@@ -322,9 +322,19 @@ curl https://www.aifast.club/v1/chat/completions \
 ---
 
 <p align="center">
-  <em>本文由 AI Developer Community 维护 · Sponsored by <a href="https://www.aifast.club">www.aifast.club</a></em>
+  <small>本文由 AI Developer Community 维护 · Sponsored by <a href="https://www.aifast.club">www.aifast.club</a></small>
 </p>
 
 <p align="center">
   <small>国内直连 ChatGPT · 国内直连 Claude API · AI 中转站推荐 · 大模型中转 · 2026 最稳定的 API 中转方案</small>
 </p>
+
+---
+
+### 🔗 相关仓库
+
+| 仓库 | 说明 |
+|:---|:---|
+| [📊 api-status](https://github.com/KKWANG4444/api-status) | 572 个模型实时状态看板 |
+| [📈 Claude-4.7-GPT-5.5-Stability-Tracker](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker) | Claude/GPT 稳定性追踪 |
+| [🌐 www.aifast.club](https://www.aifast.club) | 官网 / 注册
