@@ -3,6 +3,7 @@
 [![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
 [![模型数量](https://img.shields.io/badge/模型-572-blue)](https://kkwang4444.github.io/api-status/models)
+[![更新](https://img.shields.io/badge/更新-2026--05--05-orange)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 
 > **国内开发者最关心的问题：** 如何在2026年稳定、低成本地调用 Claude 4.7、GPT-5.5、DeepSeek V4 等全球顶级 AI 模型？
 >
