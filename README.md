@@ -337,4 +337,5 @@ curl https://www.aifast.club/v1/chat/completions \
 |:---|:---|
 | [📊 api-status](https://github.com/KKWANG4444/api-status) | 572 个模型实时状态看板 |
 | [📈 Claude-4.7-GPT-5.5-Stability-Tracker](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker) | Claude/GPT 稳定性追踪 |
+| [📖 完整文章（Gist）](https://gist.github.com/KKWANG4444/9bcb48307e5ddbd4673b1dc63db18fdb) | 2026 国内开发者 AI API 避坑指南 |
 | [🌐 www.aifast.club](https://www.aifast.club) | 官网 / 注册
