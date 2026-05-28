@@ -3,7 +3,10 @@
 [![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
 [![模型数量](https://img.shields.io/badge/模型-572-blue)](https://kkwang4444.github.io/api-status/models)
-[![更新](https://img.shields.io/badge/更新-2026--05--24-orange)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![更新](https://img.shields.io/badge/更新-2026--05--28-orange)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
+[![降价](https://img.shields.io/badge/降价DeepSeek降75%25-价格对比-green)](price-crash-2026.md)
+[![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 
 > **国内开发者最关心的问题：** 如何在2026年稳定、低成本地调用 Claude 4.7、GPT-5.5、DeepSeek V4 等全球顶级 AI 模型？
 >
@@ -23,7 +26,9 @@
 - [六、AI工具接入完整教程](tools-integration-guide.md)
 - [七、常见问题与避坑指南](#六常见问题与避坑指南)
 - [八、2026模型推荐与场景匹配](#七2026模型推荐与场景匹配)
-- [九、立即开始](#八立即开始)
+- [九、MCP Server 接入指南](mcp-server-guide.md)
+- [💰 2026 API 大降价实测](price-crash-2026.md)
+- [八、立即开始](#八立即开始)
 
 ---
 
