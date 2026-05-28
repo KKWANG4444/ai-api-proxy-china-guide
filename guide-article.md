@@ -1,5 +1,9 @@
 # 2026 国内开发者调 AI API 避坑指南：Claude 4.7 / GPT-5.5 / DeepSeek V4 直连实测
 
+[![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
+[![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
+[![更新](https://img.shields.io/badge/更新-2026--05--28-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+
 > 一个 API Key，搞定 572 个模型。国内直连，无需代理。
 
 ---
@@ -84,7 +88,7 @@ resp = client.chat.completions.create(
 
 # 换 GPT-5.5？改 model 参数就行
 resp = client.chat.completions.create(
-    model="gpt-5-5",
+    model="gpt-5.5",
     messages=[{"role": "user", "content": "你好！"}]
 )
 ```
@@ -105,7 +109,7 @@ Settings → Model Provider → 添加自定义 API，Base URL 同上。
 |:---|:---|:---|
 | 编程/代码生成 | `claude-code` | 编程专用智能体 |
 | 复杂推理/论文 | `claude-opus-4-7` | 200万上下文，逻辑最强 |
-| 日常对话/通用 | `gpt-5-5` | 综合最均衡 |
+| 日常对话/通用 | `gpt-5.5` | 综合最均衡 |
 | 高吞吐低成本 | `deepseek-v4-flash` | 百万Token，价格极低 |
 | 图像生成 | `midjourney-v7` | 图像质量天花板 |
 | 国产合规 | `qwen3.6-27b` | 数据安全合规 |
@@ -142,3 +146,7 @@ Settings → Model Provider → 添加自定义 API，Base URL 同上。
 ---
 
 *本文由 AI Developer Community 撰写。如果你觉得有用，欢迎收藏和分享。*
+
+📊 [全球模型API稳定性看板](https://kkwang4444.github.io/api-status/) | 📈 [Claude/GPT稳定性追踪](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)
+
+[![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)

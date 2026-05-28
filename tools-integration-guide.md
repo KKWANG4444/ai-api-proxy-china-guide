@@ -294,3 +294,5 @@ print(response.choices[0].message.content)
 ---
 
 > 💡 **看到这里还没注册？** 去 [www.aifast.club](https://www.aifast.club) 注册就有试用额度，十块钱试试，比折腾海外支付省心一百倍。
+
+[![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)

@@ -211,7 +211,7 @@ https://www.aifast.club/v1
 1. Cursor → Settings → Models
 2. OpenAI API Base URL → `https://www.aifast.club/v1`
 3. 填入 API Key
-4. 模型名填入：`claude-opus-4-7` 或 `gpt-5-5`
+4. 模型名填入：`claude-opus-4-7` 或 `gpt-5.5`
 
 #### 🏗️ Dify 配置
 1. Dify 后台 → Settings → Model Provider
@@ -248,7 +248,7 @@ print(response.choices[0].message.content)
 curl https://www.aifast.club/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer your-api-key" \
-  -d '{"model": "gpt-5-5", "messages": [{"role": "user", "content": "你好！"}]}'
+  -d '{"model": "gpt-5.5", "messages": [{"role": "user", "content": "你好！"}]}'
 ```
 
 > 📖 **[完整开发者接入指南 →](https://kkwang4444.github.io/api-status/guide)** 含 Cursor、Dify、LobeChat、OpenWebUI、n8n 等详细配置。
@@ -290,7 +290,7 @@ curl https://www.aifast.club/v1/chat/completions \
 |:---|:---|:---|:---|
 | 编程/代码生成 | `claude-code` | Anthropic | 编程专用智能体，代码质量极高 |
 | 复杂推理/论文 | `claude-opus-4-7` | Anthropic | 200万上下文，逻辑推理最强 |
-| 日常对话/通用 | `gpt-5-5` | OpenAI | 综合能力最均衡 |
+| 日常对话/通用 | `gpt-5.5` | OpenAI | 综合能力最均衡 |
 | 高吞吐低成本 | `deepseek-v4-flash` | DeepSeek | 百万Token上下文，价格极低 |
 | 图像生成 | `midjourney-v7` | Midjourney | 图像质量天花板 |
 | 视频生成 | `kling-2.0` | 可灵 | 国产视频生成标杆 |

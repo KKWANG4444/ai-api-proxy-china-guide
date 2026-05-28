@@ -1,5 +1,9 @@
 # 2026年AI API大跳水实测：小米降99%、DeepSeek再降价，中转到底值不值？
 
+[![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
+[![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
+[![更新](https://img.shields.io/badge/更新-2026--05--28-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+
 ## 一、这波降价有多猛？
 
 5月份AI圈出了两件大事。
@@ -115,3 +119,5 @@ AI工具的价格正在加速平民化。两年前花100块钱做的事，现在
 - 小米MiMo定价页：https://platform.xiaomimimo.com/docs/zh-CN/pricing
 - OpenAI定价页：https://openai.com/api/pricing/
 - Anthropic定价页：https://claude.com/pricing
+
+[![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
