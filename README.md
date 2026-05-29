@@ -3,7 +3,7 @@
 [![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
 [![模型数量](https://img.shields.io/badge/模型-572-blue)](https://kkwang4444.github.io/api-status/models)
-[![更新](https://img.shields.io/badge/更新-2026--05--28-orange)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![更新](https://img.shields.io/badge/更新-2026--05--29-brightgreen)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 [![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
 [![降价](https://img.shields.io/badge/降价DeepSeek降75%25-价格对比-green)](price-crash-2026.md)
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
@@ -139,7 +139,7 @@ AI 中转站的核心架构可以概括为三层：
 | 供应商 | 模型数 | 旗舰模型 |
 |:---|:---:|:---|
 | **OpenAI** | 100 | GPT-5.5 Pro、GPT-5.5、GPT-5.4 Mini、GPT-Image-2、o4 |
-| **Anthropic (Claude)** | 19 | Claude Opus 4.7、Claude Sonnet 4.6、Claude Code |
+| **Anthropic (Claude)** | 20 | Claude Opus 4.8、Claude Opus 4.7、Claude Sonnet 4.6、Claude Code |
 | **Google Gemini** | 55 | Gemini 3.1 Flash、Gemini 3 Pro、Gemini 2.5 Pro |
 | **DeepSeek** | 28 | DeepSeek V4 Pro、DeepSeek V4 Flash、DeepSeek R1 |
 | **xAI (Grok)** | 25 | Grok 4.20 Reasoning、Grok 4.20 Non-Reasoning、Grok Videos |
@@ -211,7 +211,7 @@ https://www.aifast.club/v1
 1. Cursor → Settings → Models
 2. OpenAI API Base URL → `https://www.aifast.club/v1`
 3. 填入 API Key
-4. 模型名填入：`claude-opus-4-7` 或 `gpt-5.5`
+4. 模型名填入：`claude-opus-4-8`、`claude-opus-4-7` 或 `gpt-5.5`
 
 #### 🏗️ Dify 配置
 1. Dify 后台 → Settings → Model Provider
@@ -277,7 +277,7 @@ curl https://www.aifast.club/v1/chat/completions \
 - 到控制台重新生成 Key
 
 ### Q5：支持流式输出 (Stream) / Function Calling / Vision 吗？
-**全部支持。** 兼容 OpenAI 的 SSE 流式协议，`stream: true` 即可。Claude 和 GPT 的 Tool Use 功能完全兼容。Claude Opus 4.7 和 GPT-5.5 均支持图像输入。
+**全部支持。** 兼容 OpenAI 的 SSE 流式协议，`stream: true` 即可。Claude 和 GPT 的 Tool Use 功能完全兼容。Claude Opus 4.8 / Opus 4.7 和 GPT-5.5 均支持图像输入。
 
 ### Q6：和开源方案（如 One API）比怎么样？
 自建 One API 等技术门槛高，需要自行解决网络加速和住宅 IP 问题，维护成本高。中转站是开箱即用的选择。
@@ -289,7 +289,7 @@ curl https://www.aifast.club/v1/chat/completions \
 | 使用场景 | 推荐模型 | 供应商 | 推荐理由 |
 |:---|:---|:---|:---|
 | 编程/代码生成 | `claude-code` | Anthropic | 编程专用智能体，代码质量极高 |
-| 复杂推理/论文 | `claude-opus-4-7` | Anthropic | 200万上下文，逻辑推理最强 |
+| 复杂推理/论文 | `claude-opus-4-8` | Anthropic | 最新旗舰，1M上下文，Agent任务最强 |
 | 日常对话/通用 | `gpt-5.5` | OpenAI | 综合能力最均衡 |
 | 高吞吐低成本 | `deepseek-v4-flash` | DeepSeek | 百万Token上下文，价格极低 |
 | 图像生成 | `midjourney-v7` | Midjourney | 图像质量天花板 |
