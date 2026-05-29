@@ -237,7 +237,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="claude-opus-4-7",  # 572 个模型任选
+    model="claude-opus-4-8",  # 572 个模型任选
     messages=[{"role": "user", "content": "你好！"}]
 )
 print(response.choices[0].message.content)
