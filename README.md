@@ -247,7 +247,7 @@ print(response.choices[0].message.content)
 ```bash
 curl https://www.aifast.club/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer your-api-key" \
+  -H "Authorization: Bearer *** \
   -d '{"model": "gpt-5.5", "messages": [{"role": "user", "content": "你好！"}]}'
 ```
 
@@ -375,3 +375,13 @@ curl https://www.aifast.club/v1/chat/completions \
 > 💰 **真实案例：** 校园社群推广月入3000+ · 教育资源变现月入6000+ · 自媒体流量转化月入8000+
 
 👉 **[立即申请代理](https://www.aifast.club/affiliate)**
+
+---
+### 💬 加入社区
+
+> 📱 **aifast.club 用户交流群**  
+> [Telegram 群组](https://t.me/+WYrmge-lYRFhOTFl) — 交流 API 使用心得、模型动态、问题互助
+
+---
+
+*📖 更多内容：[AI中转站完整指南](https://github.com/KKWANG4444/ai-api-china) · [API稳定性追踪](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker) · [实时状态看板](https://github.com/KKWANG4444/api-status)*
