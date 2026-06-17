@@ -223,7 +223,7 @@ aifast.club 是 **境内合法经营的公司主体**，这一点我在选型的
 - **xAI（Grok）：** Grok 4.20 Reasoning、Grok 4.20等 25 个模型
 - **阿里百炼（Qwen）：** Qwen3.6-27B、Qwen-Max 等 90 个模型
 - **豆包（字节跳动）：** Doubao Seed 2.0 等 21 个模型
-- **智谱 GLM：** GLM-5、GLM-5 Flash 等 17 个模型
+- **智谱 GLM：** GLM-5、GLM-5 Flash、GLM-5.2 系列等 17+ 个模型（官方文档已出现“迁移至 GLM-5.2”，我的中转站也已同步上架 GLM-5.2 路线。）
 - **月之暗面（Kimi）：** Kimi K2、Kimi K2 Turbo 等 11 个模型
 - **Midjourney：** 14 个图像生成模型
 - **Flux：** 8 个高质量图像生成模型
