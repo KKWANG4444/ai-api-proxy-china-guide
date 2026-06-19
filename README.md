@@ -226,7 +226,7 @@ aifast.club 是 **境内合法经营的公司主体**，这一点我在选型的
 
 - **OpenAI：** GPT-5.5 Pro、GPT-5.5、GPT-5.4 Mini、GPT-Image-2、o4 等 100 个模型
 - **Anthropic：** Claude Opus 4.8、Claude Opus 4.7、Claude Sonnet 4.6、Claude Code 等 20 个模型
-- **Google：** Gemini 3.1 Flash、Gemini 3 Pro、Gemini 2.5 Pro 等 55 个模型
+- **Google：** Gemini 3.1 Flash、Gemini 3、Gemini 2.5 Pro 等 55 个模型
 - **DeepSeek：** DeepSeek V4 Pro、DeepSeek V4 Flash、DeepSeek R1 等 28 个模型
 - **xAI（Grok）：** Grok 4.20 Reasoning、Grok 4.20等 25 个模型
 - **阿里百炼（Qwen）：** Qwen3.6-27B、Qwen-Max 等 90 个模型
