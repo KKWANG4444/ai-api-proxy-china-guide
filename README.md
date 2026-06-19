@@ -630,6 +630,8 @@ print(resp.choices[0].message.content)
   <small>国内直连 ChatGPT · 国内直连 Claude API · AI 中转站推荐 · 大模型中转 · 2026 最稳定的 API 中转方案</small>
 </p>
 
+> **⭐ 如果对你有帮助，给仓库点个 Star 吧～**
+
 <p align="center">
   <small>本文由 AI Developer Community 维护 · Sponsored by <a href="https://www.aifast.club">www.aifast.club</a></small>
 </p>
