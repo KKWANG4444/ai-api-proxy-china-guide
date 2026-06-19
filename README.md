@@ -8,7 +8,15 @@
 [![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
 [![降价](https://img.shields.io/badge/降价-DeepSeek降75%-价格对比-green)](price-crash-2026.md)
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
-[![稳定性追踪](https://img.shields.io/badge/稳定性-Claude_4.7_GPT_5.5-orange)](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)kwwww4444/ai-api-proxy-china-guide)
+[![稳定性追踪](https://img.shields.io/badge/稳定性-Claude_4.7_GPT_5.5-orange)](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)
+[![中转指南](https://img.shields.io/badge/完整指南-2026方案-blue)](https://github.com/KKWANG4444/ai-api-china)
+
+> **国内开发者最关心的问题**
+>
+> 答案是 —— 选择一家靠谱的 **API 中转站**。本文从技术原理、选型对比、接入教程三个维度，为你拆解最实用的 AI 中转方案。
+>
+> 👉 **推荐方案：**[www.aifast.club](https://www.aifast.club) · 一个 API Key 接入 572 个模型 · 国内直连 · 无需代理 · 支持微信/支付宝
+>>>>>>> a12d1ca (chore: add cross-repo badge links for SEO matrix)
 
 ---
 
