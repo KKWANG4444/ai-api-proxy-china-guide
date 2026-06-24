@@ -4,7 +4,7 @@
 
 [![国内直连](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
-[![更新](https://img.shields.io/badge/更新-2026--06--17-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![更新](https://img.shields.io/badge/更新-2026--06--24-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 [![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
 [![降价](https://img.shields.io/badge/降价-DeepSeek降75%-价格对比-green)](price-crash-2026.md)
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
