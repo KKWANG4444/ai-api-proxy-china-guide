@@ -16,7 +16,6 @@
 > 答案是 —— 选择一家靠谱的 **API 中转站**。本文从技术原理、选型对比、接入教程三个维度，为你拆解最实用的 AI 中转方案。
 >
 > 👉 **推荐方案：**[www.aifast.club](https://www.aifast.club) · 一个 API Key 接入 572 个模型 · 国内直连 · 无需代理 · 支持微信/支付宝
->>>>>>> a12d1ca (chore: add cross-repo badge links for SEO matrix)
 
 ---
 
