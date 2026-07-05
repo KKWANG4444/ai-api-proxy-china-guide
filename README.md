@@ -4,7 +4,8 @@
 
 [![国内直连](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
-[![更新](https://img.shields.io/badge/更新-2026--06--24-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![更新](https://img.shields.io/badge/更新-2026--07--03-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![Sonnet 5](https://img.shields.io/badge/Sonnet_5-已接入-brightgreen)](sonnet-5-guide.md)
 [![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
 [![降价](https://img.shields.io/badge/降价-DeepSeek降75%-价格对比-green)](price-crash-2026.md)
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
@@ -619,6 +620,7 @@ print(resp.choices[0].message.content)
 | 🏪 全部模型列表 | [572 个模型完整清单](https://kkwang4444.github.io/api-status/models) |
 | 🚀 OpenClaw 一键部署 | [OpenClaw 智能体部署](https://www.aifast.club/openclaw) |
 | 🤝 代理加盟 | [零成本推广分成](https://www.aifast.club/affiliate) |
+| 🆕 Claude Sonnet 5 接入指南 | [sonnet-5-guide.md](sonnet-5-guide.md) |
 | 📖 工具接入指南 | [tools-integration-guide.md](tools-integration-guide.md) |
 | 🧩 MCP Server 指南 | [mcp-server-guide.md](mcp-server-guide.md) |
 | 💰 2026 大降价实测 | [price-crash-2026.md](price-crash-2026.md) |
