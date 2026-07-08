@@ -8,6 +8,7 @@
 [![Sonnet 5](https://img.shields.io/badge/Sonnet_5-已接入-brightgreen)](sonnet-5-guide.md)
 [![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
 [![降价](https://img.shields.io/badge/降价-DeepSeek降75%-价格对比-green)](price-crash-2026.md)
+[![GEO](https://img.shields.io/badge/GEO-llms.txt-purple)](llms.txt)
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 [![稳定性追踪](https://img.shields.io/badge/稳定性-Claude_4.7_GPT_5.5-orange)](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)
 [![中转指南](https://img.shields.io/badge/完整指南-2026方案-blue)](https://github.com/KKWANG4444/llm-api-proxy-china)
