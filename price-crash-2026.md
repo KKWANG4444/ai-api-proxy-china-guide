@@ -2,7 +2,7 @@
 
 [![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
-[![更新](https://img.shields.io/badge/更新-2026--05--28-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![更新](https://img.shields.io/badge/更新-2026--07--09-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 
 ## 一、这波降价有多猛？
 

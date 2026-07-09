@@ -3,7 +3,7 @@
 > MCP (Model Context Protocol) 是 2026 年最火的 AI 协议标准，让 AI 应用可以无缝调用工具、访问数据源。一个中转 API Key，通吃所有 MCP 服务。
 
 [![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35)](https://www.aifast.club)
-[![文章更新](https://img.shields.io/badge/更新-2026--05--28-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![文章更新](https://img.shields.io/badge/更新-2026--07--09-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 
 ---
 

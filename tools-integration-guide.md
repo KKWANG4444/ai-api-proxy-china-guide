@@ -3,7 +3,7 @@
 > **一套配置，通吃所有 AI 工具。** 以下教程以 [www.aifast.club](https://www.aifast.club) 为例，API Key 在平台注册后创建。所有工具的原理都一样：改 `base_url` + 填 `api_key`。
 
 [![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35)](https://www.aifast.club)
-[![文章更新](https://img.shields.io/badge/更新-2026--05--28-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![文章更新](https://img.shields.io/badge/更新-2026--07--09-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 
 ---
 
