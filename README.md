@@ -4,7 +4,8 @@
 
 [![国内直连](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
-[![更新](https://img.shields.io/badge/更新-2026--07--06-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![更新](https://img.shields.io/badge/更新-2026--07--08-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![Grok 4.5](https://img.shields.io/badge/Grok_4.5-已上线-brightgreen)](https://www.aifast.club)
 [![Sonnet 5](https://img.shields.io/badge/Sonnet_5-已接入-brightgreen)](sonnet-5-guide.md)
 [![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
 [![降价](https://img.shields.io/badge/降价-DeepSeek降75%-价格对比-green)](price-crash-2026.md)
@@ -244,7 +245,7 @@ aifast.club 是 **境内合法经营的公司主体**，这一点我在选型的
 - **Anthropic：** Claude Opus 4.8、Claude Opus 4.7、**Claude Sonnet 5 🆕**、Claude Sonnet 4.6、Claude Code 等 20 个模型
 - **Google：** Gemini 3.1 Flash、Gemini 3、Gemini 2.5 Pro 等 55 个模型
 - **DeepSeek：** DeepSeek V4 Pro、DeepSeek V4 Flash、DeepSeek R1 等 28 个模型
-- **xAI（Grok）：** Grok 4.20 Reasoning、Grok 4.20等 25 个模型
+- **xAI（Grok）：** Grok 4.5 🆕、Grok 4.20 Reasoning、Grok 4.20等 26 个模型
 - **阿里百炼（Qwen）：** Qwen3.6-27B、Qwen-Max 等 90 个模型
 - **豆包（字节跳动）：** Doubao Seed 2.0 等 21 个模型
 - **智谱 GLM：** GLM-5、GLM-5 Flash、GLM-5.2 系列等 17+ 个模型（官方文档已出现“迁移至 GLM-5.2”，我的中转站也已同步上架 GLM-5.2 路线。）
