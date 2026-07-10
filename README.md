@@ -6,6 +6,7 @@
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
 [![更新](https://img.shields.io/badge/更新-2026--07--08-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 [![Grok 4.5](https://img.shields.io/badge/Grok_4.5-已上线-brightgreen)](https://www.aifast.club)
+[![GPT-5.6](https://img.shields.io/badge/GPT-5.6_Sol🌞-已上线-orange)](https://www.aifast.club)
 [![Sonnet 5](https://img.shields.io/badge/Sonnet_5-已接入-brightgreen)](sonnet-5-guide.md)
 [![MCP](https://img.shields.io/badge/MCP-接入指南-blue)](mcp-server-guide.md)
 [![降价](https://img.shields.io/badge/降价-DeepSeek降75%-价格对比-green)](price-crash-2026.md)
@@ -241,7 +242,7 @@ aifast.club 是 **境内合法经营的公司主体**，这一点我在选型的
 
 这个数据在其官网能看到完整列表。覆盖范围包括：
 
-- **OpenAI：** GPT-5.5 Pro、GPT-5.5、GPT-5.4 Mini、GPT-Image-2、o4 等 100 个模型
+- **OpenAI（GPT-5.6 Sol 🆕、GPT-5.6 Terra 🆕、GPT-5.6 Luna 🆕、GPT-5.5 Pro、GPT-5.5、GPT-5.4 Mini、GPT Image 2、o4 系列）— 103 个模型
 - **Anthropic：** Claude Opus 4.8、Claude Opus 4.7、**Claude Sonnet 5 🆕**、Claude Sonnet 4.6、Claude Code 等 20 个模型
 - **Google：** Gemini 3.1 Flash、Gemini 3、Gemini 2.5 Pro 等 55 个模型
 - **DeepSeek：** DeepSeek V4 Pro、DeepSeek V4 Flash、DeepSeek R1 等 28 个模型
