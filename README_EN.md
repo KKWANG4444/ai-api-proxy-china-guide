@@ -1,0 +1,119 @@
+# China AI API Proxy Guide (English)
+
+> **One API Key. 572 Models. Direct access in China.**
+
+A practical guide for global developers who need reliable AI API access in mainland China. This repo covers the best proxy solutions, model support, pricing comparisons, and real-world pitfalls — everything I learned after months of testing and thousands of dollars in trial & error.
+
+[![Direct Access](https://img.shields.io/badge/Direct_Access-572_models-FF6B35?logo=github)](https://www.aifast.club)
+[![Live Status](https://img.shields.io/badge/Live_Status-Online-brightgreen)](https://kkwang4444.github.io/api-status/)
+[![Updated](https://img.shields.io/badge/Updated-2026--07--10-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![Grok 4.5](https://img.shields.io/badge/Grok_4.5-Supported-brightgreen)](https://www.aifast.club)
+[![GPT-5.6](https://img.shields.io/badge/GPT-5.6_Sol🌞-Supported-orange)](https://www.aifast.club)
+
+## Why This Exists
+
+Calling OpenAI, Claude, or other Western AI APIs from mainland China is notoriously difficult:
+- **OpenAI** — Region-locked, returns 403/429 from China IPs
+- **Anthropic** — Shield-v2 auto-detects data center IPs
+- **DeepSeek** — Official API frequently returns 503 under load
+
+This guide shows you how to work around these issues using established proxy/gateway solutions.
+
+## Quick Start
+
+```python
+import openai
+
+client = openai.OpenAI(
+    base_url="https://www.aifast.club/v1",   # Replace with your gateway
+    api_key="your-api-key-here"
+)
+
+response = client.chat.completions.create(
+    model="claude-sonnet-5",  # or gpt-5.5, grok-4-5, etc.
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+print(response.choices[0].message.content)
+```
+
+## Supported Models (572 total)
+
+| Provider | Models | Count |
+|:---|:---|:---:|
+| **OpenAI** | GPT-5.6 Sol🌞, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.5 Pro, GPT-5.5, GPT-5.4 Mini, o4, GPT Image 2 | **103** |
+| **Anthropic** | Claude Sonnet 5, Claude Opus 4.8, Claude Opus 4.7, Claude Sonnet 4.6, Claude Code | **20** |
+| **xAI (Grok)** | Grok 4.5, Grok 4.2 Reasoning, Grok Videos | **26** |
+| **Google** | Gemini 3.1 Flash, Gemini 3, Gemini 2.5 Pro | **55** |
+| **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash, DeepSeek R1 | **28** |
+| **Alibaba (Qwen)** | Qwen3.6-27B, Qwen-Max | **90** |
+| **ByteDance (Doubao)** | Doubao Seed 2.0 | **21** |
+| **Zhipu (GLM)** | GLM-5, GLM-5 Flash, GLM-5.2 | **17+** |
+| **Others** | Kimi, Yi, 01.AI, Mistral, Cohere, Midjourney, Stability AI | **200+** |
+
+## How It Works
+
+Most proxy/gateway services work by routing your requests through intermediate servers that have direct access to the official APIs:
+
+```
+Your App → Gateway (www.aifast.club/v1) → OpenAI/Anthropic/etc.
+```
+
+The gateway handles:
+- ✅ **IP rotation** with residential proxies
+- ✅ **Authentication** with managed API keys
+- ✅ **Protocol conversion** (OpenAI-compatible interface)
+- ✅ **Load balancing & failover**
+- ✅ **Payment processing** in CNY
+
+## Use Cases
+
+| Scenario | Recommended Model | Provider |
+|:---|:---|:---|
+| **Coding & Development** | `claude-code`, `gpt-5.6-sol` | Anthropic / OpenAI |
+| **Complex Reasoning** | `claude-opus-4-8`, `gpt-5.5-pro` | Anthropic / OpenAI |
+| **Chat & Conversation** | `gpt-5.5`, `gemini-3-flash` | OpenAI / Google |
+| **High-Volume / Low-Cost** | `deepseek-v4-flash`, `qwen3.6-27b` | DeepSeek / Alibaba |
+| **Image Generation** | `gpt-image-2`, `midjourney-v7` | OpenAI / Midjourney |
+
+## Tool Compatibility
+
+All tools that support the OpenAI SDK can be configured to use a proxy gateway:
+
+| Tool | Setup |
+|:---|:---|
+| **Cursor** | Settings → API → Custom → `https://www.aifast.club/v1` |
+| **Dify** | Provider → OpenAI Compatible → Base URL |
+| **Chatbox / Cherry Studio** | Model Providers → OpenAI Compatible |
+| **OpenWebUI / LobeChat** | Custom OpenAI API endpoint |
+| **n8n** | HTTP Node → OpenAI credential |
+| **Claude Code** | `$ CLAUDE_BASE_URL=https://www.aifast.club/v1 claude` |
+| **Codex CLI** | `$ CODEX_BASE_URL=https://www.aifast.club/v1 codex` |
+
+## Pricing Comparison
+
+> **Note:** Gateway services have their own pricing (includes IP rotation, multi-node redundancy, and China direct access). You're paying for reliability, not just the model.
+
+| Model | Official Price | Gateway Price | Notes |
+|:---|:---:|:---:|:---|
+| Claude Sonnet 5 | $2/$10 per MTok | Varies | Latest, fastest |
+| GPT-5.5 | $3/$18 per MTok | Varies | Solid all-rounder |
+| DeepSeek V4 Flash | $0.17/$0.87 per MTok | Varies | Best value |
+
+## 📊 Live Status Board
+
+![API Status Dashboard](assets/img/api-status-screenshot.png)
+
+Real-time monitoring of 572 models — connection rates, latency, and China accessibility. Updated every 5 minutes.
+
+👉 **[View Live Status](https://kkwang4444.github.io/api-status/)**
+
+## Other Resources
+
+- **[API Status Monitor](https://kkwang4444.github.io/api-status/)** — Live status of 572 models
+- **[LLM API Proxy China](https://github.com/KKWANG4444/llm-api-proxy-china)** — Detailed model list and pricing
+- **[Stability Tracker](https://github.com/KKWANG4444/stability-tracker)** — 6-month stability test data
+- **[AI Fast Club](https://www.aifast.club)** — The gateway used in examples
+
+## License
+
+MIT

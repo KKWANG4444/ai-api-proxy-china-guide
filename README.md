@@ -1,5 +1,8 @@
 # 2026国内AI API中转站完整指南
 
+[![中文](https://img.shields.io/badge/🇨🇳-中文-red)](README.md)
+[![English](https://img.shields.io/badge/🇬🇧-English-blue)](README_EN.md)
+
 > **写在前面的真心话：** 这篇文章不是什么官方白皮书，是我自己折腾了大半年、踩了无数坑、花了几千块钱试错之后，沉淀下来的经验总结。2026年国内调AI API的难度只增不减，我把摸过的石头都摆出来，希望能帮你少走几步弯路。
 
 [![国内直连](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
