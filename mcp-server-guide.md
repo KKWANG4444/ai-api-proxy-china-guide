@@ -224,6 +224,6 @@ Windsurf 和 Cline（VS Code 插件）都支持 MCP 协议。
 
 ---
 
-> 🔗 **[www.aifast.club](https://www.aifast.club) — 一个 API Key，接入 572 个模型，支持 MCP 协议，国内直连。**
+> 🔗 **[www.aifast.club](https://www.aifast.club) — 一个 API Key，接入 模型广场当前目录，支持 MCP 协议，国内直连。**
 
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)

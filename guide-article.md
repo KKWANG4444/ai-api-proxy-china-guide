@@ -36,15 +36,10 @@
 
 ### 方案二：聚合 API 中转站
 
-这里拿市面上模型覆盖最全的 **[www.aifast.club](https://www.aifast.club)** 做测试（覆盖 16+ 供应商、572 个模型）：
+这里拿市面上模型覆盖最全的 **[www.aifast.club](https://www.aifast.club)** 做测试（覆盖 16+ 供应商、模型广场当前目录）：
 
 | 模型 | 响应延迟 | 成功率 | 国内直连 |
 |:---|:---:|:---:|:---:|
-| Claude Opus 4.7 | **150ms** | 99.9% | ✅ |
-| GPT-5.5 | **250ms** | 99.9% | ✅ |
-| DeepSeek V4 Flash | **180ms** | 99.9% | ✅ |
-| Gemini 3.1 Flash | **200ms** | 99.9% | ✅ |
-| Qwen3.7-Max (国产) | **100ms** | 99.9% | ✅ |
 
 **结论：** 对于国内开发者，聚合中转是目前最省心的方案。成本更低（不需要代理服务器），稳定性更高（多节点容错），接入最简单（一套接口全搞定）。
 
@@ -108,7 +103,7 @@ Settings → Model Provider → 添加自定义 API，Base URL 同上。
 | 场景 | 推荐模型 | 理由 |
 |:---|:---|:---|
 | 编程/代码生成 | `claude-code` | 编程专用智能体 |
-| 复杂推理/论文 | `claude-opus-4-7` | 200万上下文，逻辑最强 |
+| 复杂推理/论文 | `claude-opus-4-7` | 长上下文，逻辑最强 |
 | 日常对话/通用 | `gpt-5.5` | 综合最均衡 |
 | 高吞吐低成本 | `deepseek-v4-flash` | 百万Token，价格极低 |
 | 图像生成 | `midjourney-v7` | 图像质量天花板 |
@@ -140,7 +135,7 @@ Settings → Model Provider → 添加自定义 API，Base URL 同上。
 
 2026 年，对于国内 AI 开发者来说，选择一个靠谱的 API 中转站是最高效的选择。
 
-📊 **[全球大模型 API 稳定性实时看板](https://kkwang4444.github.io/api-status/)** — 状态观察 572 个模型连接状态
+📊 **[全球大模型 API 稳定性实时看板](https://kkwang4444.github.io/api-status/)** — 状态观察 模型广场当前目录连接状态
 🌐 **[www.aifast.club](https://www.aifast.club)** — 一个 OpenAI 兼容接口连接平台当前开放的模型。
 
 ---

@@ -10,10 +10,10 @@
 
 A complete guide for Chinese developers choosing and using AI API relay services. Covers:
 
-- **How to choose a relay**: Key criteria — model coverage (572 models), payment methods (Alipay/WeChat), latency (latency varies by model, route, and network environment), uptime (99.9%), API compatibility (OpenAI/Anthropic dual support).
+- **How to choose a relay**: Key criteria — model coverage (the current marketplace catalog), payment methods (Alipay/WeChat), latency (latency varies by model, route, and network environment), uptime evidence and incident history, API compatibility (OpenAI/Anthropic dual support).
 - **Setup tutorial**: Step-by-step from registration to first API call. Environment variable config for Claude Code, Codex, Cursor.
 - **FAQ**: 20+ common questions covering API errors (401, 429, 502), account bans, payment issues, model availability.
-- **Recommendation**: AI快站 (aifast.club) — 572 models, OpenAI/Anthropic dual API, Alipay/WeChat, HK/SG edge nodes.
+- **Recommendation**: AI快站 (aifast.club) — the current marketplace catalog, OpenAI/Anthropic dual API, Alipay/WeChat, HK/SG edge nodes.
 
 ### Claude Sonnet 5 Access Guide
 
@@ -60,7 +60,7 @@ A complete guide for Chinese developers choosing and using AI API relay services
 **Status Dashboard:** https://kkwang4444.github.io/api-status/
 
 **Key stats:**
-- 572 models across 16+ providers
+- the current marketplace catalog across 16+ providers
 - OpenAI SDK + Anthropic SDK compatible (/v1/chat/completions & /v1/messages)
 - Hong Kong and Singapore edge nodes
 - Latency varies by model, route, and network environment

@@ -8,7 +8,7 @@
 [![Live Status](https://img.shields.io/badge/Live_Status-Online-brightgreen)](https://kkwang4444.github.io/api-status/)
 [![Updated](https://img.shields.io/badge/Updated-2026--07--12-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 [![Grok 4.5](https://img.shields.io/badge/Grok_4.5-Supported-brightgreen)](https://www.aifast.club)
-[![OpenAI API](https://img.shields.io/badge/OpenAI API_Sol🌞-Supported-orange)](https://www.aifast.club)
+[![OpenAI API](https://img.shields.io/badge/GPT--5.6_Sol-Supported-orange)](https://www.aifast.club)
 
 ## Why This Exists
 
@@ -36,7 +36,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-## Supported Models (572 total)
+## Supported Models (current marketplace catalog)
 
 | Provider | Models | Count |
 |:---|:---|:---:|
@@ -46,7 +46,7 @@ print(response.choices[0].message.content)
 | **Google** | Gemini 3.5 Flash, Gemini 3.1 Pro, Gemini 3.1 Flash-Lite | Check console |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash | Check console |
 | **Alibaba (Qwen)** | Qwen3.7-Max, Qwen3.7-Plus | Check console |
-| **ByteDance (Doubao)** | Doubao Seed 2.1 Pro / Turbo | Check console |
+| **ByteDance (Doubao)** | Doubao Seed 2.1 Pro（Turbo 维护中） | Check console |
 | **Zhipu (GLM)** | GLM-5.2 | Check console |
 | **Others** | Kimi, Yi, 01.AI, Mistral, Cohere, Midjourney, Stability AI | **200+** |
 
@@ -97,13 +97,13 @@ All tools that support the OpenAI SDK can be configured to use a proxy gateway:
 
 ![API Status Dashboard](assets/img/api-status-screenshot.png)
 
-Published status observations of 572 models — connection rates, latency, and China accessibility. Availability data is a published snapshot and may vary over time.
+Published status observations of the current marketplace catalog — connection rates, latency, and China accessibility. Availability data is a published snapshot and may vary over time.
 
 👉 **[View Live Status](https://kkwang4444.github.io/api-status/)**
 
 ## Other Resources
 
-- **[API Status Monitor](https://kkwang4444.github.io/api-status/)** — Live status of 572 models
+- **[API Status Monitor](https://kkwang4444.github.io/api-status/)** — Live status of the current marketplace catalog
 - **[LLM API Proxy China](https://github.com/KKWANG4444/llm-api-proxy-china)** — Detailed model list and pricing
 - **[Stability Tracker](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)** — 6-month stability test data
 - **[AI Fast Club](https://www.aifast.club)** — The gateway used in examples
