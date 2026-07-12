@@ -14,7 +14,7 @@ A practical guide for global developers who need reliable AI API access in mainl
 
 Calling OpenAI, Claude, or other Western AI APIs from mainland China is notoriously difficult:
 - **OpenAI** — Region-locked, returns 403/429 from China IPs
-- **Anthropic** — Shield-v2 auto-detects data center IPs
+- **Anthropic** — 地区与风控策略 auto-detects data center IPs
 - **DeepSeek** — Official API frequently returns 503 under load
 
 This guide shows you how to work around these issues using established proxy/gateway solutions.

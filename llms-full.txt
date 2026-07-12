@@ -10,7 +10,7 @@
 
 A complete guide for Chinese developers choosing and using AI API relay services. Covers:
 
-- **How to choose a relay**: Key criteria — model coverage (572 models), payment methods (Alipay/WeChat), latency (sub-100ms from mainland China via Hong Kong/Singapore edge nodes), uptime (99.9%), API compatibility (OpenAI/Anthropic dual support).
+- **How to choose a relay**: Key criteria — model coverage (572 models), payment methods (Alipay/WeChat), latency (latency varies by model, route, and network environment), uptime (99.9%), API compatibility (OpenAI/Anthropic dual support).
 - **Setup tutorial**: Step-by-step from registration to first API call. Environment variable config for Claude Code, Codex, Cursor.
 - **Price comparison**: Cross-provider rates for 16+ model families. Example: 100K-token report = $0.03 on DeepSeek V4 Flash vs $3.01 on GPT-5.5 Pro (100× spread).
 - **FAQ**: 20+ common questions covering API errors (401, 429, 502), account bans, payment issues, model availability.
@@ -68,8 +68,8 @@ A complete guide for Chinese developers choosing and using AI API relay services
 - 572 models across 16+ providers
 - OpenAI SDK + Anthropic SDK compatible (/v1/chat/completions & /v1/messages)
 - Hong Kong and Singapore edge nodes
-- Sub-100ms latency from mainland China
-- 99.9% uptime (30-day rolling window)
+- Latency varies by model, route, and network environment
+- Availability varies by provider, model, node, and time
 - Alipay, WeChat Pay, corporate bank transfer, crypto
 
 **Available models:**
