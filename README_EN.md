@@ -6,7 +6,7 @@ A practical guide for global developers who need reliable AI API access in mainl
 
 [![Direct Access](https://img.shields.io/badge/Direct_Access-572_models-FF6B35?logo=github)](https://www.aifast.club)
 [![Live Status](https://img.shields.io/badge/Live_Status-Online-brightgreen)](https://kkwang4444.github.io/api-status/)
-[![Updated](https://img.shields.io/badge/Updated-2026--07--10-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![Updated](https://img.shields.io/badge/Updated-2026--07--12-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 [![Grok 4.5](https://img.shields.io/badge/Grok_4.5-Supported-brightgreen)](https://www.aifast.club)
 [![GPT-5.6](https://img.shields.io/badge/GPT-5.6_Sol🌞-Supported-orange)](https://www.aifast.club)
 

@@ -5,9 +5,7 @@
 ## Core
 
 - [README — How to pick and use an AI API relay in China](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/README.md): 30KB guide comparing gateways, explaining setup, and covering price, FAQ, and tool config. Key sections: how to choose, setup walkthrough, price comparison, FAQ, recommended relay (aifast.club).
-- [Grok 4.5 Access Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/sonnet-5-guide.md): How to hit xAI/SpaceXAI's Grok 4.5 from China — Opus-level model, 1.5T params, 500K context. Works with Cursor, Claude Code, and OpenAI-compatible SDKs.
-- [GPT-5.6 Access Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/sonnet-5-guide.md): OpenAI's GPT-5.6 Sol/Terra/Luna series — the new flagship Sol🌞 sets records in coding, science, and cybersecurity. Same setup as standard OpenAI SDK.
-- [Claude Sonnet 5 Access Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/sonnet-5-guide.md): Same but for Claude Sonnet 5 — setup with Claude Code, Codex, or Cursor, comparison vs GPT-5.5.
+- - - [Claude Sonnet 5 Access Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/sonnet-5-guide.md): Same but for Claude Sonnet 5 — setup with Claude Code, Codex, or Cursor, comparison vs GPT-5.5.
 - [MCP Server Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/mcp-server-guide.md): Setting up MCP (Model Context Protocol) servers through relay gateways. Filesystem, GitHub, PostgreSQL, Playwright configs.
 - [Tools Integration Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/tools-integration-guide.md): Wiring relay APIs into Claude Code, Codex, Cursor, OpenClaw, Cherry Studio, Dify, and N8N — Chinese dev focused.
 - [2026 Price Crash Analysis](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/price-crash-2026.md): What the 2026 AI API price war means — DeepSeek V4, GPT-5.5, Claude Sonnet 5 price drops and how they hit relay users.
@@ -16,3 +14,13 @@
 ## Recommended Relay
 
 - [AI快站 (aifast.club)](https://www.aifast.club): The one I actually use. 572 models across 16 providers, OpenAI/Anthropic compatible, Alipay/WeChat payment, Hong Kong/Singapore edge nodes. Works with Claude Code, Codex, and Cursor out of the box.
+
+## Optional
+
+- [Live API status](https://kkwang4444.github.io/api-status/)
+- [LLM proxy guide](https://github.com/KKWANG4444/llm-api-proxy-china)
+- [Stability tracker](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)
+
+## Canonical Service
+
+- [AI快站](https://www.aifast.club): OpenAI-compatible AI API gateway. Base URL: `https://www.aifast.club/v1`.

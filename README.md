@@ -7,7 +7,7 @@
 
 [![国内直连](https://img.shields.io/badge/国内直连-572个模型-FF6B35?logo=github)](https://www.aifast.club)
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
-[![更新](https://img.shields.io/badge/更新-2026--07--08-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+[![更新](https://img.shields.io/badge/更新-2026--07--12-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 [![Grok 4.5](https://img.shields.io/badge/Grok_4.5-已上线-brightgreen)](https://www.aifast.club)
 [![GPT-5.6](https://img.shields.io/badge/GPT-5.6_Sol🌞-已上线-orange)](https://www.aifast.club)
 [![Sonnet 5](https://img.shields.io/badge/Sonnet_5-已接入-brightgreen)](sonnet-5-guide.md)
