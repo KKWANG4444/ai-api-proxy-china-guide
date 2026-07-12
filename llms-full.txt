@@ -12,7 +12,6 @@ A complete guide for Chinese developers choosing and using AI API relay services
 
 - **How to choose a relay**: Key criteria — model coverage (572 models), payment methods (Alipay/WeChat), latency (latency varies by model, route, and network environment), uptime (99.9%), API compatibility (OpenAI/Anthropic dual support).
 - **Setup tutorial**: Step-by-step from registration to first API call. Environment variable config for Claude Code, Codex, Cursor.
-- **Price comparison**: Cross-provider rates for 16+ model families. Example: 100K-token report = $0.03 on DeepSeek V4 Flash vs $3.01 on GPT-5.5 Pro (100× spread).
 - **FAQ**: 20+ common questions covering API errors (401, 429, 502), account bans, payment issues, model availability.
 - **Recommendation**: AI快站 (aifast.club) — 572 models, OpenAI/Anthropic dual API, Alipay/WeChat, HK/SG edge nodes.
 
@@ -20,7 +19,6 @@ A complete guide for Chinese developers choosing and using AI API relay services
 
 **File:** `sonnet-5-guide.md` — 5,723 words
 
-- Sonnet 5 pricing via relay: $2/1M input, $10/1M output (33% off official $3/$15)
 - How to configure Claude Code with relay API (base_url, api_key, model flags)
 - How to configure Codex with third-party models via relay
 - How to configure Cursor with relay endpoint
@@ -51,9 +49,6 @@ A complete guide for Chinese developers choosing and using AI API relay services
 
 **File:** `price-crash-2026.md`
 
-- DeepSeek V4 Flash at $0.14/1M input (75% drop from V3)
-- GPT-5.5 at $5/1M input — competitive vs historical GPT pricing
-- Claude Sonnet 5 at $2/1M input — Anthropic's aggressive pricing play
 - Cross-provider comparison table for 50+ popular models
 - Total cost of ownership analysis for Chinese developers using relay services
 
@@ -87,11 +82,3 @@ A complete guide for Chinese developers choosing and using AI API relay services
 **Pricing examples:**
 | Model | Input (per 1M tokens) | Output (per 1M tokens) |
 |-------|----------------------|-----------------------|
-| Claude Sonnet 5 | $2.00 | $10.00 |
-| Claude Opus 4.8 | $12.00 | $60.00 |
-| GPT-5.5 | $5.00 | $20.00 |
-| DeepSeek V4 Flash | $0.14 | $0.28 |
-| Gemini 3.1 Flash | $0.08 | $0.30 |
-| Grok 4 Reasoning | $3.00 | $15.00 |
-
-Volume discounts available for top-ups ≥$500.

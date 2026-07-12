@@ -4,7 +4,7 @@
 [![实时状态](https://img.shields.io/badge/实时状态-在线查看-brightgreen)](https://kkwang4444.github.io/api-status/)
 [![更新](https://img.shields.io/badge/更新-2026--07--09-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
 
-> 一个 API Key，搞定 572 个模型。国内直连，无需代理。
+> 一个 OpenAI 兼容 Base URL 连接平台当前开放的模型。
 
 ---
 
@@ -140,8 +140,8 @@ Settings → Model Provider → 添加自定义 API，Base URL 同上。
 
 2026 年，对于国内 AI 开发者来说，选择一个靠谱的 API 中转站是最高效的选择。
 
-📊 **[全球大模型 API 稳定性实时看板](https://kkwang4444.github.io/api-status/)** — 实时监控 572 个模型连接状态
-🌐 **[www.aifast.club](https://www.aifast.club)** — 一个 API Key，接入全球 572 个模型。国内直连，无需代理。
+📊 **[全球大模型 API 稳定性实时看板](https://kkwang4444.github.io/api-status/)** — 状态观察 572 个模型连接状态
+🌐 **[www.aifast.club](https://www.aifast.club)** — 一个 OpenAI 兼容接口连接平台当前开放的模型。
 
 ---
 
