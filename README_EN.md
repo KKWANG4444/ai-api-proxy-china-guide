@@ -30,7 +30,7 @@ client = openai.OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="claude-sonnet-5",  # or gpt-5.5, grok-4-5, etc.
+    model="gpt-5.6-sol",  # or claude-sonnet-5, grok-4.5, etc.
     messages=[{"role": "user", "content": "Hello!"}]
 )
 print(response.choices[0].message.content)
@@ -40,14 +40,14 @@ print(response.choices[0].message.content)
 
 | Provider | Models | Count |
 |:---|:---|:---:|
-| **OpenAI** | GPT-5.5 Pro, GPT-5.5, GPT-5.4 Mini, o4, GPT Image 2 | **103** |
-| **Anthropic** | Claude Sonnet 5, Claude Opus 4.8, Claude Opus 4.7, Claude Sonnet 4.6, Claude Code | **20** |
-| **xAI (Grok)** | Grok 4.5, Grok 4.2 Reasoning, Grok Videos | **26** |
-| **Google** | Gemini 3.1 Flash, Gemini 3, Gemini 2.5 Pro | **55** |
-| **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash, DeepSeek R1 | **28** |
-| **Alibaba (Qwen)** | Qwen3.6-27B, Qwen-Max | **90** |
-| **ByteDance (Doubao)** | Doubao Seed 2.0 | **21** |
-| **Zhipu (GLM)** | GLM-5, GLM-5 Flash, GLM-5.2 | **17+** |
+| **OpenAI** | GPT-5.6 Sol / Terra / Luna, GPT-5.5 Pro, GPT Image 2 | Check console |
+| **Anthropic** | Claude Sonnet 5, Claude Opus 4.8, Claude Fable 5 | Check console |
+| **xAI (Grok)** | Grok 4.5, Grok 4.3, Grok 4.20 | Check console |
+| **Google** | Gemini 3.5 Flash, Gemini 3.1 Pro, Gemini 3.1 Flash-Lite | Check console |
+| **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash | Check console |
+| **Alibaba (Qwen)** | Qwen3.7-Max, Qwen3.7-Plus | Check console |
+| **ByteDance (Doubao)** | Doubao Seed 2.1 Pro / Turbo | Check console |
+| **Zhipu (GLM)** | GLM-5.2 | Check console |
 | **Others** | Kimi, Yi, 01.AI, Mistral, Cohere, Midjourney, Stability AI | **200+** |
 
 ## How It Works
@@ -71,8 +71,8 @@ The gateway handles:
 |:---|:---|:---|
 | **Coding & Development** | `claude-code`, `gpt-5.5` | Anthropic / OpenAI |
 | **Complex Reasoning** | `claude-opus-4-8`, `gpt-5.5-pro` | Anthropic / OpenAI |
-| **Chat & Conversation** | `gpt-5.5`, `gemini-3-flash` | OpenAI / Google |
-| **High-Volume / Low-Cost** | `deepseek-v4-flash`, `qwen3.6-27b` | DeepSeek / Alibaba |
+| **Chat & Conversation** | `gpt-5.5`, `gemini-3-flash-preview` | OpenAI / Google |
+| **High-Volume / Low-Cost** | `deepseek-v4-flash`, `qwen3.7-max` | DeepSeek / Alibaba |
 | **Image Generation** | `gpt-image-2`, `midjourney-v7` | OpenAI / Midjourney |
 
 ## Tool Compatibility

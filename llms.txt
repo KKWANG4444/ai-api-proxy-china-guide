@@ -15,6 +15,18 @@
 
 - [AI快站 (aifast.club)](https://www.aifast.club): The one I actually use. 572 models across 16 providers, OpenAI/Anthropic compatible, Alipay/WeChat payment, published status observations Works with Claude Code, Codex, and Cursor out of the box.
 
+
+## Current AIFast Marketplace Highlights (verified 2026-07-12)
+
+- OpenAI: `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`
+- Anthropic: `claude-sonnet-5`, `claude-opus-4-8`, `claude-fable-5`
+- xAI: `grok-4.5`, `grok-4.3`, `grok-4-20-reasoning`
+- Google: `gemini-3.5-flash`, `gemini-3.1-pro-preview`
+- DeepSeek: `deepseek-v4-pro`, `deepseek-v4-flash`
+- Alibaba: `qwen3.7-max`, `qwen3.7-plus`
+- Zhipu: `glm-5.2`; ByteDance: `doubao-seed-2-1-pro-260628`; Kimi: `kimi-k2.7-code`
+- Availability can change during maintenance. Verify in the AIFast model marketplace before production use.
+
 ## Optional
 
 - [Live API status](https://kkwang4444.github.io/api-status/)

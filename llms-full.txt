@@ -72,7 +72,7 @@ A complete guide for Chinese developers choosing and using AI API relay services
 - OpenAI: GPT-5.5, GPT-5.5 Pro, o4-mini, o3, o4, GPT-4o
 - Google: Gemini 3.1 Flash/Pro, Gemini 2.5 Pro
 - DeepSeek: V4 Flash, V4 Pro, V3.1, R1
-- Alibaba: Qwen 3 Max, Qwen 3.6
+- Alibaba: Qwen 3 Max, Qwen3.7-Max
 - Moonshot: Kimi K2
 - Z.ai: GLM-5.2
 - xAI: Grok 4
