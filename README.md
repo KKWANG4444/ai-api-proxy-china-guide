@@ -653,6 +653,19 @@ print(resp.choices[0].message.content)
 > **⭐ 如果对你有帮助，给仓库点个 Star 吧～**
 
 
+## 2026 年 7 月厂商型号核对
+
+以下仅表示厂商官方文档中已经出现，**不代表 AI快站已经接入**：
+
+- Anthropic：Claude Sonnet 5、Claude Opus 4.8；官方文档还列有 Claude Fable 5、Claude Mythos 5。
+- OpenAI：官方文档当前以 GPT-5.5 为最新入口，GPT-5.5 Pro 为当前 Pro 系列推荐型号。
+- Google：Gemini 3.5 Flash、Gemini 3.1 Pro、Gemini 3.1 Flash-Lite 等。
+- xAI：Grok 4.5、Grok 4.3、Grok 4.20 系列；具体模型 ID 不要把 4.20 写成 4.2。
+- DeepSeek：`deepseek-v4-pro`、`deepseek-v4-flash`；`deepseek-chat` 和 `deepseek-reasoner` 已公告将在 2026-07-24 退役。
+- 阿里云：Qwen3.7-Max；智谱：GLM-5.2；火山方舟最新目录已到 Seed 2.1；Kimi 开放平台已展示 K2.7 Code。
+
+> 接入前请同时检查厂商官方文档和 [AI快站控制台](https://www.aifast.club)。厂商发布 ≠ 平台已上线。
+
 ## 核心项目导航
 
 | 你要解决的问题 | 入口 |
