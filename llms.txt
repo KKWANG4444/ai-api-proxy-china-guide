@@ -5,7 +5,7 @@
 ## Core
 
 - [README — How to pick and use an AI API relay in China](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/README.md): 30KB guide comparing gateways, explaining setup, and covering price, FAQ, and tool config. Key sections: how to choose, setup walkthrough, price comparison, FAQ, recommended relay (aifast.club).
-- - - [Claude Sonnet 5 Access Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/sonnet-5-guide.md): Same but for Claude Sonnet 5 — setup with Claude Code, Codex, or Cursor, comparison vs GPT-5.5.
+- [Claude Sonnet 5 Access Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/sonnet-5-guide.md): Same but for Claude Sonnet 5 — setup with Claude Code, Codex, or Cursor, comparison vs GPT-5.5.
 - [MCP Server Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/mcp-server-guide.md): Setting up MCP (Model Context Protocol) servers through relay gateways. Filesystem, GitHub, PostgreSQL, Playwright configs.
 - [Tools Integration Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/tools-integration-guide.md): Wiring relay APIs into Claude Code, Codex, Cursor, OpenClaw, Cherry Studio, Dify, and N8N — Chinese dev focused.
 - [2026 Price Crash Analysis](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/price-crash-2026.md): What the 2026 AI API price war means — DeepSeek V4, GPT-5.5, Claude Sonnet 5 price drops and how they hit relay users.

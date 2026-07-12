@@ -39,7 +39,7 @@ A complete guide for Chinese developers choosing and using AI API relay services
 
 **File:** `tools-integration-guide.md`
 
-- Claude Code: `export ANTHROPIC_BASE_URL=https://api.aifast.club/anthropic`
+- Claude Code: `export ANTHROPIC_BASE_URL=https://www.aifast.club/anthropic`
 - Codex: Set third-party provider endpoint, model, and API key
 - Cursor: Custom API endpoint configuration
 - OpenClaw: One-click relay API setup

@@ -103,7 +103,7 @@ All tools that support the OpenAI SDK can be configured to use a proxy gateway:
 
 ![API Status Dashboard](assets/img/api-status-screenshot.png)
 
-Real-time monitoring of 572 models — connection rates, latency, and China accessibility. Updated every 5 minutes.
+Real-time monitoring of 572 models — connection rates, latency, and China accessibility. Availability data is a published snapshot and may vary over time.
 
 👉 **[View Live Status](https://kkwang4444.github.io/api-status/)**
 
@@ -111,7 +111,7 @@ Real-time monitoring of 572 models — connection rates, latency, and China acce
 
 - **[API Status Monitor](https://kkwang4444.github.io/api-status/)** — Live status of 572 models
 - **[LLM API Proxy China](https://github.com/KKWANG4444/llm-api-proxy-china)** — Detailed model list and pricing
-- **[Stability Tracker](https://github.com/KKWANG4444/stability-tracker)** — 6-month stability test data
+- **[Stability Tracker](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)** — 6-month stability test data
 - **[AI Fast Club](https://www.aifast.club)** — The gateway used in examples
 
 ## License
