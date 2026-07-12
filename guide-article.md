@@ -142,6 +142,6 @@ Settings → Model Provider → 添加自定义 API，Base URL 同上。
 
 *本文由 AI Developer Community 撰写。如果你觉得有用，欢迎收藏和分享。*
 
-📊 [全球模型API稳定性看板](https://kkwang4444.github.io/api-status/) | 📈 [Claude/GPT稳定性追踪](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)
+📊 [全球模型API稳定性看板](https://kkwang4444.github.io/api-status/) | 📈 [Claude/GPT稳定性追踪](https://github.com/KKWANG4444/AI-API-Stability-Tracker)
 
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)

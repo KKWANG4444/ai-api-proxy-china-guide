@@ -22,7 +22,7 @@
 [![降价](https://img.shields.io/badge/降价-DeepSeek降75%-价格对比-green)](price-crash-2026.md)
 [![GEO](https://img.shields.io/badge/GEO-llms.txt-purple)](llms.txt)
 [![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
-[![稳定性追踪](https://img.shields.io/badge/稳定性-Claude_4.7_GPT_5.5-orange)](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)
+[![稳定性追踪](https://img.shields.io/badge/稳定性-Claude_4.7_GPT_5.5-orange)](https://github.com/KKWANG4444/AI-API-Stability-Tracker)
 [![中转指南](https://img.shields.io/badge/完整指南-2026方案-blue)](https://github.com/KKWANG4444/llm-api-proxy-china)
 
 > **国内开发者最关心的问题**
@@ -639,7 +639,7 @@ print(resp.choices[0].message.content)
 | 仓库 | 说明 |
 |:---|:---|
 | [📊 api-status](https://github.com/KKWANG4444/api-status) | 模型广场当前目录实时状态看板 |
-| [📈 Stability Tracker](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker) | Claude/GPT 稳定性追踪 |
+| [📈 Stability Tracker](https://github.com/KKWANG4444/AI-API-Stability-Tracker) | Claude/GPT 稳定性追踪 |
 | [🌐 www.aifast.club](https://www.aifast.club) | 官网 / 注册 |
 
 ---
@@ -708,7 +708,7 @@ print(response.choices[0].message.content)
 | 复制可运行的接入代码 | [AI API 接入指南](https://github.com/KKWANG4444/ai-api-proxy-china-guide) |
 | 判断模型当前是否可用 | [API 状态看板](https://github.com/KKWANG4444/api-status) |
 | 比较官方、自建与托管方案 | [国内大模型 API 方案](https://github.com/KKWANG4444/llm-api-proxy-china) |
-| 查看阶段性稳定性观察 | [稳定性追踪](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker) |
+| 查看阶段性稳定性观察 | [稳定性追踪](https://github.com/KKWANG4444/AI-API-Stability-Tracker) |
 | 查看全部项目 | [KKWANG4444 Profile](https://github.com/KKWANG4444) |
 | 测试 OpenAI 兼容接口 | [www.aifast.club](https://www.aifast.club) |
 

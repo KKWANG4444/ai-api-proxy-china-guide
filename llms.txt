@@ -31,7 +31,7 @@
 
 - [Live API status](https://kkwang4444.github.io/api-status/)
 - [LLM proxy guide](https://github.com/KKWANG4444/llm-api-proxy-china)
-- [Stability tracker](https://github.com/KKWANG4444/Claude-4.7-GPT-5.5-API-Stability-Tracker)
+- [Stability tracker](https://github.com/KKWANG4444/AI-API-Stability-Tracker)
 
 ## Canonical Service
 
