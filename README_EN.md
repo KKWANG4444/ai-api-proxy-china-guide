@@ -64,7 +64,7 @@ Test plain text first. Add streaming, tools, images and structured output separa
 
 International users can pay only with cryptocurrency. **1 AIFast balance dollar ("1 刀") = 0.07 USDC or 0.07 USDT.** Fiat payment is not available to international users. Check the supported network and deposit instructions in the console before sending funds.
 
-This conversion describes an AIFast balance unit. It is not a token market exchange rate or an official model price.
+This conversion describes an AIFast balance unit. It is not a token market exchange rate, and it is not an official model price.
 
 ## Production checklist
 

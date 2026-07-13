@@ -40,7 +40,7 @@ These examples are not an uptime promise.
 - Fiat payment is not available to international users.
 - Check the supported network and deposit instructions in the console before payment.
 
-The conversion describes an AIFast balance unit, not a token market exchange rate or an official model price.
+The conversion describes an AIFast balance unit. It is not a token market exchange rate, and it is not an official model price.
 
 ## Reliability notes
 
