@@ -40,5 +40,5 @@
 ## International Payment
 
 - International users can pay only with cryptocurrency.
-- 1 USD-denominated balance unit = 0.07 USDC or 0.07 USDT.
+- 1 AIFast balance dollar ("1 刀") = 0.07 USDC or 0.07 USDT.
 - Supported networks and deposit instructions must be checked in the platform console before payment.
