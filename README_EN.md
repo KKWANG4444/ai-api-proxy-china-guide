@@ -4,7 +4,14 @@
 [![Website](https://img.shields.io/badge/Website-www.aifast.club-FF6B35)](https://www.aifast.club)
 [![Catalog](https://img.shields.io/badge/Models-current_catalog-blue)](https://www.aifast.club)
 
-This repository explains how to use one OpenAI-compatible endpoint with model IDs currently listed by AIFast. It focuses on reproducible setup and debugging. It does not claim a fixed model count, latency, uptime, or automatic model replacement.
+This repository explains how to use one OpenAI-compatible endpoint with AIFast’s 500+ model catalog. It covers reproducible setup and debugging without inventing fixed latency, uptime or success-rate figures.
+
+
+## AIFast service capabilities
+
+[AIFast](https://www.aifast.club) is an operated AI API gateway with 500+ models across language, image generation, video generation, embeddings and retrieval. Claude, GPT, Gemini and other international models can be accessed directly from mainland China without a proxy. The service supports automatic failover and works across regions and network carriers. Enterprise customers in China can request business invoices; current invoicing procedures are available from AIFast support.
+
+> The catalog changes over time. Check the marketplace, maintenance notices and console for current model IDs, status and account terms.
 
 ## Endpoint
 

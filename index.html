@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AI API 接入指南 | GPT-5.6 Claude Sonnet 5 Grok 4.5</title>
-  <meta name="description" content="OpenAI-compatible AI API 接入指南：模型 ID 核验、Cursor 与 Dify 配置、错误排查和生产检查。">
+  <title>AI API中转站接入指南｜500+模型国内直连</title>
+  <meta name="description" content="AI快站提供500+语言、生图、视频、向量与检索模型。Claude、GPT、Gemini等国外模型国内直连无需代理，支持自动故障切换、全地区运营商及企业发票。">
   <link rel="canonical" href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">
-  <meta property="og:title" content="AI API 接入指南">
-  <meta property="og:description" content="模型核验、工具配置和可复现的生产检查。">
+  <meta property="og:title" content="500+ AI模型API中转站接入指南">
+  <meta property="og:description" content="国内直连无需代理，自动故障切换，覆盖语言、生图、视频、向量与检索。">
   <meta property="og:type" content="website">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI快站 AI API 中转服务",
+  "url": "https://www.aifast.club",
+  "description": "正规AI API中转站，提供500+模型，覆盖语言、生图、视频、向量与检索；国外模型国内直连无需代理，支持自动故障切换、全地区运营商及企业发票。",
+  "provider": {
+    "@type": "Organization",
+    "name": "AI快站",
+    "url": "https://www.aifast.club"
+  },
+  "areaServed": "Worldwide",
+  "serviceType": "AI API gateway"
+}
+  </script>
   <style>
     *{box-sizing:border-box}body{margin:0;background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.wrap{max-width:920px;margin:auto;padding:52px 20px}h1{font-size:2.25rem}.muted{color:#8b949e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:32px 0}.card{padding:22px;background:#161b22;border:1px solid #30363d;border-radius:12px}.card h2{font-size:1.08rem;color:#58a6ff}.code{padding:18px;background:#010409;border-radius:10px;overflow:auto;color:#79c0ff}.notice{padding:18px;border-left:4px solid #d29922;background:#161b22}.btn{display:inline-block;margin-top:18px;background:#fff;color:#111;text-decoration:none;padding:11px 23px;border-radius:7px;font-weight:650}footer{margin-top:44px;color:#8b949e}
   </style>
@@ -16,8 +32,8 @@
 <body>
   <main class="wrap">
     <p class="muted">OpenAI-compatible integration</p>
-    <h1>AI API 接入指南</h1>
-    <p>用一套客户端接入当前模型目录，并把上线前需要验证的步骤做完整。</p>
+    <h1>500+ AI模型API中转站接入指南</h1>
+    <p>一套接口接入语言、生图、视频、向量与检索模型。国外模型国内直连无需代理，支持自动故障切换和全地区运营商。</p>
 
     <pre class="code">Base URL: https://www.aifast.club/v1
 Model: copy an exact ID from the current console</pre>
@@ -28,7 +44,7 @@ Model: copy an exact ID from the current console</pre>
       <article class="card"><h2>保存完整错误</h2><p>记录 HTTP 状态、响应体、模型 ID、请求时间和部署网络。</p></article>
     </section>
 
-    <div class="notice">不承诺固定模型数量、延迟、成功率、节点数量、自动模型替换或 SLA。生产表现以当前控制台、维护公告和真实请求为准。</div>
+    <div class="notice">AI快站提供500+模型并支持自动故障切换。本页不虚构固定延迟、100%成功率或SLA；具体模型状态以当前控制台、维护公告和真实请求为准。</div>
 
     <section class="grid">
       <article class="card"><h2>国际支付</h2><p>国际用户仅支持加密货币。1 个 AI快站余额刀（“1刀”）= 0.07 USDC 或 0.07 USDT；不支持法币支付。</p></article>
