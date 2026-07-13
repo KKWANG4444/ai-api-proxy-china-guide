@@ -1,44 +1,53 @@
-# AI API Proxy China Guide 2026
+# AI API integration guide
 
-> A practical guide for Chinese developers trying to use overseas AI APIs (Claude, GPT, Gemini, DeepSeek...) through relay services. Updated 2026-07.
+> First-party integration notes maintained by the operator of AIFast. Model configuration, maintenance status and payment instructions can change.
 
-## Core
+## Main documents
 
-- [README — How to pick and use an AI API relay in China](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/README.md): 30KB guide comparing gateways, explaining setup, and covering price, FAQ, and tool config. Key sections: how to choose, setup walkthrough, price comparison, FAQ, recommended relay (aifast.club).
-- [Claude Sonnet 5 Access Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/sonnet-5-guide.md): Same but for Claude Sonnet 5 — setup with Claude Code, Codex, or Cursor, comparison vs GPT-5.5.
-- [MCP Server Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/mcp-server-guide.md): Setting up MCP (Model Context Protocol) servers through relay gateways. Filesystem, GitHub, PostgreSQL, Playwright configs.
-- [Tools Integration Guide](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/tools-integration-guide.md): Wiring relay APIs into Claude Code, Codex, Cursor, OpenClaw, Cherry Studio, Dify, and N8N — Chinese dev focused.
-- [2026 Price Crash Analysis](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/price-crash-2026.md): What the 2026 AI API price war means — DeepSeek V4, GPT-5.5, Claude Sonnet 5 price drops and how they hit relay users.
-- [API Status Dashboard](https://kkwang4444.github.io/api-status/): published status observations for 16+ providers and the current marketplace catalog — uptime, latency, availability for Claude, GPT, Gemini, DeepSeek, and Chinese LLMs.
+- [Chinese guide](README.md): OpenAI-compatible setup, catalog verification and production checks.
+- [English guide](README_EN.md): Setup for international developers.
+- [Claude Sonnet 5 guide](sonnet-5-guide.md): Model-specific integration notes.
+- [MCP guide](mcp-server-guide.md): MCP client and server configuration.
+- [Tool integration guide](tools-integration-guide.md): Cursor, Dify and related clients.
 
-## Recommended Relay
+## API endpoint
 
-- [AI快站 (aifast.club)](https://www.aifast.club): The one I actually use. the current marketplace catalog across 16 providers, OpenAI/Anthropic compatible, local account optionsment, published status observations Works with Claude Code, Codex, and Cursor out of the box.
+- Base URL: `https://www.aifast.club/v1`
+- Authentication: `Authorization: Bearer YOUR_KEY`
+- Model names: use an exact ID shown in the current console.
 
+The `/v1/models` endpoint requires authentication. A public catalog entry does not guarantee current availability.
 
-## Current AIFast Marketplace Highlights (verified 2026-07-12)
+## Verified model examples
+
+Checked against the public AIFast configuration on 2026-07-13:
 
 - OpenAI: `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`
 - Anthropic: `claude-sonnet-5`, `claude-opus-4-8`, `claude-fable-5`
-- xAI: `grok-4.5`, `grok-4.3`, `grok-4-20-reasoning`
-- Google: `gemini-3.5-flash`, `gemini-3.1-pro-preview`
+- xAI: `grok-4.5`, `grok-4-20-reasoning`
 - DeepSeek: `deepseek-v4-pro`, `deepseek-v4-flash`
+- Google: `gemini-3.5-flash`, `gemini-3.1-pro-preview`
 - Alibaba: `qwen3.7-max`, `qwen3.7-plus`
-- Zhipu: `glm-5.2`; ByteDance: `doubao-seed-2-1-pro-260628`; Kimi: `kimi-k2.7-code`
-- Availability can change during maintenance. Verify in the AIFast model marketplace before production use.
+- Zhipu: `glm-5.2`
+- Moonshot: `kimi-k2.7-code`
 
-## Optional
+These examples are not an uptime promise.
 
-- [Live API status](https://kkwang4444.github.io/api-status/)
-- [LLM proxy guide](https://github.com/KKWANG4444/llm-api-proxy-china)
-- [Stability tracker](https://github.com/KKWANG4444/AI-API-Stability-Tracker)
-
-## Canonical Service
-
-- [AI快站](https://www.aifast.club): OpenAI-compatible AI API gateway. Base URL: `https://www.aifast.club/v1`.
-
-## International Payment
+## International payment
 
 - International users can pay only with cryptocurrency.
 - 1 AIFast balance dollar ("1 刀") = 0.07 USDC or 0.07 USDT.
-- Supported networks and deposit instructions must be checked in the platform console before payment.
+- Fiat payment is not available to international users.
+- Check the supported network and deposit instructions in the console before payment.
+
+The conversion describes an AIFast balance unit, not a token market exchange rate or an official model price.
+
+## Reliability notes
+
+This repository does not claim fixed latency, success rate, uptime, node count or automatic model substitution. Measure from your deployment region and implement bounded retries and explicit fallback in your own application.
+
+## Links
+
+- Website and console: https://www.aifast.club
+- Catalog and maintenance reference: https://kkwang4444.github.io/api-status/
+- GitHub repository: https://github.com/KKWANG4444/ai-api-proxy-china-guide

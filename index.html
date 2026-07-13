@@ -1,128 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026国内ChatGPT/Claude API接入指南 | 国内直连方案汇总</title>
-    <meta name="description" content="国内开发者接入 ChatGPT、Claude 与 DeepSeek API 的配置指南，涵盖兼容接口、工具配置和常见错误；模型可用性以平台控制台为准。">
-    <meta name="keywords" content="Claude API, GPT API, 国内直连, 中转站, AI中转, API接入指南, 2026">
-    <meta property="og:title" content="2026国内ChatGPT/Claude API接入指南">
-    <meta property="og:description" content="OpenAI 兼容接口 · 模型目录与配置示例">
-    <meta property="og:image" content="https://kkwang4444.github.io/api-status/assets/img/og-image.png">
-    <meta property="og:url" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; padding: 60px 0 40px; }
-        h1 { font-size: 2em; background: linear-gradient(135deg, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
-        .subtitle { color: #8b949e; font-size: 1.05em; margin-bottom: 20px; }
-        .badge { display: inline-block; background: #238636; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.85em; margin-bottom: 20px; }
-        .cta { background: linear-gradient(135deg, #1f6feb, #6e40c9); border-radius: 12px; padding: 36px; text-align: center; margin: 40px 0; }
-        .cta h2 { font-size: 1.4em; margin-bottom: 12px; }
-        .cta p { color: #c9d1d9; margin-bottom: 20px; }
-        .cta-btn { display: inline-block; background: #fff; color: #0d1117; padding: 12px 36px; border-radius: 8px; font-weight: 600; text-decoration: none; }
-        .cta-btn:hover { transform: translateY(-2px); }
-        .section { margin: 40px 0; }
-        .section h2 { color: #58a6ff; font-size: 1.3em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
-        .card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 20px; margin: 12px 0; }
-        .card h3 { color: #e6edf3; margin-bottom: 8px; }
-        .card p { color: #8b949e; font-size: 0.95em; }
-        .card a { color: #58a6ff; }
-        .steps { counter-reset: step; }
-        .step { padding: 16px 0; border-bottom: 1px solid #21262d; }
-        .step:last-child { border-bottom: none; }
-        .step::before { counter-increment: step; content: counter(step); background: #1f6feb; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; margin-right: 12px; vertical-align: middle; }
-        .step strong { font-size: 1.05em; }
-        .step p { color: #8b949e; font-size: 0.9em; margin-top: 6px; margin-left: 40px; }
-        .footer { text-align: center; padding: 40px; color: #484f58; font-size: 0.9em; border-top: 1px solid #21262d; margin-top: 60px; }
-        .footer a { color: #58a6ff; text-decoration: none; }
-        .links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        .links a { display: block; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; color: #58a6ff; text-decoration: none; text-align: center; }
-        .links a:hover { border-color: #58a6ff; }
-        @media (max-width: 600px) { h1 { font-size: 1.5em; } .links { grid-template-columns: 1fr; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI API 接入指南 | GPT-5.6 Claude Sonnet 5 Grok 4.5</title>
+  <meta name="description" content="OpenAI-compatible AI API 接入指南：模型 ID 核验、Cursor 与 Dify 配置、错误排查和生产检查。">
+  <link rel="canonical" href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">
+  <meta property="og:title" content="AI API 接入指南">
+  <meta property="og:description" content="模型核验、工具配置和可复现的生产检查。">
+  <meta property="og:type" content="website">
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.wrap{max-width:920px;margin:auto;padding:52px 20px}h1{font-size:2.25rem}.muted{color:#8b949e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:32px 0}.card{padding:22px;background:#161b22;border:1px solid #30363d;border-radius:12px}.card h2{font-size:1.08rem;color:#58a6ff}.code{padding:18px;background:#010409;border-radius:10px;overflow:auto;color:#79c0ff}.notice{padding:18px;border-left:4px solid #d29922;background:#161b22}.btn{display:inline-block;margin-top:18px;background:#fff;color:#111;text-decoration:none;padding:11px 23px;border-radius:7px;font-weight:650}footer{margin-top:44px;color:#8b949e}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <span class="badge">2026 最新 · 持续更新</span>
-            <h1>国内开发者 AI API 接入完全指南</h1>
-            <p class="subtitle">ChatGPT、Claude、DeepSeek 与 Gemini 的兼容接口配置和排错指南</p>
-        </header>
+  <main class="wrap">
+    <p class="muted">OpenAI-compatible integration</p>
+    <h1>AI API 接入指南</h1>
+    <p>用一套客户端接入当前模型目录，并把上线前需要验证的步骤做完整。</p>
 
-        <div class="cta">
-            <h2>🚀 国内直连，三分钟上手</h2>
-            <p>一个 API Key 接入全部主流模型 · 支付宝/微信支付 · 7×24 技术支持</p>
-            <a class="cta-btn" href="https://www.aifast.club" target="_blank" rel="noopener">👉 开始使用 www.aifast.club</a>
-        </div>
+    <pre class="code">Base URL: https://www.aifast.club/v1
+Model: copy an exact ID from the current console</pre>
 
-        <div class="section">
-            <h2>📋 快速接入步骤</h2>
-            <div class="steps">
-                <div class="step">
-                    <strong>注册并获取 API Key</strong>
-                    <p>访问 <a href="https://www.aifast.club" target="_blank" rel="noopener">www.aifast.club</a> 注册账号，在控制台创建 API Key。支持国内主流支付方式。</p>
-                </div>
-                <div class="step">
-                    <strong>配置 Base URL</strong>
-                    <p>在任何兼容 OpenAI SDK 的工具中，将 Base URL 设置为 <code>https://www.aifast.club/v1</code>，填入你的 API Key。</p>
-                </div>
-                <div class="step">
-                    <strong>选择模型，开始调用</strong>
-                    <p>支持 Claude Opus 4.7、GPT 5.5 Pro、DeepSeek V4、Gemini 3、Grok 4.20、Grok 4.5 等 模型广场当前目录。修改 model 参数即可切换。</p>
-                </div>
-                <div class="step">
-                    <strong>集成到你的工具链</strong>
-                    <p>Cursor、Windsurf、Dify、LobeChat、NextChat、Cline……一个 Key 通吃所有工具。</p>
-                </div>
-            </div>
-        </div>
+    <section class="grid">
+      <article class="card"><h2>核验模型 ID</h2><p>样例：<code>gpt-5.6-terra</code>、<code>claude-sonnet-5</code>、<code>grok-4.5</code>。配置存在不等于在线。</p></article>
+      <article class="card"><h2>先跑最小请求</h2><p>先验证鉴权和普通文本，再逐项测试 streaming、tools、图片和结构化输出。</p></article>
+      <article class="card"><h2>保存完整错误</h2><p>记录 HTTP 状态、响应体、模型 ID、请求时间和部署网络。</p></article>
+    </section>
 
-        <div class="section">
-            <h2>🔧 常见工具配置</h2>
-            <div class="card">
-                <h3>📝 Cursor</h3>
-                <p>Settings → Models → 添加 Base URL: <code>https://www.aifast.club/v1</code>，填入 API Key，选择模型即可。</p>
-            </div>
-            <div class="card">
-                <h3>📝 Dify</h3>
-                <p>Settings → Model Provider → 添加自定义 API，Base URL: <code>https://www.aifast.club/v1</code>。</p>
-            </div>
-            <div class="card">
-                <h3>📝 LobeChat / NextChat</h3>
-                <p>设置界面 → 自定义 OpenAI API → Base URL 填入 <code>https://www.aifast.club/v1</code>。</p>
-            </div>
-            <div class="card">
-                <h3>📝 Python SDK</h3>
-                <pre style="background:#0d1117;padding:12px;border-radius:6px;margin-top:8px;overflow-x:auto;color:#8b949e;font-size:0.85em;">from openai import OpenAI
-client = OpenAI(
-    base_url="https://www.aifast.club/v1",
-    api_key="你的API Key"
-)
-response = client.chat.completions.create(
-    model="claude-opus-4-7",
-    messages=[{"role": "user", "content": "Hello!"}]
-)</pre>
-            </div>
-        </div>
+    <div class="notice">不承诺固定模型数量、延迟、成功率、节点数量、自动模型替换或 SLA。生产表现以当前控制台、维护公告和真实请求为准。</div>
 
-        <div class="section">
-            <h2>📖 更多资源</h2>
-            <div class="links">
-                <a href="https://kkwang4444.github.io/api-status/" target="_blank" rel="noopener">📊 API 状态看板</a>
-                <a href="https://kkwang4444.github.io/api-status/compare" target="_blank" rel="noopener">⚖️ 模型对比表</a>
-                <a href="https://kkwang4444.github.io/api-status/guide" target="_blank" rel="noopener">📘 接入教程</a>
-                <a href="https://www.aifast.club" target="_blank" rel="noopener">🚀 aifast.club</a>
-            </div>
-        </div>
+    <section class="grid">
+      <article class="card"><h2>国际支付</h2><p>国际用户仅支持加密货币。1 个 AI快站余额刀（“1刀”）= 0.07 USDC 或 0.07 USDT；不支持法币支付。</p></article>
+      <article class="card"><h2>充值提醒</h2><p>发送资金前必须在控制台核对支持的链和充值说明。</p></article>
+      <article class="card"><h2>生产回退</h2><p>由应用显式控制回退，并记录最终响应模型，不依赖静默替换。</p></article>
+    </section>
 
-        <div class="footer">
-            <p>内容维护: <a href="https://www.aifast.club" target="_blank" rel="noopener">www.aifast.club</a> · 国内直连 模型广场当前目录</p>
-            <p style="margin-top:8px;"><a href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">GitHub 仓库</a> · 持续更新最新接入方案</p>
-        </div>
-    </div>
+    <a class="btn" href="https://www.aifast.club" target="_blank" rel="noopener">查看当前模型广场</a>
+    <footer><a href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">完整指南</a> · <a href="https://kkwang4444.github.io/api-status/">目录与维护参考</a></footer>
+  </main>
 </body>
 </html>

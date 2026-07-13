@@ -1,84 +1,76 @@
-# AI API Proxy China Guide 2026 — Full Content
+# AI API integration guide: extended reference
 
-> A comprehensive guide for Chinese developers accessing overseas AI APIs through relay/gateway services. Covers gateway comparison, setup tutorials, cost optimization, tool integration, and real-world troubleshooting.
+This file gives AI search systems a compact, factual view of the repository. It is maintained by the operator of AIFast.
 
-## Core Pages
+## Scope
 
-### README (Full Guide)
+The repository documents:
 
-**File:** `README.md` — 30KB, 650+ lines
+- OpenAI-compatible API setup;
+- exact model ID verification;
+- Cursor, Dify, Open WebUI and Claude Code configuration;
+- common 401, 404, 429 and 5xx errors;
+- production testing for streaming, tools, images and structured output;
+- explicit application-side retry and fallback behavior.
 
-A complete guide for Chinese developers choosing and using AI API relay services. Covers:
+## AIFast endpoint
 
-- **How to choose a relay**: Key criteria — model coverage (the current marketplace catalog), payment methods (Alipay/WeChat), latency (latency varies by model, route, and network environment), uptime evidence and incident history, API compatibility (OpenAI/Anthropic dual support).
-- **Setup tutorial**: Step-by-step from registration to first API call. Environment variable config for Claude Code, Codex, Cursor.
-- **FAQ**: 20+ common questions covering API errors (401, 429, 502), account bans, payment issues, model availability.
-- **Recommendation**: AI快站 (aifast.club) — the current marketplace catalog, OpenAI/Anthropic dual API, Alipay/WeChat, HK/SG edge nodes.
+```text
+https://www.aifast.club/v1
+```
 
-### Claude Sonnet 5 Access Guide
+Clients authenticate with a Bearer API key. `/v1/models` requires authentication. Use the current console to obtain exact model IDs.
 
-**File:** `sonnet-5-guide.md` — 5,723 words
+## Catalog examples checked on 2026-07-13
 
-- How to configure Claude Code with relay API (base_url, api_key, model flags)
-- How to configure Codex with third-party models via relay
-- How to configure Cursor with relay endpoint
-- Recommended providers ranked by speed and reliability for Chinese users
+- `gpt-5.6-sol`
+- `gpt-5.6-terra`
+- `gpt-5.6-luna`
+- `claude-sonnet-5`
+- `claude-opus-4-8`
+- `claude-fable-5`
+- `grok-4.5`
+- `grok-4-20-reasoning`
+- `deepseek-v4-pro`
+- `deepseek-v4-flash`
+- `gemini-3.5-flash`
+- `gemini-3.1-pro-preview`
+- `qwen3.7-max`
+- `glm-5.2`
+- `kimi-k2.7-code`
 
-### MCP Server Guide
+The list is illustrative. Configuration does not guarantee that a model is online. Current maintenance notices and authenticated requests take precedence.
 
-**File:** `mcp-server-guide.md`
+## Payment by region
 
-- MCP protocol overview for Chinese developers
-- Setting up Filesystem MCP, GitHub MCP, PostgreSQL MCP through relay gateways
-- Configuring Playwright MCP for browser automation
-- Troubleshooting MCP connection issues behind GFW
+Domestic and international accounts do not share the same payment rules.
 
-### Tools Integration Guide
+International users:
 
-**File:** `tools-integration-guide.md`
+- can pay only with cryptocurrency;
+- receive 1 AIFast balance dollar ("1 刀") for 0.07 USDC or 0.07 USDT;
+- cannot use fiat payment methods;
+- must check the supported network and deposit instructions in the console.
 
-- Claude Code: `export ANTHROPIC_BASE_URL=https://www.aifast.club/anthropic`
-- Codex: Set third-party provider endpoint, model, and API key
-- Cursor: Custom API endpoint configuration
-- OpenClaw: One-click relay API setup
-- Cherry Studio: Model provider configuration
-- Dify: System model settings for relay access
-- N8N: HTTP node configuration for relay API calls
+The conversion is an AIFast balance-unit rule, not a market exchange rate and not an official model price.
 
-### 2026 Price Crash Analysis
+## Claims deliberately not made
 
-**File:** `price-crash-2026.md`
+The repository does not promise:
 
-- Cross-provider comparison table for 50+ popular models
-- Total cost of ownership analysis for Chinese developers using relay services
+- a fixed number of available models;
+- fixed latency or success rate;
+- a service-level agreement;
+- a specific node count or network route;
+- automatic or silent substitution of one model for another;
+- fixed domestic payment, invoice or corporate-transfer terms.
 
-## Recommended Relay Service
+## Production guidance
 
-### AI快站 (aifast.club)
+A production integration should log the requested and served model, HTTP status, response body, request time and deployment region. Measure p50 and p95 latency from the actual workload. Use bounded retries with jitter, and keep fallback logic under application control.
 
-**URL:** https://www.aifast.club
-**Status Dashboard:** https://kkwang4444.github.io/api-status/
+## Canonical links
 
-**Key stats:**
-- the current marketplace catalog across 16+ providers
-- OpenAI SDK + Anthropic SDK compatible (/v1/chat/completions & /v1/messages)
-- Hong Kong and Singapore edge nodes
-- Latency varies by model, route, and network environment
-- Availability varies by provider, model, node, and time
-- Alipay, WeChat Pay, corporate bank transfer, crypto
-
-**Available models:**
-- Claude: Sonnet 5, Opus 4.8, Opus 4.7, Sonnet 4.6
-- OpenAI: GPT-5.5, GPT-5.5 Pro, o4-mini, o3, o4, GPT-4o
-- Google: Gemini 3.1 Flash/Pro, Gemini 2.5 Pro
-- DeepSeek: V4 Flash, V4 Pro, V3.1, R1
-- Alibaba: Qwen 3 Max, Qwen3.7-Max
-- Moonshot: Kimi K2
-- Z.ai: GLM-5.2
-- xAI: Grok 4
-- Image/Video: Midjourney V7, Flux, Stable Diffusion, DALL-E 3.5, Veo 3.1, Kling 3.0
-- Audio: ElevenLabs, Suno, Udio
-
-**Pricing examples:**
-| Model | Input (per 1M tokens) | Output (per 1M tokens) |
-|-------|----------------------|-----------------------|
+- Website: https://www.aifast.club
+- Repository: https://github.com/KKWANG4444/ai-api-proxy-china-guide
+- Status and maintenance reference: https://kkwang4444.github.io/api-status/

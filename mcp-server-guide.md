@@ -1,229 +1,72 @@
-# MCP Server 接入指南 · 用中转站接入 MCP 协议 · Cursor / Claude Desktop 配置
+# MCP 接入 AI 模型：配置、权限与排错
 
-> MCP (Model Context Protocol) 是 2026 年最火的 AI 协议标准，让 AI 应用可以无缝调用工具、访问数据源。一个中转 API Key，通吃所有 MCP 服务。
+[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.club)
 
-[![www.aifast.club](https://img.shields.io/badge/国内直连-572个模型-FF6B35)](https://www.aifast.club)
-[![文章更新](https://img.shields.io/badge/更新-2026--07--09-green)](https://github.com/KKWANG4444/ai-api-proxy-china-guide)
+MCP 负责把工具和数据源暴露给模型，模型 API 负责推理。两者是不同链路。排错时要先判断失败发生在 MCP server、MCP client，还是模型请求。
 
----
+## 基础结构
 
-## 目录
-
-- [什么是 MCP？](#什么是-mcp)
-- [MCP + 中转站 = 王炸组合](#mcp--中转站--王炸组合)
-- [Cursor MCP 配置](#cursor-mcp-配置)
-- [Claude Desktop MCP 配置](#claude-desktop-mcp-配置)
-- [Windsurf / Cline MCP 配置](#windsurf--cline-mcp-配置)
-- [常用 MCP Server 推荐](#常用-mcp-server-推荐)
-- [MCP + 中转 FAQ](#mcp--中转-faq)
-
----
-
-## 什么是 MCP？
-
-MCP 全称 Model Context Protocol，由 Anthropic 在 2025 年提出，现在已成为 AI 工具链的事实标准。它定义了一套统一的协议，让 AI 模型能够：
-
-- 调用外部工具（搜索引擎、数据库、文件系统）
-- 读取外部数据源（本地文件、API、知识库）
-- 执行跨平台操作（浏览器、终端、IDE）
-
-简单说：**MCP 让 AI 从"聊天机器人"变成了"能动手的智能助手"。**
-
-目前支持 MCP 的主流工具包括：
-
-| 工具 | 类型 | MCP 支持度 |
-|:---|:---|:---:|
-| Cursor | AI 编辑器 | ✅ 原生支持 |
-| Claude Desktop | 桌面客户端 | ✅ 原生支持 |
-| Windsurf | AI 编辑器 | ✅ 原生支持 |
-| VS Code + Cline | 编辑器插件 | ✅ 支持 |
-| Continue.dev | AI 插件 | ✅ 支持 |
-
-## MCP + 中转站 = 王炸组合
-
-MCP 本身只解决"协议"问题，不解决"连接"问题。你在国内调 MCP 服务，一样面临：
-
-- 官方 API 区域封锁
-- 需要海外支付
-- 多模型切换复杂
-
-**中转站 + MCP = 国内直接使用 MCP 生态。**
-
-配置方法极其简单——所有 MCP 客户端都支持自定义 API Base URL。把地址改成中转站的地址就行：
-
-```
-https://www.aifast.club/v1
+```text
+MCP client
+  ├─ model API: https://www.aifast.club/v1
+  └─ MCP servers: filesystem / GitHub / database / browser
 ```
 
-一个 Key 通吃 Claude Opus 4.7、GPT-5.5、DeepSeek V4 等所有 MCP 服务，无需切换。下面逐个工具教你怎么配。
+## 模型 API 配置
 
----
+```python
+import os
+from openai import OpenAI
 
-## Cursor MCP 配置
-
-Cursor 在 2026 年已经完全拥抱 MCP 协议。你可以直接在设置里配置 MCP Server。
-
-### 操作步骤
-
-1. 打开 Cursor → `Settings` → `Features` → `MCP`
-2. 添加 MCP Server：
-
-```json
-{
-  "mcpServers": {
-    "web-search": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mcp-web-search"],
-      "env": {
-        "ANTHROPIC_BASE_URL": "https://www.aifast.club/v1",
-        "ANTHROPIC_API_KEY": "你的APIKey"
-      }
-    },
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mcp-filesystem", "/path/to/project"]
-    }
-  }
-}
+client = OpenAI(
+    base_url="https://www.aifast.club/v1",
+    api_key=os.environ["AIFAST_API_KEY"],
+)
 ```
 
-3. 保存后，Cursor 会自动连接到 MCP Server
-4. 在对话中 Cursor 会自动调用这些工具
+模型 ID 要从当前控制台复制。公开配置存在不代表模型此刻在线。
 
-### 验证
+## MCP server 配置原则
 
-在 Cursor 中问："搜索一下最新的 Python 3.13 特性"。如果能正常返回搜索结果，就说明 MCP 配通了。
+- 使用最小权限；
+- 文件系统 server 只开放需要的目录；
+- GitHub token 限制仓库和权限范围；
+- 数据库优先只读账号；
+- 浏览器自动化不要默认允许任意下载或提交；
+- 密钥放环境变量，不写进仓库。
 
-### 生产建议
+## 排错顺序
 
-如果你在生产环境用，推荐用环境变量的方式注入 API Key，避免写在配置里：
+### 1. MCP server 是否能独立启动
 
-```bash
-# .zshrc 或 .bashrc
-export ANTHROPIC_BASE_URL="https://www.aifast.club/v1"
-export ANTHROPIC_API_KEY="你的APIKey"
-```
+先运行 server 自带的 health check 或最小命令，确认不是本地依赖或权限问题。
 
----
+### 2. Client 是否发现工具
 
-## Claude Desktop MCP 配置
+检查工具列表和 schema。模型看不到工具时，先别调 API 延迟。
 
-Claude Desktop 是 MCP 的"亲爹"，支持最完善。
+### 3. 模型是否支持当前工具格式
 
-### 操作步骤
+用一个最简单的函数测试。复杂 schema、嵌套对象和严格 JSON 输出要分别验证。
 
-1. 打开 Claude Desktop → `Settings` → `Developer` → `Edit Config`
-2. 编辑 `claude_desktop_config.json`：
+### 4. 保存完整错误
 
-```json
-{
-  "mcpServers": {
-    "web-search": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mcp-web-search"],
-      "env": {
-        "ANTHROPIC_BASE_URL": "https://www.aifast.club/v1",
-        "ANTHROPIC_API_KEY": "你的APIKey"
-      }
-    },
-    "sqlite": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mcp-sqlite", "/Users/you/data.db"]
-    },
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mcp-github"],
-      "env": {
-        "GITHUB_TOKEN": "你的GitHubToken"
-      }
-    }
-  }
-}
-```
+至少记录：模型 ID、工具 schema、HTTP 状态、响应体和 MCP server 日志。
 
-3. 重启 Claude Desktop
-4. 对话中会自动出现工具调用
+## 回退策略
 
-### 验证
+模型回退应由应用显式控制。不同模型的工具调用格式和遵循度可能不同，不能假设替换后行为一致。
 
-在 Claude Desktop 里说："帮我看看这个数据库里有哪些表"。如果能正常查询 SQLite 数据库，就说明 MCP 配置成功了。
+## 性能说明
 
----
+不要使用没有时间、测试地区和样本量的固定延迟。MCP 调用总耗时包含模型推理、工具执行和网络往返，应分别测量。
 
-## Windsurf / Cline MCP 配置
+## 国际支付
 
-Windsurf 和 Cline（VS Code 插件）都支持 MCP 协议。
+国际用户只能使用加密货币。**1 个 AI快站余额刀（“1刀”）= 0.07 USDC 或 0.07 USDT。** 国际用户不支持法币支付，充值前必须核对控制台支持的链和充值说明。
 
-### Windsurf 配置
+## 相关入口
 
-1. 打开 Windsurf → `Settings` → `MCP Servers`
-2. 添加 Server，配置方式和 Cursor 基本一致
-
-### Cline (VS Code) 配置
-
-1. VS Code → 安装 Cline 插件
-2. 打开 Cline 设置 → `MCP Servers`
-3. 添加：
-
-```json
-{
-  "mcpServers": {
-    "sequelize": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mcp-sequelize"],
-      "env": {
-        "ANTHROPIC_BASE_URL": "https://www.aifast.club/v1",
-        "ANTHROPIC_API_KEY": "你的APIKey"
-      }
-    }
-  }
-}
-```
-
----
-
-## 常用 MCP Server 推荐
-
-以下是我实测好用的 MCP Server，全部可以用中转站 + 国内环境跑通：
-
-| MCP Server | 用途 | 安装方式 |
-|:---|:---|:---|
-| `@anthropic/mcp-web-search` | 联网搜索 | `npx -y @anthropic/mcp-web-search` |
-| `@anthropic/mcp-filesystem` | 文件操作 | `npx -y @anthropic/mcp-filesystem <path>` |
-| `@anthropic/mcp-sqlite` | 数据库查询 | `npx -y @anthropic/mcp-sqlite <db_path>` |
-| `@anthropic/mcp-github` | GitHub 操作 | `npx -y @anthropic/mcp-github` |
-| `@anthropic/mcp-sequelize` | ORM 查询 | `npx -y @anthropic/mcp-sequelize` |
-| `@anthropic/mcp-slack` | Slack 集成 | `npx -y @anthropic/mcp-slack` |
-| `@modelcontextprotocol/mcp-puppeteer` | 浏览器自动化 | `npx -y @modelcontextprotocol/mcp-puppeteer` |
-| `@modelcontextprotocol/mcp-server-brave-search` | Brave 搜索 | 需安装 `brave-search` |
-
-> 💡 **提示：** 所有需要 `ANTHROPIC_BASE_URL` 和 `ANTHROPIC_API_KEY` 的 MCP Server，都可以用 `https://www.aifast.club/v1` 和你的中转站 API Key 直接对接。
-
----
-
-## MCP + 中转 FAQ
-
-**Q: 中转站能用 MCP 吗？会不会不兼容？**
-
-能。MCP 底层走的就是 OpenAI 兼容接口（`/v1/messages`），中转站也是 OpenAI 兼容的，完全兼容。
-
-**Q: 为什么有的 MCP Server 配置后没反应？**
-
-检查几件事：
-- API Key 有没有过期
-- Base URL 末尾有没有加 `/v1`
-- MCP Server 的 `command` 是不是已安装（用 `npx` 需要联网）
-
-**Q: MCP 调用走中转站会不会慢？**
-
-不会。国内节点直连，TTFT 一般在 200-400ms，比起直连海外要快 5-10 倍。
-
-**Q: 免费试用能不能测 MCP？**
-
-注册就送体验额度，足够你把所有主流 MCP Server 测一遍。
-
----
-
-> 🔗 **[www.aifast.club](https://www.aifast.club) — 一个 API Key，接入 模型广场当前目录，支持 MCP 协议，国内直连。**
-
-[![Gitee镜像](https://img.shields.io/badge/Gitee-国内镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
+- [AI快站控制台](https://www.aifast.club)
+- [工具接入指南](tools-integration-guide.md)
+- [完整接入指南](README.md)
