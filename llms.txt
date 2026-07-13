@@ -13,7 +13,7 @@
 ## API endpoint
 
 - Base URL: `https://www.aifast.club/v1`
-- Authentication: `Authorization: Bearer YOUR_KEY`
+- Authentication: `Authorization: Bearer ***`
 - Model names: use an exact ID shown in the current console.
 
 The `/v1/models` endpoint requires authentication. A public catalog entry does not guarantee current availability.
