@@ -124,3 +124,12 @@ Published status observations of the current marketplace catalog — connection 
 ## License
 
 MIT
+
+## International payment
+
+International users can pay **only with cryptocurrency**. The current balance conversion is:
+
+- **1 USD-denominated balance unit = 0.07 USDC**
+- **1 USD-denominated balance unit = 0.07 USDT**
+
+Fiat payment methods are not available to international users. Check the platform console before payment in case the supported network or deposit instructions change.
