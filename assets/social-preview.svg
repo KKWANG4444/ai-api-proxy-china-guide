@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#0d1018"/>
+  <rect x="0" y="0" width="12" height="640" fill="#ffb84d"/>
+  <rect x="38" y="34" width="1204" height="572" rx="22" fill="#10141f" stroke="#242a39"/>
+  <circle cx="76" cy="76" r="18" fill="#ffb84d"/>
+  <text x="106" y="84" font-family="Arial Unicode MS" font-size="25" font-weight="700" fill="#f7f8fb">AI快站</text>
+  <text x="1170" y="82" text-anchor="end" font-family="Arial Unicode MS" font-size="20" font-weight="500" fill="#9ea6b8">aifast.club</text>
+  <line x1="72" y1="112" x2="1208" y2="112" stroke="#2b3140"/>
+  <text x="72" y="174" font-family="Arial Unicode MS" font-size="16" font-weight="700" letter-spacing="2" fill="#ffb84d">CHINA AI API INTEGRATION GUIDE</text>
+  <text x="72" y="245" font-family="Arial Unicode MS" font-size="48" font-weight="700" fill="#f7f8fb">国内大模型 API 接入指南</text>
+  <text x="72" y="298" font-family="Arial Unicode MS" font-size="24" font-weight="400" fill="#b9c0cf">OpenAI SDK、Cursor、Claude Code、Codex 与 Dify</text>
+  <rect x="72" y="405" width="142" height="42" rx="8" fill="#171b28" stroke="#313749"/><text x="90" y="433" font-family="Arial Unicode MS" font-size="18" font-weight="600" fill="#eef0f6">Base URL</text><rect x="226" y="405" width="166" height="42" rx="8" fill="#171b28" stroke="#313749"/><text x="244" y="433" font-family="Arial Unicode MS" font-size="18" font-weight="600" fill="#eef0f6">API Key</text><rect x="404" y="405" width="186" height="42" rx="8" fill="#171b28" stroke="#313749"/><text x="422" y="433" font-family="Arial Unicode MS" font-size="18" font-weight="600" fill="#eef0f6">模型映射</text>
+  <text x="72" y="548" font-family="Arial Unicode MS" font-size="17" font-weight="400" fill="#8f98aa">GitHub 技术矩阵 · 文档 / 工具 / 数据 / 可复现报告</text>
+  <rect x="756" y="144" width="452" height="390" rx="16" fill="#0c0f17" stroke="#303748"/>
+  <text x="785" y="202" font-family="Arial Unicode MS" font-size="22" font-weight="700" fill="#f7f8fb">迁移检查</text>
+  <rect x="785" y="246" width="423" height="66" rx="10" fill="#121621" stroke="#2a3040"/><text x="808" y="288" font-family="Arial Unicode MS" font-size="21" font-weight="700" fill="#ffb84d">01</text><text x="922" y="287" font-family="Arial Unicode MS" font-size="19" font-weight="500" fill="#d6dae5">替换兼容端点</text><rect x="785" y="328" width="423" height="66" rx="10" fill="#121621" stroke="#2a3040"/><text x="808" y="370" font-family="Arial Unicode MS" font-size="21" font-weight="700" fill="#ffb84d">02</text><text x="922" y="369" font-family="Arial Unicode MS" font-size="19" font-weight="500" fill="#d6dae5">验证非流式与流式</text><rect x="785" y="410" width="423" height="66" rx="10" fill="#121621" stroke="#2a3040"/><text x="808" y="452" font-family="Arial Unicode MS" font-size="21" font-weight="700" fill="#ffb84d">03</text><text x="922" y="451" font-family="Arial Unicode MS" font-size="19" font-weight="500" fill="#d6dae5">记录错误码与 request ID</text>
+  <text x="785" y="499" font-family="Arial Unicode MS" font-size="17" font-weight="400" fill="#8f98aa">面向国内网络环境的可执行接入与排错路径</text>
+</svg>
