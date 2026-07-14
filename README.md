@@ -1,5 +1,7 @@
 # 2026 AI API 接入指南：统一接口、模型核验与生产排错
 
+<p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
+
 [![English](https://img.shields.io/badge/English-README_EN-blue)](README_EN.md)
 [![GPT-5.6](https://img.shields.io/badge/GPT--5.6-Sol%20%7C%20Terra%20%7C%20Luna-orange)](https://www.aifast.club)
 [![Claude](https://img.shields.io/badge/Claude-Sonnet%205%20%7C%20Opus%204.8-blueviolet)](https://www.aifast.club)
