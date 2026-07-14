@@ -8,7 +8,7 @@
 
 这份指南面向需要在一个项目里使用多个模型的开发者。AI快站当前提供500+模型，本文同时把接入、验证和排错流程讲清楚，不使用无法复现的延迟数字。
 
-**先验证再改客户端：** [运行AIFast API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools)，一条命令检查鉴权、模型列表、聊天请求及常见HTTP错误。验证通过后可[创建AI快站账户](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-readme-cn)。
+**先验证再改客户端：** [运行AIFast API Doctor](https://gitee.com/kkwwww4444/llm-api-proxy-china/raw/main/tools/aifast_api_doctor.py)，一条命令检查鉴权、模型列表、聊天请求及常见HTTP错误。验证通过后可[创建AI快站账户](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-readme-cn)。
 
 > **按任务进入：** [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
