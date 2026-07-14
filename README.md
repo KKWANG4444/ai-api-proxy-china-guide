@@ -10,6 +10,8 @@
 
 **先验证再改客户端：** [运行AIFast API Doctor](https://gitee.com/kkwwww4444/llm-api-proxy-china/raw/main/tools/aifast_api_doctor.py)，一条命令检查鉴权、模型列表、聊天请求及常见HTTP错误。验证通过后可[创建AI快站账户](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-readme-cn)。
 
+**先检查现有中转站：** [运行模型检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-cn)，用临时限额Key检查模型声明、Token、动态题、SSE和工具调用。报告用于兼容性与风险筛查，不是模型厂商认证。
+
 > **按任务进入：** [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
 AI快站提供 OpenAI-compatible 接口：

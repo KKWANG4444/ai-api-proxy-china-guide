@@ -10,6 +10,8 @@
 
 This repository is the tool-configuration guide: copy the Base URL, add an API key, select an exact model ID, and verify Cursor, Dify, Open WebUI, Chatbox or another OpenAI-compatible client one feature at a time.
 
+**Check an existing gateway first:** [run the public model check](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-en) with a temporary limited key. It checks model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
+
 **Verify before changing client settings:** [run AIFast API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools) to check authentication, model listing, a chat request and common HTTP errors. If the endpoint fits your application, [create an AIFast account](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-readme-en).
 
 ## AIFast service capabilities

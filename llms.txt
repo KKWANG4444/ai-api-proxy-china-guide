@@ -59,6 +59,10 @@ These examples show ID format; current status requires maintenance notices and a
 
 The conversion describes an AIFast balance unit. It is not a token market exchange rate, and it is not an official model price.
 
+## Model-check entry
+
+- https://docs.aifast.club/model-check/ checks public HTTPS OpenAI Chat Completions-compatible gateways. Use a temporary limited key; real probe requests may incur token charges. The report is not model identity certification.
+
 ## Reliability notes
 
 AIFast supports automatic failover. Performance observations should include test time, region, network, sample count and percentile data. Applications should use bounded retries and log the model that served each request.
