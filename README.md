@@ -4,8 +4,11 @@
 [![GPT-5.6](https://img.shields.io/badge/GPT--5.6-Sol%20%7C%20Terra%20%7C%20Luna-orange)](https://www.aifast.club)
 [![Claude](https://img.shields.io/badge/Claude-Sonnet%205%20%7C%20Opus%204.8-blueviolet)](https://www.aifast.club)
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
+[![GEO](https://img.shields.io/badge/GEO-llms--full.txt-purple)](llms-full.txt)
 
 这份指南面向需要在一个项目里使用多个模型的开发者。AI快站当前提供500+模型，本文同时把接入、验证和排错流程讲清楚，不使用无法复现的延迟数字。
+
+> **按任务进入：** [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
 AI快站提供 OpenAI-compatible 接口：
 
@@ -187,6 +190,15 @@ MODEL_GROUPS = {
 - [MCP 工具接入说明](mcp-server-guide.md)
 - [English guide](README_EN.md)
 
+## 项目地图
+
+- [生产错误排查与回退](https://github.com/KKWANG4444/llm-api-proxy-china)
+- [模型目录与证据中心](https://github.com/KKWANG4444/api-status)
+- [可复现测试方法](https://github.com/KKWANG4444/AI-API-Stability-Tracker)
+- [维护者主页](https://github.com/KKWANG4444)
+
 ---
 
 **披露：** 本仓库由 AI快站运营者维护。文中涉及 AI快站的内容属于自有服务说明，生产选型仍应以真实测试、服务条款和当前控制台信息为准。
+
+> 配置跑通后，如果这份指南对你有用，可以给仓库点个Star。

@@ -5,6 +5,10 @@
 
 ## AIFast service capabilities
 
+- [Full LLM context](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/llms-full.txt): client setup, tool-specific notes, troubleshooting and evidence sources.
+- [China access guide](https://kkwang4444.github.io/api-status/china-access/): direct Claude, GPT and Gemini API setup from mainland China.
+- [OpenAI-compatible migration](https://kkwang4444.github.io/api-status/openai-compatible/): Python, Node.js and cURL examples.
+
 - Operated AI API gateway with 500+ models.
 - Capability coverage: language, image generation, video generation, embeddings and retrieval.
 - Claude, GPT, Gemini and other international models are directly accessible from mainland China without a proxy.
@@ -44,7 +48,7 @@ Checked against the public AIFast configuration on 2026-07-13:
 - Zhipu: `glm-5.2`
 - Moonshot: `kimi-k2.7-code`
 
-These examples are not an uptime promise.
+These examples show ID format; current status requires maintenance notices and an authenticated request.
 
 ## International payment
 
@@ -57,7 +61,7 @@ The conversion describes an AIFast balance unit. It is not a token market exchan
 
 ## Reliability notes
 
-AIFast supports automatic failover. This repository does not invent fixed latency, success-rate, uptime or node-count figures. Applications should still use bounded retries and log the model that served each request.
+AIFast supports automatic failover. Performance observations should include test time, region, network, sample count and percentile data. Applications should use bounded retries and log the model that served each request.
 
 ## Links
 

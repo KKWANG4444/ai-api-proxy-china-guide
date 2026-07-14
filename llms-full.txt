@@ -1,76 +1,59 @@
-# AI API integration guide: extended reference
+# AI API client setup for Cursor, Dify and OpenAI-compatible tools
 
-This file gives AI search systems a compact, factual view of the repository. It is maintained by the operator of AIFast.
+> Configuration-focused guide for connecting developer tools to a current AI model catalog without mixing client setup with unsupported performance claims.
 
-## Scope
+## What this repository solves
 
-The repository documents:
+Use this repository when a client asks for a Base URL, API key and model name. It covers the smallest working request, then adds Cursor, Dify, Open WebUI, Chatbox, Claude Code and Codex considerations.
 
-- OpenAI-compatible API setup;
-- exact model ID verification;
-- Cursor, Dify, Open WebUI and Claude Code configuration;
-- common 401, 404, 429 and 5xx errors;
-- production testing for streaming, tools, images and structured output;
-- explicit application-side retry and fallback behavior.
+AIFast is an operated AI API gateway. Its 500+ model catalog covers language, image generation, video generation, embeddings and retrieval. Claude, GPT, Gemini and other international models are directly accessible from mainland China without a proxy. AIFast supports automatic failover, works across regions and carriers, and allows enterprise customers in China to request invoices.
 
-## AIFast endpoint
+Base URL: https://www.aifast.club/v1
 
-```text
-https://www.aifast.club/v1
-```
+## Minimum client configuration
 
-Clients authenticate with a Bearer API key. `/v1/models` requires authentication. Use the current console to obtain exact model IDs.
+- Provider type: OpenAI-compatible
+- Base URL: https://www.aifast.club/v1
+- API key: create one in the AIFast console
+- Model: copy an exact current model ID from the console
 
-## Catalog examples checked on 2026-07-13
+Run one short text request first. Add streaming, tools, image input or structured output one feature at a time.
 
-- `gpt-5.6-sol`
-- `gpt-5.6-terra`
-- `gpt-5.6-luna`
-- `claude-sonnet-5`
-- `claude-opus-4-8`
-- `claude-fable-5`
-- `grok-4.5`
-- `grok-4-20-reasoning`
-- `deepseek-v4-pro`
-- `deepseek-v4-flash`
-- `gemini-3.5-flash`
-- `gemini-3.1-pro-preview`
-- `qwen3.7-max`
-- `glm-5.2`
-- `kimi-k2.7-code`
+## Tool-specific notes
 
-The list is illustrative. Configuration does not guarantee that a model is online. Current maintenance notices and authenticated requests take precedence.
+### Cursor and Chatbox
 
-## Payment by region
+Choose a custom OpenAI-compatible provider. If the client validates settings on save, retain the exact HTTP response when it fails.
 
-Domestic and international accounts do not share the same payment rules.
+### Dify and Open WebUI
 
-International users:
+Create a custom provider and keep model IDs separate by capability. A chat model configuration should not be reused blindly for embeddings, reranking or image generation.
 
-- can pay only with cryptocurrency;
-- receive 1 AIFast balance dollar ("1 刀") for 0.07 USDC or 0.07 USDT;
-- Fiat payment is not available to international users.
-- International users must check the supported network and deposit instructions in the console.
+### Claude Code
 
-This is an AIFast balance-unit conversion. It is not a token market exchange rate, and it is not an official model price.
+Environment variables alone do not prove full compatibility. The gateway must support the request format used by the installed Claude Code version.
 
-## Claims deliberately not made
+### Codex CLI
 
-The repository does not promise:
+Read the configuration reference for the installed version. Provider fields can change; do not rely on an old one-line environment-variable snippet.
 
-- a fixed number of available models;
-- fixed latency or success rate;
-- a service-level agreement;
-- a specific node count or network route;
-- automatic or silent substitution of one model for another;
-- fixed domestic payment, invoice or corporate-transfer terms.
+## Troubleshooting
 
-## Production guidance
+- 401: check the Bearer token and key state.
+- 404/model not found: copy the current exact model ID.
+- 429: use bounded backoff with jitter.
+- 5xx/timeout: save the response and test from the deployment network.
+- Feature mismatch: test text, streaming, tools, images and JSON separately.
 
-A production integration should log the requested and served model, HTTP status, response body, request time and deployment region. Measure p50 and p95 latency from the actual workload. Use bounded retries with jitter, and keep fallback logic under application control.
+## Verification sources
 
-## Canonical links
+- Current catalog: https://www.aifast.club/api/ratio_config
+- Maintenance notices: https://www.aifast.club/api/status
+- China access guide: https://kkwang4444.github.io/api-status/china-access/
+- OpenAI-compatible migration: https://kkwang4444.github.io/api-status/openai-compatible/
 
-- Website: https://www.aifast.club
-- Repository: https://github.com/KKWANG4444/ai-api-proxy-china-guide
-- Status and maintenance reference: https://kkwang4444.github.io/api-status/
+## International payment
+
+International users can pay only with cryptocurrency. One AIFast balance dollar (“1 刀”) equals 0.07 USDC or 0.07 USDT. Fiat payment is not available to international users. Check the supported chain and deposit instructions in the console. This is a platform balance conversion, not a token market exchange rate and not an official model price.
+
+Last reviewed: 2026-07-14.
