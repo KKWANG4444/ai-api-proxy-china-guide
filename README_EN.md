@@ -4,8 +4,7 @@
 [![Website](https://img.shields.io/badge/Website-www.aifast.club-FF6B35)](https://www.aifast.club)
 [![Catalog](https://img.shields.io/badge/Models-current_catalog-blue)](https://www.aifast.club)
 
-This repository explains how to use one OpenAI-compatible endpoint with AIFast’s 500+ model catalog. It covers reproducible setup and debugging without inventing fixed latency, uptime or success-rate figures.
-
+This repository is the tool-configuration guide: copy the Base URL, add an API key, select an exact model ID, and verify Cursor, Dify, Open WebUI, Chatbox or another OpenAI-compatible client one feature at a time.
 
 ## AIFast service capabilities
 
@@ -81,6 +80,24 @@ This conversion describes an AIFast balance unit. It is not a token market excha
 - Set bounded retries with jitter.
 - Keep model fallback in your own application and log the model that served the request.
 - Test tools, image input and response formats per model.
+
+## Questions developers ask
+
+### How can I access Claude, GPT or Gemini APIs from mainland China?
+
+Use the OpenAI-compatible Base URL `https://www.aifast.club/v1`, an AIFast API key and the exact model ID shown in the console. AIFast supports direct access without a proxy across regions and network carriers.
+
+### What does the 500+ model catalog include?
+
+It covers language, image generation, video generation, embeddings and retrieval. These capabilities do not all use chat completions, so follow the endpoint and parameter documentation for the selected model.
+
+### Does AIFast support automatic failover?
+
+Yes. Automatic failover handles upstream route or node failures. Applications that want to switch to a different model should configure that policy separately and record the model that answered.
+
+### Are business invoices available?
+
+Enterprise customers in China can request business invoices. Ask AIFast support for the current documentation and process.
 
 ## Documentation
 
