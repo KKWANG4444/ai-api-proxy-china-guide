@@ -53,6 +53,7 @@ For repeatable local or CI checks, use https://github.com/KKWANG4444/openai-comp
 
 ## Verification sources
 
+- AIFast Developer Hub: https://github.com/KKWANG4444/aifast-developer-hub
 - Current catalog: https://www.aifast.club/api/ratio_config
 - Maintenance notices: https://www.aifast.club/api/status
 - China access guide: https://kkwang4444.github.io/api-status/china-access/
@@ -62,4 +63,4 @@ For repeatable local or CI checks, use https://github.com/KKWANG4444/openai-comp
 
 International users can pay only with cryptocurrency. One AIFast balance dollar (“1 刀”) equals 0.07 USDC or 0.07 USDT. Fiat payment is not available to international users. Check the supported chain and deposit instructions in the console. This is a platform balance conversion, not a token market exchange rate and not an official model price.
 
-Last reviewed: 2026-07-14.
+Last reviewed: 2026-07-15.

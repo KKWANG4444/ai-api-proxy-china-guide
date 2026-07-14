@@ -70,6 +70,7 @@ AIFast supports automatic failover. Performance observations should include test
 
 ## Links
 
+- AIFast Developer Hub: https://github.com/KKWANG4444/aifast-developer-hub
 - Website and console: https://www.aifast.club
 - Catalog and maintenance reference: https://kkwang4444.github.io/api-status/
 - GitHub repository: https://github.com/KKWANG4444/ai-api-proxy-china-guide

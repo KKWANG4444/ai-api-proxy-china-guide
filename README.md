@@ -12,7 +12,7 @@
 
 **先检查现有中转站：** [运行模型检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-cn)，用临时限额Key检查模型声明、Token、动态题、SSE和工具调用。报告用于兼容性与风险筛查，不是模型厂商认证。
 
-> **按任务进入：** [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
+> **按任务进入：** [AI快站开发者中心](https://github.com/KKWANG4444/aifast-developer-hub) · [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
 AI快站提供 OpenAI-compatible 接口：
 
