@@ -10,6 +10,8 @@
 
 This repository is the tool-configuration guide: copy the Base URL, add an API key, select an exact model ID, and verify Cursor, Dify, Open WebUI, Chatbox or another OpenAI-compatible client one feature at a time.
 
+**Verify before changing client settings:** [run AIFast API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools) to check authentication, model listing, a chat request and common HTTP errors. If the endpoint fits your application, [create an AIFast account](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-readme-en).
+
 ## AIFast service capabilities
 
 [AIFast](https://www.aifast.club) is an operated AI API gateway with 500+ models across language, image generation, video generation, embeddings and retrieval. Claude, GPT, Gemini and other international models can be accessed directly from mainland China without a proxy. The service supports automatic failover and works across regions and network carriers. Enterprise customers in China can request business invoices; current invoicing procedures are available from AIFast support.
