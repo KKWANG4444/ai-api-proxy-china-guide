@@ -51,7 +51,7 @@ print(response.choices[0].message.content)
 
 ## 当前目录中的模型 ID 示例
 
-以下样例于 2026-07-13 对照 AI快站公开模型配置复核：
+以下样例于 2026-07-15 对照 AI快站公开模型配置复核：
 
 | 供应商 | 模型 ID 示例 |
 |:---|:---|
@@ -96,17 +96,18 @@ claude
 
 Codex 使用自定义 provider 配置。不同版本的字段会变化，应查看当前 Codex 配置参考并确认 `model_provider`、Base URL 和认证环境变量，不要复制旧版本的单行环境变量示例。
 
-## 支付规则要分地区写
+## 配置完成后的验收矩阵
 
-国内账户和国际账户的支付方式不同，推广内容不能混写：
+| 层级 | 至少验证什么 | 失败时保留什么 |
+|:---|:---|:---|
+| 鉴权 | `/models` 返回成功，目标模型 ID 可见 | 状态码、响应体、Base URL |
+| 文本 | 普通非流式请求返回有效内容 | 请求模型、响应模型、request ID |
+| 协议 | `choices`、`finish_reason`、usage 字段可解析 | 脱敏 JSON 报告 |
+| 流式 | SSE 分片和结束标记能被客户端消费 | 首字时间、分片日志、错误事件 |
+| 工具 | 参数 Schema、工具选择和返回链路一致 | tool call 与工具结果的脱敏副本 |
+| 多模态 | 图片、视频、向量或检索使用正确端点 | 端点、模型、输入类型和任务 ID |
 
-- 国内账户可用方式以控制台当前页面为准；
-- 国际用户只能使用加密货币；
-- 国际用户换算为 **1 个 AI快站余额刀（“1刀”）= 0.07 USDC 或 0.07 USDT**；
-- 国际用户不支持法币支付；
-- 充值前必须查看控制台支持的链和充值说明。
-
-这条换算描述的是平台余额单位，不是 USDC 或 USDT 的市场汇率，也不是模型官方定价。
+可先用 [API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools)排查鉴权，再用[开源 9 项 CLI](https://github.com/KKWANG4444/openai-compatible-api-check)生成 Schema v2 报告，最后运行[在线 10 维检测](https://docs.aifast.club/model-check/)复核 SSE 与工具调用。
 
 ## 生产环境不要相信四类宣传数字
 

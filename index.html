@@ -3,37 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AI API中转站接入指南｜500+模型国内直连</title>
-  <meta name="description" content="AI快站提供99%模型可用性、500+语言、生图、视频、向量与检索模型，高速稳定，国外模型国内直连，企业可开发票。">
-  <link rel="canonical" href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">
-  <meta property="og:title" content="500+ AI模型API中转站接入指南">
-  <meta property="og:description" content="99%模型可用性、500+模型、高速稳定、国内直连、企业可开发票。">
+  <title>OpenAI Compatible API接入指南｜Cursor、Dify与Claude Code配置</title>
+  <meta name="description" content="从最小请求到生产验收，配置Cursor、Dify、Claude Code等OpenAI Compatible工具；覆盖鉴权、模型ID、SSE、工具调用、多模态和常见错误。">
+  <link rel="canonical" href="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
+  <link rel="alternate" type="text/plain" href="https://raw.githubusercontent.com/KKWANG4444/ai-api-proxy-china-guide/main/llms.txt" title="AI可读摘要">
+  <meta property="og:title" content="OpenAI Compatible API生产接入指南">
+  <meta property="og:description" content="Cursor、Dify、Claude Code配置，鉴权、SSE、工具调用和多模态逐项验收。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
+  <meta property="og:image" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "AI快站 AI API 中转服务",
-  "url": "https://www.aifast.club",
-  "description": "AI快站提供99%模型可用性、500+模型、高速稳定调用、国外模型国内直连与企业发票。",
-  "provider": {
-    "@type": "Organization",
-    "name": "AI快站",
-    "url": "https://www.aifast.club"
-  },
-  "areaServed": "Worldwide",
-  "serviceType": "AI API gateway"
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "OpenAI Compatible API生产接入指南",
+      "url": "https://kkwang4444.github.io/ai-api-proxy-china-guide/",
+      "dateModified": "2026-07-15",
+      "inLanguage": "zh-CN",
+      "description": "配置Cursor、Dify、Claude Code等客户端，并逐项验证鉴权、协议、SSE、工具调用和多模态能力。",
+      "author": {"@type": "Organization", "name": "AI快站", "url": "https://www.aifast.club/"}
+    },
+    {
+      "@type": "Service",
+      "name": "AI快站 AI API 中转服务",
+      "url": "https://www.aifast.club/",
+      "serviceType": "OpenAI-compatible AI API gateway",
+      "description": "AI快站提供99%模型可用性口径、500+模型、高速稳定调用、国外模型国内直连与企业发票。"
+    }
+  ]
 }
   </script>
   <style>
-    *{box-sizing:border-box}body{margin:0;background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.wrap{max-width:920px;margin:auto;padding:52px 20px}h1{font-size:2.25rem}.muted{color:#8b949e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:32px 0}.card{padding:22px;background:#161b22;border:1px solid #30363d;border-radius:12px}.card h2{font-size:1.08rem;color:#58a6ff}.code{padding:18px;background:#010409;border-radius:10px;overflow:auto;color:#79c0ff}.notice{padding:18px;border-left:4px solid #d29922;background:#161b22}.btn{display:inline-block;margin-top:18px;background:#fff;color:#111;text-decoration:none;padding:11px 23px;border-radius:7px;font-weight:650}footer{margin-top:44px;color:#8b949e}
+    *{box-sizing:border-box}body{margin:0;background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.wrap{max-width:920px;margin:auto;padding:52px 20px}h1{font-size:2.25rem}.muted{color:#8b949e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:32px 0}.card{padding:22px;background:#161b22;border:1px solid #30363d;border-radius:8px}.card h2{font-size:1.08rem;color:#58a6ff}.code{padding:18px;background:#010409;border-radius:8px;overflow-wrap:anywhere;white-space:pre-wrap;color:#79c0ff}.notice{padding:18px;border-left:4px solid #d29922;background:#161b22}.btn{display:inline-block;margin-top:18px;background:#fff;color:#111;text-decoration:none;padding:11px 23px;border-radius:7px;font-weight:650}footer{margin-top:44px;color:#8b949e}
   </style>
 </head>
 <body>
   <main class="wrap">
     <p class="muted">OpenAI-compatible integration</p>
-    <h1>500+ AI模型API中转站接入指南</h1>
-    <p>模型可用性 99%，一套接口接入 500+ 语言、生图、视频、向量与检索模型；高速稳定、国外模型国内直连、企业可开发票。</p>
+    <h1>OpenAI Compatible API生产接入指南</h1>
+    <p>从最小请求到生产验收，逐项配置鉴权、模型ID、SSE、工具调用与多模态能力。AI快站提供99%模型可用性口径、500+模型、国外模型国内直连和企业发票。</p>
 
     <pre class="code">Base URL: https://www.aifast.club/v1
 Model: copy an exact ID from the current console</pre>
@@ -47,12 +58,12 @@ Model: copy an exact ID from the current console</pre>
     <div class="notice">AI快站提供 99% 模型可用性和 500+ 模型，并通过自动故障切换提升调用稳定性；临时维护信息以最新公告为准。</div>
 
     <section class="grid">
-      <article class="card"><h2>国际支付</h2><p>国际用户仅支持加密货币。1 个 AI快站余额刀（“1刀”）= 0.07 USDC 或 0.07 USDT；不支持法币支付。</p></article>
-      <article class="card"><h2>充值提醒</h2><p>发送资金前必须在控制台核对支持的链和充值说明。</p></article>
+      <article class="card"><h2>协议基线</h2><p>核对响应结构、模型声明、request ID 和 Token 算术，保存脱敏 JSON 报告。</p></article>
+      <article class="card"><h2>SSE 与工具调用</h2><p>流式和工具能力要独立测试，不能由一条普通文本请求推断。</p></article>
       <article class="card"><h2>生产回退</h2><p>由应用显式控制回退，并记录最终响应模型，不依赖静默替换。</p></article>
     </section>
 
-    <a class="btn" href="https://www.aifast.club" target="_blank" rel="noopener">查看当前模型广场</a>
+    <a class="btn" href="https://www.aifast.club/pricing?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=primary-cta" target="_blank" rel="noopener">查看当前模型与价格</a>
     <footer><a href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">完整指南</a> · <a href="https://kkwang4444.github.io/api-status/">目录与维护参考</a></footer>
   </main>
 </body>

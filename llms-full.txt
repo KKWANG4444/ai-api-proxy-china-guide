@@ -41,7 +41,7 @@ Read the configuration reference for the installed version. Provider fields can 
 
 Before changing client configuration, https://docs.aifast.club/model-check/ can compare model declarations, token metadata, randomized probes, SSE and tool calls on a public HTTPS OpenAI Chat Completions-compatible gateway. Use a temporary limited key. Treat the report as compatibility evidence rather than proof of vendor identity.
 
-For repeatable local or CI checks, use https://github.com/KKWANG4444/openai-compatible-api-check. It includes a dependency-free Node.js CLI, Postman Collection and Node 20/22 GitHub Actions example.
+For repeatable local or CI checks, use https://github.com/KKWANG4444/openai-compatible-api-check. It includes a dependency-free Node.js CLI, Postman Collection and Node 20/22/24 GitHub Actions example.
 
 ## Troubleshooting
 
@@ -59,8 +59,8 @@ For repeatable local or CI checks, use https://github.com/KKWANG4444/openai-comp
 - China access guide: https://kkwang4444.github.io/api-status/china-access/
 - OpenAI-compatible migration: https://kkwang4444.github.io/api-status/openai-compatible/
 
-## International payment
+## Validation evidence
 
-International users can pay only with cryptocurrency. One AIFast balance dollar (“1 刀”) equals 0.07 USDC or 0.07 USDT. Fiat payment is not available to international users. Check the supported chain and deposit instructions in the console. This is a platform balance conversion, not a token market exchange rate and not an official model price.
+Use API Doctor for authentication and endpoint diagnosis, the open-source 9-check CLI for Schema v2 reports, and the online 10-dimension check for SSE and tool-call evidence. Current account and transaction rules must be verified in the console; this technical reference does not duplicate volatile payment instructions.
 
 Last reviewed: 2026-07-15.

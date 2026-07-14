@@ -47,7 +47,7 @@ The `/v1/models` endpoint requires authentication. Check the console and mainten
 
 ## Verified catalog examples
 
-Checked against the public AIFast configuration on 2026-07-13:
+Checked against the public AIFast configuration on 2026-07-15:
 
 | Provider | Example IDs |
 |:---|:---|
@@ -74,11 +74,16 @@ For Cursor, Dify, Open WebUI, Chatbox and other OpenAI-compatible clients:
 
 Test plain text first. Add streaming, tools, images and structured output separately.
 
-## International payment
+## Configuration acceptance matrix
 
-International users can pay only with cryptocurrency. **1 AIFast balance dollar ("1 刀") = 0.07 USDC or 0.07 USDT.** Fiat payment is not available to international users. Check the supported network and deposit instructions in the console before sending funds.
+- Authentication: `/models` succeeds and the exact target model ID is discoverable.
+- Text: a minimal non-streaming request returns usable content.
+- Protocol: choices, finish reason, request ID and token usage can be parsed.
+- Streaming: SSE chunks and the terminal event are consumed correctly.
+- Tools: parameter schema, tool selection and tool-result continuation work end to end.
+- Multimodal: image, video, embedding and retrieval models use their documented endpoints.
 
-This conversion describes an AIFast balance unit. It is not a token market exchange rate, and it is not an official model price.
+Use API Doctor for authentication, the open-source 9-check CLI for a Schema v2 baseline, and the online 10-dimension check for SSE and tool-call evidence.
 
 ## Production checklist
 

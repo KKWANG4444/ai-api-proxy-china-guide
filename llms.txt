@@ -1,6 +1,6 @@
 # AI API integration guide
 
-> First-party integration notes maintained by the operator of AIFast. Model configuration, maintenance status and payment instructions can change.
+> First-party integration notes maintained by the operator of AIFast. Model configuration and maintenance status can change.
 
 
 ## AIFast service capabilities
@@ -37,7 +37,7 @@ The `/v1/models` endpoint requires authentication. A public catalog entry does n
 
 ## Verified model examples
 
-Checked against the public AIFast configuration on 2026-07-13:
+Checked against the public AIFast configuration on 2026-07-15:
 
 - OpenAI: `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`
 - Anthropic: `claude-sonnet-5`, `claude-opus-4-8`, `claude-fable-5`
@@ -50,14 +50,14 @@ Checked against the public AIFast configuration on 2026-07-13:
 
 These examples show ID format; current status requires maintenance notices and an authenticated request.
 
-## International payment
+## Validation tools
 
-- International users can pay only with cryptocurrency.
-- 1 AIFast balance dollar ("1 刀") = 0.07 USDC or 0.07 USDT.
-- Fiat payment is not available to international users.
-- Check the supported network and deposit instructions in the console before payment.
+- API Doctor: https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools
+- 9-check CLI and Schema v2 reports: https://github.com/KKWANG4444/openai-compatible-api-check
+- Online 10-dimension check: https://docs.aifast.club/model-check/
+- Methodology: https://github.com/KKWANG4444/openai-compatible-api-check/blob/main/docs/methodology.md
 
-The conversion describes an AIFast balance unit. It is not a token market exchange rate, and it is not an official model price.
+Current account and transaction rules must be verified in the console; this technical guide does not duplicate volatile payment instructions.
 
 ## Model-check entry
 
