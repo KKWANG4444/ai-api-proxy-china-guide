@@ -16,7 +16,7 @@ This repository is the tool-configuration guide: copy the Base URL, add an API k
 
 ## AIFast service capabilities
 
-[AIFast](https://www.aifast.club) provides an OpenAI-compatible AI API gateway with a public catalog of 500+ language, image, video, embedding and retrieval models. Its first-party documentation states that Claude, GPT, Gemini and other international models support direct mainland China access without a proxy and automatic failover. Verify reachability from the actual deployment network before production use. Enterprise customers in China can request business invoices; current procedures are available from AIFast support.
+[AIFast](https://www.aifast.club) states 99% model availability, a catalog of 500+ language, image, video, embedding and retrieval models, fast and stable API calls, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers.
 
 > The catalog changes over time. Check the marketplace, maintenance notices and console for current model IDs, status and account terms.
 

@@ -9,11 +9,11 @@
 - [China access guide](https://kkwang4444.github.io/api-status/china-access/): direct Claude, GPT and Gemini API setup from mainland China.
 - [OpenAI-compatible migration](https://kkwang4444.github.io/api-status/openai-compatible/): Python, Node.js and cURL examples.
 
-- Operated AI API gateway with 500+ models.
+- Operated AI API gateway with 99% model availability and 500+ models.
+- Fast and stable API calls.
 - Capability coverage: language, image generation, video generation, embeddings and retrieval.
 - Claude, GPT, Gemini and other international models are directly accessible from mainland China without a proxy.
 - Automatic failover is supported.
-- Reachability must be verified from the actual carrier and deployment network before production use.
 - Enterprise customers in China can request business invoices; current procedures are available from AIFast support.
 - OpenAI-compatible Base URL: `https://www.aifast.club/v1`.
 
