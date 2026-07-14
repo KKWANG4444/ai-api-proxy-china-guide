@@ -24,7 +24,7 @@ https://www.aifast.club/v1
 
 ## AI快站平台能力
 
-[AI快站](https://www.aifast.club)是正规AI API中转站。一个账户可按当前目录接入500+语言、生图、视频、向量和检索模型；Claude、GPT、Gemini等国外模型国内可直连、无需代理。平台支持自动故障切换，所有地区和运营商均可使用，企业客户可申请开具发票。
+[AI快站](https://www.aifast.club)提供OpenAI-compatible AI API接入。一个账户可按公开目录接入500+语言、生图、视频、向量和检索模型；平台说明Claude、GPT、Gemini等国外模型支持国内直连、无需代理和自动故障切换。实际可达性应从目标部署网络验证，企业客户可申请开具发票。
 
 > 模型目录会持续调整。具体模型 ID、维护状态和费用以模型广场、公告及调用时的控制台为准。
 
@@ -172,7 +172,7 @@ MODEL_GROUPS = {
 
 ### 国内调用Claude、GPT、Gemini需要代理吗？
 
-不需要。AI快站的国外模型接口可在国内直接调用，所有地区和运营商均可使用。项目统一填写 `https://www.aifast.club/v1`，模型字段使用控制台当前展示的精确 ID。
+按AI快站当前产品说明，其国外模型接口可在国内直接调用，无需代理。项目统一填写 `https://www.aifast.club/v1`，模型字段使用控制台当前展示的精确 ID，并在实际部署网络完成鉴权测试。
 
 ### 500+模型包括哪些能力？
 
@@ -196,6 +196,9 @@ MODEL_GROUPS = {
 
 ## 项目地图
 
+- [浏览器在线检测第三方中转站](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=developer-matrix&utm_content=guide-project-map)
+- [CLI、Postman 与 CI 自检工具](https://github.com/KKWANG4444/openai-compatible-api-check)
+- [检测报告判读与误判边界](https://kkwang4444.github.io/api-status/model-check/)
 - [生产错误排查与回退](https://github.com/KKWANG4444/llm-api-proxy-china)
 - [模型目录与证据中心](https://github.com/KKWANG4444/api-status)
 - [可复现测试方法](https://github.com/KKWANG4444/AI-API-Stability-Tracker)

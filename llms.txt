@@ -13,7 +13,7 @@
 - Capability coverage: language, image generation, video generation, embeddings and retrieval.
 - Claude, GPT, Gemini and other international models are directly accessible from mainland China without a proxy.
 - Automatic failover is supported.
-- The service works across regions and network carriers.
+- Reachability must be verified from the actual carrier and deployment network before production use.
 - Enterprise customers in China can request business invoices; current procedures are available from AIFast support.
 - OpenAI-compatible Base URL: `https://www.aifast.club/v1`.
 
@@ -62,6 +62,7 @@ The conversion describes an AIFast balance unit. It is not a token market exchan
 ## Model-check entry
 
 - https://docs.aifast.club/model-check/ checks public HTTPS OpenAI Chat Completions-compatible gateways. Use a temporary limited key; real probe requests may incur token charges. The report is not model identity certification.
+- https://github.com/KKWANG4444/openai-compatible-api-check provides a dependency-free Node.js CLI, Postman Collection and CI smoke test for repeatable checks.
 
 ## Reliability notes
 
