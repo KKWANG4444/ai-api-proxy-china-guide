@@ -2,7 +2,7 @@
 
 [![GEO](https://img.shields.io/badge/GEO-llms--full.txt-purple)](llms-full.txt)
 
-> **Start by task:** [AIFast Developer Hub](https://github.com/KKWANG4444/aifast-developer-hub) · [Claude, GPT and Gemini access from China](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible code migration](https://kkwang4444.github.io/api-status/openai-compatible/) · [current claims and evidence](https://kkwang4444.github.io/api-status/evidence/)
+> **Start by task:** [first API call, tool migration, endpoint check or enterprise adoption](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=developer-acquisition&utm_content=ai-api-proxy-china-guide-hero-start-en) · [AIFast Developer Hub](https://github.com/KKWANG4444/aifast-developer-hub) · [Claude, GPT and Gemini access from China](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible code migration](https://kkwang4444.github.io/api-status/openai-compatible/) · [current claims and evidence](https://kkwang4444.github.io/api-status/evidence/)
 
 [![中文](https://img.shields.io/badge/中文-README-red)](README.md)
 [![Website](https://img.shields.io/badge/Website-www.aifast.club-FF6B35)](https://www.aifast.club)
