@@ -41,7 +41,7 @@ Read the configuration reference for the installed version. Provider fields can 
 
 Before changing client configuration, https://docs.aifast.club/model-check/ can compare model declarations, token metadata, randomized probes, SSE and tool calls on a public HTTPS OpenAI Chat Completions-compatible gateway. Use a temporary limited key. Treat the report as compatibility evidence rather than proof of vendor identity.
 
-For repeatable local or CI checks, use https://github.com/KKWANG4444/openai-compatible-api-check. It includes a dependency-free Node.js CLI, Postman Collection and Node 20/22/24 GitHub Actions example.
+Use https://docs.aifast.club/guides/model-check-report-guide/ to interpret the itemized result and https://docs.aifast.club/start/ to continue with the matching integration or migration workflow.
 
 ## Troubleshooting
 

@@ -53,16 +53,17 @@ These examples show ID format; current status requires maintenance notices and a
 ## Validation tools
 
 - API Doctor: https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools
-- 9-check CLI and Schema v2 reports: https://github.com/KKWANG4444/openai-compatible-api-check
+- Start by task: https://docs.aifast.club/start/
 - Online 10-dimension check: https://docs.aifast.club/model-check/
-- Methodology: https://github.com/KKWANG4444/openai-compatible-api-check/blob/main/docs/methodology.md
+- Methodology: https://docs.aifast.club/guides/model-api-downgrade-detection/
+- Report interpretation: https://docs.aifast.club/guides/model-check-report-guide/
 
 Current account and transaction rules must be verified in the console; this technical guide does not duplicate volatile payment instructions.
 
 ## Model-check entry
 
 - https://docs.aifast.club/model-check/ checks public HTTPS OpenAI Chat Completions-compatible gateways. Use a temporary limited key; real probe requests may incur token charges. The report is not model identity certification.
-- https://github.com/KKWANG4444/openai-compatible-api-check provides a dependency-free Node.js CLI, Postman Collection and CI smoke test for repeatable checks.
+- https://docs.aifast.club/guides/model-check-report-guide/ explains each signal, evidence boundary and recommended follow-up.
 
 ## Reliability notes
 

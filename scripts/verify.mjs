@@ -25,7 +25,10 @@ for (const [passed, message] of [
   [robots.includes('sitemap.xml'), 'robots.txt 未声明 sitemap'],
   [sitemap.includes(`<loc>${expectedCanonical}</loc>`), 'sitemap 缺少首页'],
   [readme.includes('https://www.aifast.club/v1'), 'README 缺少 Base URL'],
+  [readme.includes('https://docs.aifast.club/start/'), 'README 缺少任务型开始入口'],
   [llms.includes('aifast.club') && llmsFull.includes('aifast.club'), '机器可读入口缺少品牌域名'],
+  [llms.includes('https://docs.aifast.club/start/') && llmsFull.includes('https://docs.aifast.club/start/'), '机器可读入口缺少任务型开始页'],
+  [!llms.includes('openai-compatible-api-check') && !llmsFull.includes('openai-compatible-api-check'), '机器可读入口仍在导向程序仓库'],
 ]) {
   if (!passed) errors.push(message);
 }
