@@ -10,9 +10,27 @@
 
 这份指南面向需要在一个项目里使用多个模型的开发者。AI快站提供模型可用性 99%、500+ 模型、高速稳定调用、国外模型国内直连和企业发票；本文同时把接入、验证和排错流程讲清楚。
 
-**先验证再改客户端：** [运行AIFast API Doctor](https://gitee.com/kkwwww4444/llm-api-proxy-china/raw/main/tools/aifast_api_doctor.py)，一条命令检查鉴权、模型列表、聊天请求及常见HTTP错误。验证通过后可[创建AI快站账户](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-readme-cn)。
+## 先检测你正在使用的接口
 
-**先检查现有中转站：** [运行模型检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-cn)，用临时限额Key检查模型声明、Token、动态题、SSE和工具调用。报告用于兼容性与风险筛查，不是模型厂商认证。
+| 方式 | 适合场景 | 入口 |
+|:---|:---|:---|
+| 浏览器在线检测 | 不安装工具，检查模型声明、Token、动态题、SSE 与工具调用 | [检测现有中转站](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-tool-online) |
+| npx CLI | 本地或 CI 生成脱敏 Markdown / JSON 报告 | [CLI 与方法论](https://github.com/KKWANG4444/openai-compatible-api-check) |
+| Postman Collection | 手工冒烟、团队共享变量 | [导入 Collection](https://github.com/KKWANG4444/openai-compatible-api-check/tree/main/postman) |
+| API Doctor | 定位 401、429、5xx、超时和模型 ID 错误 | [运行 API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china) |
+
+```bash
+export OPENAI_API_KEY="你的临时限额 Key"
+npx --yes --package=github:KKWANG4444/openai-compatible-api-check \
+  model-api-check \
+  --base-url https://gateway.example.com/v1 \
+  --model your-model-id \
+  --output reports/check.md
+```
+
+[查看示例脱敏报告](https://github.com/KKWANG4444/openai-compatible-api-check/blob/main/examples/report.example.json) · [下载当前 Release](https://github.com/KKWANG4444/openai-compatible-api-check/releases/latest)
+
+先对现有接口留下可复核报告。需要更换服务商时，再[查看 AI快站模型与价格](https://www.aifast.club/pricing?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-tool-pricing)或[创建测试账号](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-tool-register)。
 
 > **按任务进入：** [AI快站开发者中心](https://github.com/KKWANG4444/aifast-developer-hub) · [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
@@ -199,7 +217,7 @@ MODEL_GROUPS = {
 
 ## 项目地图
 
-- [浏览器在线检测第三方中转站](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=developer-matrix&utm_content=guide-project-map)
+- [浏览器在线检测第三方中转站](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-project-map)
 - [CLI、Postman 与 CI 自检工具](https://github.com/KKWANG4444/openai-compatible-api-check)
 - [检测报告判读与误判边界](https://kkwang4444.github.io/api-status/model-check/)
 - [生产错误排查与回退](https://github.com/KKWANG4444/llm-api-proxy-china)
