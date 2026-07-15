@@ -83,7 +83,7 @@ Test plain text first. Add streaming, tools, images and structured output separa
 - Tools: parameter schema, tool selection and tool-result continuation work end to end.
 - Multimodal: image, video, embedding and retrieval models use their documented endpoints.
 
-Use API Doctor for authentication, the open-source 9-check CLI for a Schema v2 baseline, and the online 10-dimension check for SSE and tool-call evidence.
+Run the [online 10-dimension check](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-validation-online-en) first. If it exposes authentication, rate-limit or upstream errors, continue with the [website troubleshooting guide](https://docs.aifast.club/troubleshooting/api-errors/).
 
 ## Production checklist
 
@@ -124,8 +124,7 @@ Enterprise customers in China can request business invoices. Ask AIFast support 
 ## Project matrix
 
 - [Online gateway check](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-project-map-en)
-- [CLI, Postman and CI checker](https://github.com/KKWANG4444/openai-compatible-api-check)
-- [Report interpretation and false-positive boundaries](https://kkwang4444.github.io/api-status/model-check/)
+- [Report interpretation and false-positive boundaries](https://docs.aifast.club/guides/model-check-report-guide/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-project-report-en)
 - [Production troubleshooting and fallback](https://github.com/KKWANG4444/llm-api-proxy-china)
 - [Catalog and evidence center](https://github.com/KKWANG4444/api-status)
 - [Reproducible observation method](https://github.com/KKWANG4444/AI-API-Stability-Tracker)
