@@ -16,6 +16,8 @@
 
 [立即在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-tool-primary) · [查看报告判读方法](https://docs.aifast.club/guides/model-check-report-guide/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-tool-report)
 
+还没进入真实请求阶段时，先用 [Base URL 检查器](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker)排查 `/v1/v1`、404 和端点重复；准备比较方案成本时，用 [Token 成本计算器](https://docs.aifast.club/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator)按当前价格计算批量任务与重试费用。
+
 先对现有接口留下可复核报告。需要更换服务商时，再[查看 AI快站模型与价格](https://www.aifast.club/pricing?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-tool-pricing)或[创建测试账号](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-tool-register)。
 
 > **按当前需求开始：** [首次调用、工具迁移、接口检测或企业接入](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-hero-start) · [AI快站开发者中心](https://github.com/KKWANG4444/aifast-developer-hub) · [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)

@@ -14,6 +14,8 @@ This repository is the tool-configuration guide: copy the Base URL, add an API k
 
 **Check an existing gateway first:** [run the public model check](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-check-en) with a temporary limited key. It checks model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
 
+Before sending a live request, use the [Base URL checker](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.club/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
+
 **Verify before changing client settings:** [run AIFast API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools) to check authentication, model listing, a chat request and common HTTP errors. If the endpoint fits your application, [create an AIFast account](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-readme-register-en).
 
 ## AIFast service capabilities
