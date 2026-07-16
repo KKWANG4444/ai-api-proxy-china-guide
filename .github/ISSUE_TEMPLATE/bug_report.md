@@ -1,24 +1,22 @@
 ---
 name: Bug report
-description: Report an issue with the API or framework
-labels: [bug]
-body:
-  - type: input
-    id: endpoint
-    attributes:
-      label: Base URL & model
-      placeholder: e.g. https://www.aifast.club/v1, claude-sonnet-5
-    validations:
-      required: true
-  - type: textarea
-    id: description
-    attributes:
-      label: What happened?
-      placeholder: Include the HTTP status, response body (redact API key), and error message.
-    validations:
-      required: true
-  - type: dropdown
-    id: capability
-    attributes:
-      label: Capability
-      options: [text, streaming, tools, image, video, embedding]
+about: Report a reproducible tool configuration or guide problem
+title: "[Bug] "
+labels: bug
+assignees: ""
+---
+
+## Environment
+
+- Client or tool and version:
+- Base URL:
+- Exact model ID:
+- Capability: text / streaming / tools / image / video / embedding
+
+## What happened?
+
+Describe the problem and the expected behavior.
+
+## Evidence
+
+Include the HTTP status, redacted response body and minimal reproduction steps. **Do not paste API keys or other credentials.**

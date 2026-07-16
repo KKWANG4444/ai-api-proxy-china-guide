@@ -4,7 +4,7 @@ Thank you for considering a contribution. This repository documents tool-specifi
 
 - **Bug reports or feature requests**: Use the issue template and include the tool name, version, Base URL, HTTP status and response body (redact your API key).
 - **Pull requests**: If you have a tested workflow for a tool not currently covered, or a correction to an existing guide, open a PR. Small fixes and clarifications are welcome.
-- **Security issues**: Do not file a public issue. Use the GitHub security advisory or contact the repository owner directly.
+- **Security or account issues**: Do not file a public issue or paste credentials. Use [AIFast customer support](https://www.aifast.club/customersupport).
 
 ## Before opening an issue
 
