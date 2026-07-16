@@ -10,7 +10,7 @@
 
 > **先解决眼前问题：** [浏览器在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) · [检查 Base URL](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-base-url) · [查看模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-hero-pricing) · [注册并创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-hero-register)
 
-这份指南面向需要在一个项目里使用多个模型的开发者。AI快站提供模型可用性 99%、500+ 模型、高速稳定调用、国外模型国内直连和企业发票；本文同时把接入、验证和排错流程讲清楚。
+开发者接入 OpenAI 兼容 API 的配置、验证和排错指南，覆盖 Cursor、Dify、Claude Code、Codex 等工具。AI快站提供 500+ 模型、国外模型国内直连、自动故障切换和企业发票；本文把接入步骤、模型验证和生产排错讲清楚。
 
 | 你现在的状态 | 建议先做 | 能得到什么 |
 |:---|:---|:---|
