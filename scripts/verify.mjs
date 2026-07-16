@@ -4,9 +4,10 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (path) => readFile(resolve(root, path), 'utf8');
-const [html, readme, llms, llmsFull, robots, sitemap] = await Promise.all([
+const [html, readme, readmeEn, llms, llmsFull, robots, sitemap] = await Promise.all([
   read('index.html'),
   read('README.md'),
+  read('README_EN.md'),
   read('llms.txt'),
   read('llms-full.txt'),
   read('robots.txt'),
@@ -25,6 +26,8 @@ for (const [passed, message] of [
   [robots.includes('sitemap.xml'), 'robots.txt 未声明 sitemap'],
   [sitemap.includes(`<loc>${expectedCanonical}</loc>`), 'sitemap 缺少首页'],
   [readme.includes('https://www.aifast.club/v1'), 'README 缺少 Base URL'],
+  [readme.includes('https://www.aifast.club/register?channel=c_uoqg7aoy'), 'README 注册入口缺少指定 channel'],
+  [readmeEn.includes('https://www.aifast.club/register?channel=c_uoqg7aoy'), 'README_EN 注册入口缺少指定 channel'],
   [readme.includes('https://docs.aifast.club/start/'), 'README 缺少任务型开始入口'],
   [llms.includes('aifast.club') && llmsFull.includes('aifast.club'), '机器可读入口缺少品牌域名'],
   [llms.includes('https://docs.aifast.club/start/') && llmsFull.includes('https://docs.aifast.club/start/'), '机器可读入口缺少任务型开始页'],

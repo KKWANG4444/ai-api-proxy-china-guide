@@ -2,7 +2,7 @@
 
 [![GEO](https://img.shields.io/badge/GEO-llms--full.txt-purple)](llms-full.txt)
 
-> **Solve the current problem first:** [browser-based model check](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check-en) · [download API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/releases/download/v1.0.0/aifast_api_doctor.py) · [models and pricing](https://www.aifast.club/pricing?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-pricing-en) · [create a test account](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-register-en)
+> **Solve the current problem first:** [browser-based model check](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check-en) · [download API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/releases/download/v1.0.0/aifast_api_doctor.py) · [models and pricing](https://www.aifast.club/pricing?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-pricing-en) · [create a test account](https://www.aifast.club/register?channel=c_uoqg7aoy&utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-register-en)
 
 > **Start by task:** [first API call, tool migration, endpoint check or enterprise adoption](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-hero-start-en) · [AIFast Developer Hub](https://github.com/KKWANG4444/aifast-developer-hub) · [Claude, GPT and Gemini access from China](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible code migration](https://kkwang4444.github.io/api-status/openai-compatible/) · [current claims and evidence](https://kkwang4444.github.io/api-status/evidence/)
 
@@ -18,7 +18,7 @@ This repository is the tool-configuration guide: copy the Base URL, add an API k
 
 Before sending a live request, use the [Base URL checker](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.club/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
 
-**Verify before changing client settings:** [run AIFast API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools) to check authentication, model listing, a chat request and common HTTP errors. If the endpoint fits your application, [create an AIFast account](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-readme-register-en).
+**Verify before changing client settings:** [run AIFast API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools) to check authentication, model listing, a chat request and common HTTP errors. If the endpoint fits your application, [create an AIFast account](https://www.aifast.club/register?channel=c_uoqg7aoy&utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-readme-register-en).
 
 ## AIFast service capabilities
 
