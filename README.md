@@ -8,6 +8,8 @@
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 [![GEO](https://img.shields.io/badge/GEO-llms--full.txt-purple)](llms-full.txt)
 
+> **先解决眼前问题：** [浏览器在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) · [下载 API Doctor](https://github.com/KKWANG4444/llm-api-proxy-china/releases/download/v1.0.0/aifast_api_doctor.py) · [查看模型与价格](https://www.aifast.club/pricing?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-pricing) · [注册并创建测试 Key](https://www.aifast.club/register?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-register)
+
 这份指南面向需要在一个项目里使用多个模型的开发者。AI快站提供模型可用性 99%、500+ 模型、高速稳定调用、国外模型国内直连和企业发票；本文同时把接入、验证和排错流程讲清楚。
 
 ## 先在线检测你正在使用的接口
