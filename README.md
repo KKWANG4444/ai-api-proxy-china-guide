@@ -210,6 +210,9 @@ MODEL_GROUPS = {
 
 - [AI快站模型广场与控制台](https://www.aifast.club)
 - [模型上架与维护参考](https://kkwang4444.github.io/api-status/)
+- [OpenAI SDK 配置实战：timeout、retry 与排错](openai-sdk-advanced-config.md)
+- [API 模型真实性验证方法](model-authenticity-verification.md)
+- [生产环境 API 容错：重试、熔断与降级](production-api-resilience.md)
 - [Claude Sonnet 5 接入说明](sonnet-5-guide.md)
 - [MCP 工具接入说明](mcp-server-guide.md)
 - [English guide](README_EN.md)
