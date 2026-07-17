@@ -12,7 +12,7 @@
 
 ### 用 SDK 自带的重试
 
-OpenAI SDK 默认对 429 和 5xx 做 2 次重试（共 3 次），间隔指数退避。这是第一道防线：
+OpenAI SDK 默认会对连接错误、408、409、429 和 5xx 自动重试 2 次，这是第一道防线。如果使用本节后面的自定义重试器，应把 SDK 的 `max_retries` 设为 `0`，否则两层重试会相乘：装饰器尝试 4 次、SDK 每次再尝试 3 次，最坏会发出 12 个请求。
 
 ```python
 from openai import OpenAI
@@ -20,7 +20,7 @@ from openai import OpenAI
 client = OpenAI(
     api_key="sk-...",
     base_url="https://www.aifast.club/v1",
-    max_retries=2,  # 总共 3 次尝试
+    max_retries=0,  # 由下面的装饰器统一控制，避免双重重试
 )
 ```
 
@@ -120,12 +120,12 @@ class CircuitBreaker:
             self.failures = 0
             self.state = "closed"
             return result
-        except Exception as e:
+        except (RateLimitError, InternalServerError, APITimeoutError):
             self.failures += 1
             self.last_failure_time = time.time()
             if self.failures >= self.threshold:
                 self.state = "open"
-            raise e
+            raise
 
 cb = CircuitBreaker(threshold=5, recovery_time=30)
 
@@ -136,7 +136,7 @@ response = cb.call(lambda: client.chat.completions.create(
 ))
 ```
 
-连续失败 5 次后，熔断器会在 30 秒内直接拒绝请求，30 秒后恢复为半开状态尝试一次。如果成功就关闭，失败则继续打开。
+连续出现 5 次可重试错误后，熔断器会在 30 秒内直接拒绝请求，30 秒后进入半开状态试一次。401、400、404 等配置错误不会计入熔断；这类错误应该立即暴露并修正。
 
 ---
 
