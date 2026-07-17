@@ -26,6 +26,8 @@ The catalog changes over time. Check the marketplace, maintenance notices and co
 - [Claude Sonnet 5 guide](sonnet-5-guide.md): Model-specific integration notes.
 - [MCP guide](mcp-server-guide.md): MCP client and server configuration.
 - [Tool integration guide](tools-integration-guide.md): Cursor, Dify and related clients.
+- [Codex custom provider setup](https://docs.aifast.club/tools/codex/): Responses API, Base URL, environment key and minimum task validation.
+- [Codex gateway validation](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/): provider selection, tool events, context compaction, thread resume and HTTP errors.
 
 ## API endpoint
 

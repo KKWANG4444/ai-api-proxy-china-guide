@@ -5,10 +5,13 @@
 [![English](https://img.shields.io/badge/English-README_EN-blue)](README_EN.md)
 [![GPT-5.6](https://img.shields.io/badge/GPT--5.6-Sol%20%7C%20Terra%20%7C%20Luna-orange)](https://docs.aifast.club/providers/openai-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-openai)
 [![Claude](https://img.shields.io/badge/Claude-Sonnet%205%20%7C%20Opus%204.8-blueviolet)](https://docs.aifast.club/providers/claude-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-claude)
+[![Codex](https://img.shields.io/badge/Codex-Responses_API-22c55e)](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-codex)
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 [![GEO](https://img.shields.io/badge/GEO-llms--full.txt-purple)](llms-full.txt)
 
 > **先解决眼前问题：** [浏览器在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) · [检查 Base URL](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-base-url) · [查看模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-hero-pricing) · [注册并创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-hero-register)
+
+> **Codex 专项：** [配置自定义 Provider](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup) · [验收 Responses、工具调用、压缩与会话恢复](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting)
 
 开发者接入 OpenAI 兼容 API 的配置、验证和排错指南，覆盖 Cursor、Dify、Claude Code、Codex 等工具。AI快站提供 500+ 模型、国外模型国内直连、自动故障切换和企业发票；本文把接入步骤、模型验证和生产排错讲清楚。
 
@@ -113,7 +116,7 @@ claude
 
 ### Codex CLI
 
-Codex 使用自定义 provider 配置。不同版本的字段会变化，应查看当前 Codex 配置参考并确认 `model_provider`、Base URL 和认证环境变量，不要复制旧版本的单行环境变量示例。
+Codex 使用自定义 provider 配置。不同版本的字段会变化，应查看当前 Codex 配置参考并确认 `model_provider`、Base URL、认证环境变量和 `wire_api = "responses"`，不要复制旧版本的单行环境变量示例。先按 [Codex 接入 OpenAI Compatible API 配置教程](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-codex-section-setup)完成最小配置，再用 [Codex 中转 API 验收与排错清单](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-codex-section-troubleshooting)验证 Responses 路径、流式事件、工具调用、上下文压缩和会话恢复。
 
 ## 配置完成后的验收矩阵
 

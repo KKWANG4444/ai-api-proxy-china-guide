@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>OpenAI Compatible API接入指南｜Cursor、Dify与Claude Code配置</title>
-  <meta name="description" content="从最小请求到生产验收，配置Cursor、Dify、Claude Code等OpenAI Compatible工具；覆盖鉴权、模型ID、SSE、工具调用、多模态和常见错误。">
+  <title>OpenAI Compatible API接入｜Codex、Cursor与Claude Code配置</title>
+  <meta name="description" content="配置Codex自定义Provider、Cursor、Dify与Claude Code；覆盖Responses API、鉴权、模型ID、SSE、工具调用、上下文压缩和常见错误。">
   <link rel="canonical" href="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
   <link rel="alternate" type="text/plain" href="https://raw.githubusercontent.com/KKWANG4444/ai-api-proxy-china-guide/main/llms.txt" title="AI可读摘要">
-  <meta property="og:title" content="OpenAI Compatible API生产接入指南">
-  <meta property="og:description" content="Cursor、Dify、Claude Code配置，鉴权、SSE、工具调用和多模态逐项验收。">
+  <meta property="og:title" content="Codex与OpenAI Compatible API生产接入指南">
+  <meta property="og:description" content="Codex、Cursor、Dify与Claude Code配置，逐项验收Responses、鉴权、SSE、工具调用和上下文压缩。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
   <meta property="og:image" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/assets/social-preview.png">
@@ -19,11 +19,11 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "OpenAI Compatible API生产接入指南",
+      "headline": "Codex与OpenAI Compatible API生产接入指南",
       "url": "https://kkwang4444.github.io/ai-api-proxy-china-guide/",
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-07-17",
       "inLanguage": "zh-CN",
-      "description": "配置Cursor、Dify、Claude Code等客户端，并逐项验证鉴权、协议、SSE、工具调用和多模态能力。",
+      "description": "配置Codex自定义Provider、Cursor、Dify与Claude Code，并逐项验证Responses、鉴权、SSE、工具调用和上下文压缩。",
       "author": {"@type": "Organization", "name": "AI快站", "url": "https://www.aifast.club/"}
     },
     {
@@ -43,8 +43,8 @@
 <body>
   <main class="wrap">
     <p class="muted">OpenAI-compatible integration</p>
-    <h1>OpenAI Compatible API生产接入指南</h1>
-    <p>从最小请求到生产验收，逐项配置鉴权、模型ID、SSE、工具调用与多模态能力。AI快站提供99%模型可用性口径、500+模型、国外模型国内直连和企业发票。</p>
+    <h1>Codex与OpenAI Compatible API生产接入指南</h1>
+    <p>从 Codex 自定义 Provider 到通用客户端生产验收，逐项配置 Responses API、鉴权、模型ID、SSE、工具调用与上下文压缩。AI快站提供99%模型可用性口径、500+模型、国外模型国内直连和企业发票。</p>
 
     <pre class="code">Base URL: https://www.aifast.club/v1
 Model: copy an exact ID from the current console</pre>
@@ -53,6 +53,7 @@ Model: copy an exact ID from the current console</pre>
       <article class="card"><h2>核验模型 ID</h2><p>样例：<code>gpt-5.6-terra</code>、<code>claude-sonnet-5</code>、<code>grok-4.5</code>。配置存在不等于在线。</p></article>
       <article class="card"><h2>先跑最小请求</h2><p>先验证鉴权和普通文本，再逐项测试 streaming、tools、图片和结构化输出。</p></article>
       <article class="card"><h2>保存完整错误</h2><p>记录 HTTP 状态、响应体、模型 ID、请求时间和部署网络。</p></article>
+      <article class="card"><h2>Codex Responses 验收</h2><p>核对自定义 Provider、Responses 路径、工具事件、上下文压缩和会话恢复。</p></article>
     </section>
 
     <div class="notice">AI快站提供 99% 模型可用性和 500+ 模型，并通过自动故障切换提升调用稳定性；临时维护信息以最新公告为准。</div>
@@ -64,7 +65,7 @@ Model: copy an exact ID from the current console</pre>
     </section>
 
     <a class="btn" href="https://www.aifast.club/pricing?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=primary-cta" target="_blank" rel="noopener">查看当前模型与价格</a>
-    <footer><a href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">完整指南</a> · <a href="https://kkwang4444.github.io/api-status/">目录与维护参考</a></footer>
+    <footer><a href="https://docs.aifast.club/tools/codex/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=codex-setup">Codex 配置教程</a> · <a href="https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=codex-troubleshooting">Codex 验收排错</a> · <a href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">完整指南</a> · <a href="https://kkwang4444.github.io/api-status/">目录与维护参考</a></footer>
   </main>
 </body>
 </html>

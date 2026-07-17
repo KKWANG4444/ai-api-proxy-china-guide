@@ -11,8 +11,11 @@
 [![中文](https://img.shields.io/badge/中文-README-red)](README.md)
 [![Start](https://img.shields.io/badge/Docs-quick_start-FF6B35)](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-start-en)
 [![Model selection](https://img.shields.io/badge/Models-selection_guide-blue)](https://docs.aifast.club/models/model-selection/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-model-selection-en)
+[![Codex](https://img.shields.io/badge/Codex-Responses_API-22c55e)](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-codex-en)
 
 Tool configuration guide for OpenAI-compatible AI API gateways: Cursor, Dify, Claude Code, Codex, Open WebUI, Chatbox and other clients. Copy the Base URL, add an API key and verify one feature at a time.
+
+> **Codex:** [configure a custom provider](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup-en) · [validate Responses, tool calls, compaction and thread resume](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting-en)
 
 **Check an existing gateway first:** [run the public model check](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-check-en) with a temporary limited key. It checks model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
 

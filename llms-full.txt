@@ -37,6 +37,10 @@ Environment variables alone do not prove full compatibility. The gateway must su
 
 Read the configuration reference for the installed version. Provider fields can change; do not rely on an old one-line environment-variable snippet.
 
+- Setup guide: https://docs.aifast.club/tools/codex/
+- Validation and troubleshooting: https://docs.aifast.club/troubleshooting/codex-gateway-checklist/
+- Chat Completions success does not prove that Responses events, tool calls, file edits, context compaction or thread resume are compatible.
+
 ## Pre-migration model check
 
 Before changing client configuration, https://docs.aifast.club/model-check/ can compare model declarations, token metadata, randomized probes, SSE and tool calls on a public HTTPS OpenAI Chat Completions-compatible gateway. Use a temporary limited key. Treat the report as compatibility evidence rather than proof of vendor identity.
