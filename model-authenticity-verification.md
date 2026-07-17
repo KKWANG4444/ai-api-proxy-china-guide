@@ -29,50 +29,39 @@ curl -s https://www.aifast.club/v1/chat/completions \
 
 ---
 
-## 2. 知识边界测试
+## 2. 知识边界只能做辅助信号
 
-不同大模型的训练数据和知识截止日期不同。用下面几个简单问题做边界测试：
+模型自报的知识截止日期、身份和“我是否知道某件事”都可能受系统提示、联网检索、缓存或网关改写影响。若要使用知识边界题，至少做到：
 
-```python
-BOUNDARY_TESTS = [
-    ("What is the exact date of your knowledge cutoff?", "2025"),  # 不同模型差异明显
-    ("Who won the Super Bowl in 2024?", "Kansas City"),           # 2024 年的知识
-    ("What happened after September 2025 that you know about?", "2025"),  # 最新知识窗口
-]
-```
+1. 题目来自厂商公开模型卡中明确列出的知识截止范围；
+2. 同一题在官方端点和待测端点各跑多次；
+3. 禁用联网搜索与外部工具；
+4. 保存原始响应、时间、参数和 request ID；
+5. 只把结果写成相似性信号，不下“已证明是真模型”的结论。
 
-每个答案都有明显的模型特征。Claude 的回应风格和 GPT 不一样，Gemini 也有自己的习惯。
+风格、措辞和单道知识题都很容易误判。它们适合发现明显异常，不适合单独鉴定身份。
 
 ---
 
-## 3. Tokenizer 对比
+## 3. 响应元数据与使用量字段
 
-模型的 tokenizer（分词器）是公开的。把一个测试文本通过中转返回后，再用官方 tokenizer 解码，看结果是否一致。
+比“让模型自报身份”更有价值的是保存原始响应：
 
 ```python
-import tiktoken  # OpenAI
-# pip install anthropic  # Claude
-
-# 先用中转站生成一段文本
 response = client.chat.completions.create(
     model="claude-sonnet-5",
-    messages=[{"role": "user", "content": "写一段关于量子计算的中文介绍，50字左右。"}],
+    messages=[{"role": "user", "content": "只回复 ok"}],
 )
-text = response.choices[0].message.content
 
-# 用 Claude 的 tokenizer 看 encode/decode
-import anthropic
-tokenizer = anthropic.claude_tokenizer_256k()
-ids = tokenizer.encode(text)
-decoded = tokenizer.decode(ids)
-
-if decoded != text:
-    print("警告：tokenizer 不一致，可能不是真实模型")
-else:
-    print("tokenizer 一致 ✅")
+print("request model:", "claude-sonnet-5")
+print("response model:", response.model)
+print("request id:", getattr(response, "_request_id", None))
+print("usage:", response.usage)
 ```
 
-tiktoken（GPT BPE）和 anthropic tokenizer 的行为不同。如果请求写 claude 但 tokenizer 跑 tiktoken 反而更一致，就可能有问题。
+检查请求模型、响应模型、request ID、finish reason 和 usage 是否存在且格式稳定。字段缺失或前后矛盾只能说明协议或路由异常，仍不能单独证明底层模型身份。
+
+不要用“把任意文本 encode 后再 decode 是否还原”做鉴真。任何正确实现的 tokenizer 对普通文本都应当能往返还原，这不能说明文本由哪个模型生成。未经模型官方支持的 tokenizer 方法也不应写进可运行教程。
 
 ---
 
@@ -141,17 +130,17 @@ expected = numbers[0] * numbers[1] + numbers[2] - numbers[3] / numbers[4]
 
 ---
 
-## 6. 对比同一模型在不同平台的输出
+## 6. 官方端点做对照组
 
-更可靠的验证：在 AI快站 和官方平台同时请求同一提示语，比较：
+更可靠的办法是在官方端点与待测端点上使用同一模型、同一参数和同一组动态题，重复采样并比较：
 
-- 首字延迟
-- 输出长度
-- tokenizer 解码一致性
-- 响应中的 model 字段
-- 风格特征（列表格式、语气、用词偏好）
+- 协议字段与 usage 结构；
+- tools、流式和结构化输出行为；
+- 动态题的错误类型和稳定性；
+- request ID、响应模型字段与可追溯日志；
+- 在注明时间、地区、网络、样本量后比较延迟分布。
 
-如果两个输出高度一致，基本能确定是真实模型。
+输出文字相似或风格相近仍不能证明底层身份。黑盒测试只能给出一致性证据；最终结论还需要供应链记录、服务商披露或可审计的上游凭据。
 
 ---
 
@@ -179,12 +168,12 @@ expected = numbers[0] * numbers[1] + numbers[2] - numbers[3] / numbers[4]
 |:---|:---:|:---:|
 | 自报模型名 | 低 | ✅ |
 | 知识边界测试 | 中 | ✅ |
-| Tokenizer 对比 | 高 | ✅ |
+| 响应元数据检查 | 低 | ✅ |
 | 流式分片检查 | 中 | ✅ |
-| 工具调用测试 | 高 | ✅ |
+| 工具调用测试 | 中 | ✅ |
 | 随机动态题 | 中 | ✅ |
-| 跨平台对比 | 最高 | ⚠️ |
-| 在线检测工具 | 全面 | ✅ |
+| 官方端点对照组 | 较高 | ⚠️ |
+| 在线检测工具 | 多维信号 | ✅ |
 
 没有一种方法是绝对充分的。几种方法组合使用、不定期抽查，是比较务实的做法。
 

@@ -23,7 +23,7 @@ client = OpenAI(
 建 client 时不传任何参数，OpenAI SDK 的行为是：
 
 - **超时**：总超时 600 秒，连接超时 5 秒。短文本请求几百毫秒就返回，600s 基本不起作用；但流式输出一个长文档时，如果中途没有数据分片，SDK 会等到 600s 才报错。
-- **重试**：默认最多重试 2 次，总共最多发 3 次请求。重试间隔指数退避（0.5s → 1.0s → 2.0s），上限 8.0s。只重试 429/5xx，不是所有错误都重试（401/400 不会重试）。
+- **重试**：默认最多重试 2 次，总共最多发 3 次请求。SDK 会对连接错误、408、409、429 和 5xx 自动重试，并用带抖动的指数退避控制间隔。401、400、404 这类配置或请求错误不会靠重试解决。具体默认值以当前 `openai-python` 源码为准。
 
 对大多数场景已经够用。但如果你的服务对响应时间敏感，或需要处理慢模型的长请求，就值得调一调。
 
@@ -100,7 +100,8 @@ def log_request(request: httpx.Request) -> None:
     logger.info(f"→ {request.method} {request.url}")
 
 def log_response(response: httpx.Response) -> None:
-    logger.info(f"← {response.status_code} (retry: {response.request.headers.get('x-request-id', '?')})")
+    request_id = response.headers.get("x-request-id", "?")
+    logger.info(f"← {response.status_code} request_id={request_id}")
 
 client = OpenAI(
     api_key="sk-...",
@@ -121,8 +122,9 @@ client = OpenAI(
 | 401 | API Key 无效或未传 | ❌ 不重试 |
 | 400 | 请求格式错误 | ❌ 不重试 |
 | 404 | 模型不存在或路径错 | ❌ 不重试 |
-| 429 | 请求频率超限 | ✅ 等待后退避 |
-| 5xx | 服务端异常 | ✅ 等待后退避 |
+| 408 / 409 | 请求超时或资源冲突 | ✅ 自动重试 |
+| 429 | 请求频率超限 | ✅ 自动重试 |
+| 5xx | 服务端异常 | ✅ 自动重试 |
 
 如果收到 429 但 SDK 重试后还是 429，说明需要降低频率，而不是继续加大 retries。
 
@@ -195,13 +197,18 @@ openai.RateLimitError: Error code: 429
 - 如果连续 429，在应用层加限速
 
 ```python
+import openai
 from time import sleep
 
-for i in range(5):
-    try:
-        return client.chat.completions.create(...)
-    except openai.RateLimitError:
-        sleep(2 ** i)  # 指数退避
+
+def call_with_backoff():
+    for i in range(5):
+        try:
+            return client.chat.completions.create(...)
+        except openai.RateLimitError:
+            if i == 4:
+                raise
+            sleep(2 ** i)  # 指数退避
 ```
 
 ### 问题 5：请求卡住直到超时
