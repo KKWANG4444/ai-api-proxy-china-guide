@@ -119,6 +119,7 @@ client = OpenAI(
 
 | 状态码 | 原因 | SDK 是否重试 |
 |:---|:---|:---:|
+| 连接错误 | DNS、连接失败或网络中断 | ✅ 自动重试 |
 | 401 | API Key 无效或未传 | ❌ 不重试 |
 | 400 | 请求格式错误 | ❌ 不重试 |
 | 404 | 模型不存在或路径错 | ❌ 不重试 |
@@ -240,6 +241,7 @@ curl -s -w "\n%{http_code}" https://www.aifast.club/v1/chat/completions \
 # config.py
 from openai import OpenAI, AsyncOpenAI
 import httpx
+from httpx import AsyncClient
 
 DEFAULT_TIMEOUT = httpx.Timeout(timeout=600, connect=5.0)
 
@@ -252,7 +254,6 @@ def create_client(api_key: str, base_url: str = "https://www.aifast.club/v1") ->
     )
 
 def create_async_client(api_key: str, base_url: str = "https://www.aifast.club/v1") -> AsyncOpenAI:
-    from httpx import AsyncClient
     return AsyncOpenAI(
         api_key=api_key,
         base_url=base_url,

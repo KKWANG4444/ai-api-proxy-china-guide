@@ -32,6 +32,7 @@ client = OpenAI(
 import time
 import random
 from openai import (
+    APIConnectionError,
     APITimeoutError,
     RateLimitError,
     InternalServerError,
@@ -44,7 +45,7 @@ def retry(max_attempts=3, base_delay=1.0, max_delay=30.0):
             for attempt in range(1, max_attempts + 1):
                 try:
                     return func(*args, **kwargs)
-                except (RateLimitError, InternalServerError, APITimeoutError) as e:
+                except (APIConnectionError, RateLimitError, InternalServerError, APITimeoutError) as e:
                     last_error = e
                     if attempt == max_attempts:
                         raise
@@ -67,13 +68,14 @@ def call_model(prompt: str) -> str:
 **要点：**
 
 - 只重试可安全重复的请求（幂等）。如果请求副作用不可重做（发送邮件、扣减余额），重试前先确认服务端是否已处理。
-- 指数退避：第 1 次 0.5s → 第 2 次 1s → 第 3 次 2s → 第 4 次 4s。加随机抖动防止所有客户端同时重试（惊群效应）。
-- 设上限：不要无限重试。
+- 四次尝试之间只会等待三次：0.5s → 1s → 2s。第四次失败后立即抛错，不会再等待；
+- 加随机抖动，避免所有客户端同时重试；
+- 设上限，不要无限重试。
 
 ### 只重试幂等请求
 
 ```python
-SAFE_TO_RETRY = {RateLimitError, InternalServerError, APITimeoutError}
+SAFE_TO_RETRY = {APIConnectionError, RateLimitError, InternalServerError, APITimeoutError}
 
 def safe_retry(func, max_attempts=3):
     last_error = None
@@ -120,7 +122,7 @@ class CircuitBreaker:
             self.failures = 0
             self.state = "closed"
             return result
-        except (RateLimitError, InternalServerError, APITimeoutError):
+        except (APIConnectionError, RateLimitError, InternalServerError, APITimeoutError):
             self.failures += 1
             self.last_failure_time = time.time()
             if self.failures >= self.threshold:
@@ -137,6 +139,8 @@ response = cb.call(lambda: client.chat.completions.create(
 ```
 
 连续出现 5 次可重试错误后，熔断器会在 30 秒内直接拒绝请求，30 秒后进入半开状态试一次。401、400、404 等配置错误不会计入熔断；这类错误应该立即暴露并修正。
+
+这个示例适合单线程演示。多线程或多协程共享同一个熔断器时，`failures` 和 `state` 的读写必须加锁，或直接使用经过并发测试的熔断库，避免多个请求同时进入半开状态。
 
 ---
 
@@ -161,7 +165,7 @@ def call_with_fallback(models, messages, max_retries_per_model=2):
                     messages=messages,
                 )
                 return response.choices[0].message.content, model
-            except (RateLimitError, InternalServerError, APITimeoutError) as e:
+            except (APIConnectionError, RateLimitError, InternalServerError, APITimeoutError) as e:
                 last_error = e
                 time.sleep(2 ** attempt)
             except Exception as e:
