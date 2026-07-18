@@ -13,6 +13,8 @@
 
 > **Codex 专项：** [配置自定义 Provider](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup) · [验收 Responses、工具调用、压缩与会话恢复](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting)
 
+> **Cursor2API 排错与迁移：** [区分官方自定义 API、社区协议转换和标准网关](https://docs.aifast.club/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor2api) · [排查 model not found 与 /v1/v1](https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-model-not-found)
+
 开发者接入 OpenAI 兼容 API 的配置、验证和排错指南，覆盖 Cursor、Dify、Claude Code、Codex 等工具。AI快站提供 500+ 模型、国外模型国内直连、自动故障切换和企业发票；本文把接入步骤、模型验证和生产排错讲清楚。
 
 | 你现在的状态 | 建议先做 | 能得到什么 |
