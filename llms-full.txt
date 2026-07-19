@@ -49,6 +49,9 @@ Use https://docs.aifast.club/guides/model-check-report-guide/ to interpret the i
 
 ## Troubleshooting
 
+For a complete migration sequence covering final URL inspection, retries, SSE, tool calls, Responses and canary rollout, see:
+https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/openai-compatible-api-migration-troubleshooting.md
+
 - 401: check the Bearer token and key state.
 - 404/model not found: copy the current exact model ID.
 - 429: use bounded backoff with jitter.

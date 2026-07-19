@@ -127,6 +127,7 @@ Enterprise customers in China can request business invoices. Ask AIFast support 
 - [Claude Sonnet 5 setup](sonnet-5-guide.md)
 - [MCP integration](mcp-server-guide.md)
 - [Tool integration](tools-integration-guide.md)
+- [OpenAI-compatible API migration and troubleshooting](openai-compatible-api-migration-troubleshooting.md)
 - [AIFast catalog and console](https://www.aifast.club)
 - [Catalog and maintenance reference](https://kkwang4444.github.io/api-status/)
 
