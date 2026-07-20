@@ -13,6 +13,9 @@
   <meta property="og:url" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
   <meta property="og:image" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/assets/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Codex与OpenAI Compatible API生产接入指南">
+  <meta name="twitter:description" content="配置Codex、Cursor、Dify与Claude Code，并验证Responses、鉴权、SSE、工具调用和上下文压缩。">
+  <meta name="twitter:image" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/assets/social-preview.png">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -21,7 +24,7 @@
       "@type": "TechArticle",
       "headline": "Codex与OpenAI Compatible API生产接入指南",
       "url": "https://kkwang4444.github.io/ai-api-proxy-china-guide/",
-      "dateModified": "2026-07-17",
+      "dateModified": "2026-07-20",
       "inLanguage": "zh-CN",
       "description": "配置Codex自定义Provider、Cursor、Dify与Claude Code，并逐项验证Responses、鉴权、SSE、工具调用和上下文压缩。",
       "author": {"@type": "Organization", "name": "AI快站", "url": "https://www.aifast.club/"}
@@ -37,7 +40,7 @@
 }
   </script>
   <style>
-    *{box-sizing:border-box}body{margin:0;background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.wrap{max-width:920px;margin:auto;padding:52px 20px}h1{font-size:2.25rem}.muted{color:#8b949e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:32px 0}.card{padding:22px;background:#161b22;border:1px solid #30363d;border-radius:8px}.card h2{font-size:1.08rem;color:#58a6ff}.code{padding:18px;background:#010409;border-radius:8px;overflow-wrap:anywhere;white-space:pre-wrap;color:#79c0ff}.notice{padding:18px;border-left:4px solid #d29922;background:#161b22}.btn{display:inline-block;margin-top:18px;background:#fff;color:#111;text-decoration:none;padding:11px 23px;border-radius:7px;font-weight:650}footer{margin-top:44px;color:#8b949e}
+    *{box-sizing:border-box}body{margin:0;background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.wrap{max-width:920px;margin:auto;padding:52px 20px}h1{font-size:2.25rem}.muted{color:#8b949e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:32px 0}.card{padding:22px;background:#161b22;border:1px solid #30363d;border-radius:8px}.card h2{font-size:1.08rem;color:#58a6ff}.code{padding:18px;background:#010409;border-radius:8px;overflow-wrap:anywhere;white-space:pre-wrap;color:#79c0ff}.notice{padding:18px;border-left:4px solid #d29922;background:#161b22}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;margin-top:18px;background:#fff;color:#111;text-decoration:none;padding:11px 23px;border-radius:7px;font-weight:650}.btn.secondary{background:transparent;color:#e6edf3;border:1px solid #6e7681}footer{margin-top:44px;color:#8b949e}
   </style>
 </head>
 <body>
@@ -64,7 +67,11 @@ Model: copy an exact ID from the current console</pre>
       <article class="card"><h2>生产回退</h2><p>由应用显式控制回退，并记录最终响应模型，不依赖静默替换。</p></article>
     </section>
 
-    <a class="btn" href="https://www.aifast.club/pricing?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=primary-cta" target="_blank" rel="noopener">查看当前模型与价格</a>
+    <div class="actions">
+      <a class="btn" href="https://docs.aifast.club/model-check/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=model-check&amp;utm_content=guide-pages-model-check">先检测现有接口</a>
+      <a class="btn secondary" href="https://www.aifast.club/pricing?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=primary-cta" target="_blank" rel="noopener">查看当前模型与价格</a>
+      <a class="btn secondary" href="https://docs.aifast.club/start/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=developer_acquisition&amp;utm_content=guide-pages-start">按需求开始接入</a>
+    </div>
     <footer><a href="https://docs.aifast.club/tools/codex/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=codex-setup">Codex 配置教程</a> · <a href="https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=codex-troubleshooting">Codex 验收排错</a> · <a href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">完整指南</a> · <a href="https://kkwang4444.github.io/api-status/">目录与维护参考</a></footer>
   </main>
 </body>
