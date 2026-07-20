@@ -11,6 +11,8 @@
 
 > **先解决眼前问题：** [浏览器在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) · [检查 Base URL](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-base-url) · [查看模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-hero-pricing) · [注册并创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-hero-register)
 
+> **开发者工具矩阵：** [AI快站 Developer Hub](https://github.com/KKWANG4444/aifast-developer-hub)汇总在线检测、客户端配置、API 迁移、生产排错与证据边界；实际检测仍在网页完成，无需下载程序。
+
 > **Codex 专项：** [配置自定义 Provider](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup) · [验收 Responses、工具调用、压缩与会话恢复](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting)
 
 > **Cursor2API 排错与迁移：** [区分官方自定义 API、社区协议转换和标准网关](https://docs.aifast.club/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor2api) · [排查 model not found 与 /v1/v1](https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-model-not-found)
@@ -34,7 +36,7 @@
 
 先对现有接口留下可复核报告。需要更换服务商时，再[查看 AI快站模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-tool-pricing)或[创建测试账号](https://docs.aifast.club/go/register/?source=github&placement=guide-tool-register)。
 
-> **按当前需求开始：** [首次调用、工具迁移、接口检测或企业接入](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-hero-start) · [AI快站开发者中心](https://github.com/KKWANG4444/aifast-developer-hub) · [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
+> **按当前需求开始：** [首次调用、工具迁移、接口检测或企业接入](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-hero-start) · [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
 > **具体业务场景：** [生图 API](https://docs.aifast.club/models/image-generation-api/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-image-api) · [视频生成 API](https://docs.aifast.club/models/video-generation-api/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-video-api) · [Embedding / Rerank 与 Dify](https://docs.aifast.club/models/embedding-rerank-dify/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-embedding-rerank) · [企业采购与发票](https://docs.aifast.club/guides/enterprise-ai-api-procurement/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-enterprise)
 
