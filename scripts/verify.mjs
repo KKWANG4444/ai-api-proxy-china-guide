@@ -36,6 +36,7 @@ for (const [passed, message] of [
   [readmeEn.includes('https://docs.aifast.club/en/tools/codex/'), 'README_EN 缺少英文 Codex 配置入口'],
   [readme.includes('https://docs.aifast.club/guides/openai-compatible-api/') && readmeEn.includes('https://docs.aifast.club/en/guides/openai-compatible-api/'), 'README 缺少中英文 OpenAI Compatible 接入入口'],
   [readme.includes('https://docs.aifast.club/tools/cursor/') && readmeEn.includes('https://docs.aifast.club/en/tools/cursor/'), 'README 缺少中英文 Cursor 配置入口'],
+  [readme.includes('https://docs.aifast.club/tools/cursor2api/?utm_source=github') && readme.includes('https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github'), 'README 缺少 Cursor2API 或 model not found 高意图深链'],
   [readme.includes('github.com/KKWANG4444/openai-compatible-api-check') && readmeEn.includes('github.com/KKWANG4444/openai-compatible-api-check/blob/main/README_EN.md'), 'README 缺少可审计检测规则入口'],
   [llms.includes('https://docs.aifast.club/tools/codex/') && llmsFull.includes('https://docs.aifast.club/troubleshooting/codex-gateway-checklist/'), '机器可读入口缺少 Codex 配置或排错页'],
   [llms.includes('aifast.club') && llmsFull.includes('aifast.club'), '机器可读入口缺少品牌域名'],
