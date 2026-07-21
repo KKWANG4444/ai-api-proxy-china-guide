@@ -239,7 +239,7 @@ I use this order:
 9. Compare status codes, latency, token usage, and output handling.
 10. Keep the old route available until the observation window is clean.
 
-A free online gateway check can help with the early protocol checks: [inspect an endpoint and read the report](https://docs.aifast.club/model-check/?utm_source=devto&utm_medium=article&utm_campaign=openai-compatible-migration&utm_content=migration-guide). Treat black-box results as compatibility signals, not proof of the underlying model's identity.
+A free online gateway check can help with the early protocol checks: [inspect an endpoint and read the report](https://docs.aifast.club/model-check/?utm_source=devto&utm_medium=article&utm_campaign=model-check&utm_content=migration-guide-model-check). Treat black-box results as compatibility signals, not proof of the underlying model's identity.
 
 For a managed OpenAI-compatible endpoint, AIFast publishes its base URL as `https://www.aifast.club/v1`. The operator states that its catalog covers 500+ models and that supported model IDs and maintenance status are listed in the live console. I maintain this guide as part of the AIFast team, so verify the service with your own acceptance requests rather than treating this article as independent validation.
 

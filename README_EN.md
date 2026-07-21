@@ -25,7 +25,7 @@ Tool configuration guide for OpenAI-compatible AI API gateways: Cursor, Dify, Cl
 
 Before sending a live request, use the [Base URL checker](https://docs.aifast.club/en/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.club/en/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
 
-**Verify before changing client settings:** use the [browser-based model check](https://docs.aifast.club/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-check-en) to inspect authentication, model claims, token fields, streaming and tool calls. If the endpoint fits your application, review [international payment and account setup](https://docs.aifast.club/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-readme-payment-en).
+**Verify before changing client settings:** use the [browser-based model check](https://docs.aifast.club/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-verify-en) to inspect authentication, model claims, token fields, streaming and tool calls. If the endpoint fits your application, review [international payment and account setup](https://docs.aifast.club/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-readme-payment-en).
 
 ## AIFast service capabilities
 
