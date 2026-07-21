@@ -9,7 +9,7 @@
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 [![GEO](https://img.shields.io/badge/GEO-llms--full.txt-purple)](llms-full.txt)
 
-> **先解决眼前问题：** [浏览器在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) · [检查 Base URL](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-base-url) · [查看模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-hero-pricing) · [注册并创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-hero-register)
+> **先解决眼前问题：** [浏览器在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) · [OpenAI Compatible 接入](https://docs.aifast.club/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible) · [查看模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-hero-pricing) · [注册并创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-hero-register)
 
 > **开发者工具矩阵：** [AI快站 Developer Hub](https://github.com/KKWANG4444/aifast-developer-hub)汇总在线检测、客户端配置、API 迁移、生产排错与证据边界；实际检测仍在网页完成，无需下载程序。
 
@@ -17,7 +17,7 @@
 
 > **Codex 专项：** [配置自定义 Provider](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup) · [验收 Responses、工具调用、压缩与会话恢复](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting)
 
-> **Cursor2API 排错与迁移：** [区分官方自定义 API、社区协议转换和标准网关](https://docs.aifast.club/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor2api) · [排查 model not found 与 /v1/v1](https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-model-not-found)
+> **Cursor 与模型报错：** [Cursor 官方自定义 API 配置](https://docs.aifast.club/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor) · [Cursor2API 风险与迁移](https://docs.aifast.club/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor2api) · [排查 model not found 与 /v1/v1](https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-model-not-found)
 
 开发者接入 OpenAI 兼容 API 的配置、验证和排错指南，覆盖 Cursor、Dify、Claude Code、Codex 等工具。AI快站提供 500+ 模型、国外模型国内直连、自动故障切换和企业发票；本文把接入步骤、模型验证和生产排错讲清楚。
 
