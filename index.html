@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>OpenAI Compatible API接入｜Codex、Cursor与Claude Code配置</title>
-  <meta name="description" content="配置Codex自定义Provider、Cursor、Dify与Claude Code；覆盖Responses API、鉴权、模型ID、SSE、工具调用、上下文压缩和常见错误。">
+  <title>国内AI API中转站接入指南｜OpenAI、Claude、Gemini与Codex</title>
+  <meta name="description" content="国内AI API中转站接入指南，覆盖OpenAI API中转、Claude API中转、Gemini API中转，以及Codex、Cursor、Dify和Claude Code配置与生产排错。">
   <link rel="canonical" href="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
   <link rel="alternate" type="text/plain" href="https://raw.githubusercontent.com/KKWANG4444/ai-api-proxy-china-guide/main/llms.txt" title="AI可读摘要">
-  <meta property="og:title" content="Codex与OpenAI Compatible API生产接入指南">
-  <meta property="og:description" content="Codex、Cursor、Dify与Claude Code配置，逐项验收Responses、鉴权、SSE、工具调用和上下文压缩。">
+  <meta property="og:title" content="国内AI API中转站接入指南">
+  <meta property="og:description" content="OpenAI、Claude、Gemini API中转接入，以及Codex、Cursor、Dify与Claude Code配置和生产验收。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/">
   <meta property="og:image" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/assets/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Codex与OpenAI Compatible API生产接入指南">
-  <meta name="twitter:description" content="配置Codex、Cursor、Dify与Claude Code，并验证Responses、鉴权、SSE、工具调用和上下文压缩。">
+  <meta name="twitter:title" content="国内AI API中转站接入指南">
+  <meta name="twitter:description" content="OpenAI、Claude、Gemini API中转接入，以及Codex、Cursor、Dify与Claude Code配置和生产验收。">
   <meta name="twitter:image" content="https://kkwang4444.github.io/ai-api-proxy-china-guide/assets/social-preview.png">
   <script type="application/ld+json">
 {
@@ -22,11 +22,11 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "Codex与OpenAI Compatible API生产接入指南",
+      "headline": "国内AI API中转站接入指南：OpenAI、Claude、Gemini与Codex",
       "url": "https://kkwang4444.github.io/ai-api-proxy-china-guide/",
       "dateModified": "2026-07-20",
       "inLanguage": "zh-CN",
-      "description": "配置Codex自定义Provider、Cursor、Dify与Claude Code，并逐项验证Responses、鉴权、SSE、工具调用和上下文压缩。",
+      "description": "面向国内开发者的AI API中转站接入指南，覆盖OpenAI、Claude、Gemini API中转，以及Codex、Cursor、Dify与Claude Code配置和生产验收。",
       "author": {"@type": "Organization", "name": "AI快站", "url": "https://www.aifast.club/"}
     },
     {
@@ -45,9 +45,9 @@
 </head>
 <body>
   <main class="wrap">
-    <p class="muted">OpenAI-compatible integration</p>
-    <h1>Codex与OpenAI Compatible API生产接入指南</h1>
-    <p>从 Codex 自定义 Provider 到通用客户端生产验收，逐项配置 Responses API、鉴权、模型ID、SSE、工具调用与上下文压缩。AI快站提供99%模型可用性口径、500+模型、国外模型国内直连和企业发票。</p>
+    <p class="muted">国内 OpenAI-compatible API integration</p>
+    <h1>国内AI API中转站接入指南</h1>
+    <p>覆盖 OpenAI API 中转、Claude API 中转、Gemini API 中转，以及 Codex、Cursor、Dify 与 Claude Code 配置。逐项验收 Responses API、鉴权、模型ID、SSE、工具调用与上下文压缩。AI快站提供99%模型可用性口径、500+模型、国外模型国内直连和企业发票。</p>
 
     <pre class="code">Base URL: https://www.aifast.club/v1
 Model: copy an exact ID from the current console</pre>

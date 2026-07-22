@@ -1,4 +1,4 @@
-# 2026 AI API 接入指南：统一接口、模型核验与生产排错
+# 国内 AI API 中转站接入指南：OpenAI、Claude、Gemini 与 Codex
 
 <p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
 
@@ -19,7 +19,9 @@
 
 > **Cursor 与模型报错：** [Cursor 官方自定义 API 配置](https://docs.aifast.club/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor) · [Cursor2API 风险与迁移](https://docs.aifast.club/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor2api) · [排查 model not found 与 /v1/v1](https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-model-not-found)
 
-开发者接入 OpenAI 兼容 API 的配置、验证和排错指南，覆盖 Cursor、Dify、Claude Code、Codex 等工具。AI快站提供 500+ 模型、国外模型国内直连、自动故障切换和企业发票；本文把接入步骤、模型验证和生产排错讲清楚。
+这是一份面向国内开发者的 AI API 中转站接入指南，覆盖 OpenAI API 中转、Claude API 中转、Gemini API 中转，以及 Cursor、Dify、Claude Code、Codex 等工具的 OpenAI-compatible 配置。内容重点是可复制的接入步骤、模型质量检测和生产排错，不用过时的固定延迟或一次测试结果代替真实验收。
+
+AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模型支持国内直连，并提供自动故障切换和企业发票。模型 ID、维护状态和价格仍以当前控制台、公告及真实请求为准。
 
 | 你现在的状态 | 建议先做 | 能得到什么 |
 |:---|:---|:---|
