@@ -30,7 +30,7 @@ for (const [passed, message] of [
   [readme.slice(0, 3000).includes('OpenAI API 中转') && readme.slice(0, 3000).includes('Claude API 中转') && readme.slice(0, 3000).includes('Gemini API 中转'), 'README 首屏缺少供应商接入搜索意图'],
   [html.includes('<title>国内AI API中转站接入指南'), 'GitHub Pages 标题未承接国内 AI API 中转站搜索意图'],
   [html.includes('"dateModified": "2026-07-22"'), 'JSON-LD dateModified 未同步当前发布日'],
-  [!/(572\s*个模型|GPT[- .]?5\.5|Claude\s*4\.7)/i.test(`${readme}\n${readmeEn}\n${html}\n${llms}\n${llmsFull}`), '公开内容仍包含旧模型数量、旧模型名或旧仓库口径'],
+  [!/(572\s*(?:个\s*模型|models?)|GPT[-‐‑‒–—― .]?5\.5|Claude[-‐‑‒–—― .]?4\.7)/iu.test(`${readme}\n${readmeEn}\n${html}\n${llms}\n${llmsFull}`), '公开内容仍包含旧模型数量、旧模型名或旧仓库口径'],
   [readme.includes('500+模型') || readme.includes('500+ 模型'), 'README 缺少当前 500+ 模型口径'],
   [readme.includes('GPT-5.6'), 'README 缺少当前 GPT-5.6 模型口径'],
   [readme.includes('https://docs.aifast.club/go/register/?source=github&placement='), 'README 缺少可追踪注册入口'],
