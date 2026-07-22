@@ -65,7 +65,7 @@ Checked against the public AIFast configuration on 2026-07-15:
 | Provider | Example IDs |
 |:---|:---|
 | OpenAI | `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna` |
-| Anthropic | `claude-sonnet-5`, `claude-opus-4-8`, `claude-fable-5` |
+| Anthropic | `claude-sonnet-5`, `claude-opus-4-8` |
 | xAI | `grok-4.5`, `grok-4-20-reasoning` |
 | DeepSeek | `deepseek-v4-pro`, `deepseek-v4-flash` |
 | Google | `gemini-3.5-flash`, `gemini-3.1-pro-preview` |
