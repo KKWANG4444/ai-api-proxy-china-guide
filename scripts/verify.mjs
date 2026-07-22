@@ -29,6 +29,7 @@ for (const [passed, message] of [
   [readme.startsWith('# 国内 AI API 中转站接入指南：'), 'README 首屏丢失国内 AI API 中转站搜索意图'],
   [readme.slice(0, 3000).includes('OpenAI API 中转') && readme.slice(0, 3000).includes('Claude API 中转') && readme.slice(0, 3000).includes('Gemini API 中转'), 'README 首屏缺少供应商接入搜索意图'],
   [html.includes('<title>国内AI API中转站接入指南'), 'GitHub Pages 标题未承接国内 AI API 中转站搜索意图'],
+  [html.includes('"dateModified": "2026-07-22"'), 'JSON-LD dateModified 未同步当前发布日'],
   [readme.includes('https://docs.aifast.club/go/register/?source=github&placement='), 'README 缺少可追踪注册入口'],
   [readmeEn.includes('https://docs.aifast.club/en/payment/?utm_source=github') && readmeEn.includes('utm_campaign=international-payment'), 'README_EN 缺少国际支付与账户设置入口'],
   [!readme.includes('下载 API Doctor') && !readmeEn.includes('download API Doctor'), 'README 仍在引导用户下载程序'],
@@ -44,6 +45,8 @@ for (const [passed, message] of [
   [llms.includes('https://docs.aifast.club/tools/codex/') && llmsFull.includes('https://docs.aifast.club/troubleshooting/codex-gateway-checklist/'), '机器可读入口缺少 Codex 配置或排错页'],
   [llms.includes('aifast.club') && llmsFull.includes('aifast.club'), '机器可读入口缺少品牌域名'],
   [llms.includes('https://docs.aifast.club/start/') && llmsFull.includes('https://docs.aifast.club/start/'), '机器可读入口缺少任务型开始页'],
+  [llms.startsWith('# Domestic AI API relay integration guide') && llmsFull.startsWith('# Domestic AI API relay setup'), '机器可读内容未承接接入仓库定位'],
+  [!llms.includes('/tree/main/tools'), '机器可读内容仍包含不存在的 tools 入口'],
   [!llms.includes('openai-compatible-api-check') && !llmsFull.includes('openai-compatible-api-check'), '机器可读入口仍在导向程序仓库'],
 ]) {
   if (!passed) errors.push(message);

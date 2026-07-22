@@ -1,4 +1,4 @@
-# AI API client setup for Cursor, Dify and OpenAI-compatible tools
+# Domestic AI API relay setup for OpenAI, Claude, Gemini and developer tools
 
 > Configuration-focused guide for connecting developer tools to a current AI model catalog without mixing client setup with unsupported performance claims.
 
@@ -70,4 +70,4 @@ https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/openai-compatib
 
 Use API Doctor for authentication and endpoint diagnosis, the open-source 9-check CLI for Schema v2 reports, and the online 10-dimension check for SSE and tool-call evidence. Current account and transaction rules must be verified in the console; this technical reference does not duplicate volatile payment instructions.
 
-Last reviewed: 2026-07-15.
+Last reviewed: 2026-07-22.

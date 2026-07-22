@@ -1,6 +1,6 @@
-# AI API integration guide
+# Domestic AI API relay integration guide
 
-> First-party integration notes maintained by the operator of AIFast. Model configuration and maintenance status can change.
+> First-party guide for OpenAI, Claude and Gemini API relay integration from mainland China, maintained by the operator of AIFast. Model configuration and maintenance status can change.
 
 
 ## AIFast service capabilities
@@ -54,7 +54,7 @@ These examples show ID format; current status requires maintenance notices and a
 
 ## Validation tools
 
-- API Doctor: https://github.com/KKWANG4444/llm-api-proxy-china/tree/main/tools
+- Browser-based model quality check: https://docs.aifast.club/model-check/
 - Start by task: https://docs.aifast.club/start/
 - Online 10-dimension check: https://docs.aifast.club/model-check/
 - Methodology: https://docs.aifast.club/guides/model-api-downgrade-detection/
