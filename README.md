@@ -3,21 +3,11 @@
 <p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
 
 [![English](https://img.shields.io/badge/English-README_EN-blue)](README_EN.md)
-[![GPT-5.6](https://img.shields.io/badge/GPT--5.6-Sol%20%7C%20Terra%20%7C%20Luna-orange)](https://docs.aifast.club/providers/openai-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-openai)
-[![Claude](https://img.shields.io/badge/Claude-Sonnet%205%20%7C%20Opus%204.8-blueviolet)](https://docs.aifast.club/providers/claude-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-claude)
-[![Codex](https://img.shields.io/badge/Codex-Responses_API-22c55e)](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-codex)
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
-[![GEO](https://img.shields.io/badge/GEO-llms--full.txt-purple)](llms-full.txt)
 
-> **先解决眼前问题：** [浏览器在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) · [OpenAI Compatible 接入](https://docs.aifast.club/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible) · [查看模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-hero-pricing) · [注册并创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-hero-register)
+> **先做一次网页验证：** [在线模型质量检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check)。无需下载程序，可用临时限额 Key 检查模型声明、Token 字段、SSE 和工具调用。
 
-> **开发者工具矩阵：** [AI快站 Developer Hub](https://github.com/KKWANG4444/aifast-developer-hub)汇总在线检测、客户端配置、API 迁移、生产排错与证据边界；实际检测仍在网页完成，无需下载程序。
-
-> **检测规则可审计：** [协议检查、报告 Schema 与回归证据](https://github.com/KKWANG4444/openai-compatible-api-check)公开供技术复核；普通用户仍直接使用上方网页检测。
-
-> **Codex 专项：** [配置自定义 Provider](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup) · [验收 Responses、工具调用、压缩与会话恢复](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting)
-
-> **Cursor 与模型报错：** [Cursor 官方自定义 API 配置](https://docs.aifast.club/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor) · [Cursor2API 风险与迁移](https://docs.aifast.club/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor2api) · [排查 model not found 与 /v1/v1](https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-model-not-found)
+> **再选择接入路径：** [OpenAI-compatible 配置](https://docs.aifast.club/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible) · [Codex 配置与验收](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex) · [Cursor 自定义 API](https://docs.aifast.club/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor)
 
 这是一份面向国内开发者的 AI API 中转站接入指南，覆盖 OpenAI API 中转、Claude API 中转、Gemini API 中转，以及 Cursor、Dify、Claude Code、Codex 等工具的 OpenAI-compatible 配置。内容重点是可复制的接入步骤、模型质量检测和生产排错，不用过时的固定延迟或一次测试结果代替真实验收。
 
@@ -36,13 +26,17 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 
 [立即在线检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-tool-primary) · [查看报告判读方法](https://docs.aifast.club/guides/model-check-report-guide/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-tool-report)
 
+需要复核检测实现时，可查看[协议检查、报告 Schema 与回归证据](https://github.com/KKWANG4444/openai-compatible-api-check)；普通使用者无需安装程序。
+
 还没进入真实请求阶段时，先用 [Base URL 检查器](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker)排查 `/v1/v1`、404 和端点重复；准备比较方案成本时，用 [Token 成本计算器](https://docs.aifast.club/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator)按当前价格计算批量任务与重试费用。
 
-先对现有接口留下可复核报告。需要更换服务商时，再[查看 AI快站模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-tool-pricing)或[创建测试账号](https://docs.aifast.club/go/register/?source=github&placement=guide-tool-register)。
+先对现有接口留下可复核报告。确认接口符合业务需求后，再查看[当前模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-tool-pricing)或[创建测试账号](https://docs.aifast.club/go/register/?source=github&placement=guide-tool-register)。
 
 > **按当前需求开始：** [首次调用、工具迁移、接口检测或企业接入](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-hero-start) · [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
 > **具体业务场景：** [生图 API](https://docs.aifast.club/models/image-generation-api/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-image-api) · [视频生成 API](https://docs.aifast.club/models/video-generation-api/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-video-api) · [Embedding / Rerank 与 Dify](https://docs.aifast.club/models/embedding-rerank-dify/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-embedding-rerank) · [企业采购与发票](https://docs.aifast.club/guides/enterprise-ai-api-procurement/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-enterprise)
+
+> **专项排错：** [Cursor2API 风险与迁移](https://docs.aifast.club/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-troubleshooting-cursor2api) · [model not found 与 `/v1/v1`](https://docs.aifast.club/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-troubleshooting-model-not-found)
 
 AI快站提供 OpenAI-compatible 接口：
 
@@ -55,6 +49,8 @@ https://www.aifast.club/v1
 ## AI快站平台能力
 
 [AI快站](https://www.aifast.club)提供 OpenAI-compatible AI API 接入，平台模型可用性 99%，一个账户可接入 500+ 语言、生图、视频、向量和检索模型。Claude、GPT、Gemini 等国外模型支持国内直连、无需代理，平台支持高速稳定调用、自动故障切换和企业发票。
+
+当前公开配置中的 OpenAI 模型族包括 GPT-5.6；准确模型 ID、协议能力和维护状态仍需按当前目录及真实请求确认。
 
 > 模型目录会持续调整。具体模型 ID、维护状态和费用以模型广场、公告及调用时的控制台为准。
 
