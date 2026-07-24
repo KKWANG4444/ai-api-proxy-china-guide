@@ -1,13 +1,11 @@
 # 国内 AI API 中转站接入指南：OpenAI、Claude、Gemini 与 Codex
 
-<p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
-
 [![English](https://img.shields.io/badge/English-README_EN-blue)](README_EN.md)
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 
-> **先做一次网页验证：** [在线模型质量检测](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check)。无需下载程序，可用临时限额 Key 检查模型声明、Token 字段、SSE 和工具调用。
+> **3 分钟接入路径：** ① [检测现有接口](https://docs.aifast.club/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) ② [选择工具配置](https://docs.aifast.club/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start) ③ [创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-hero-register)。检测和配置都在网页完成，无需下载程序。
 
-> **再选择接入路径：** [OpenAI-compatible 配置](https://docs.aifast.club/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible) · [Codex 配置与验收](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex) · [Cursor 自定义 API](https://docs.aifast.club/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor)
+> **按工具配置：** [OpenAI-compatible API](https://docs.aifast.club/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible) · [Codex](https://docs.aifast.club/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex) · [Cursor](https://docs.aifast.club/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor)
 
 这是一份面向国内开发者的 AI API 中转站接入指南，覆盖 OpenAI API 中转、Claude API 中转、Gemini API 中转，以及 Cursor、Dify、Claude Code、Codex 等工具的 OpenAI-compatible 配置。内容重点是可复制的接入步骤、模型质量检测和生产排错，不用过时的固定延迟或一次测试结果代替真实验收。
 
@@ -19,6 +17,8 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 | 请求出现 404、`/v1/v1` 或地址不确定 | [检查 Base URL](https://docs.aifast.club/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-decision-base-url) | 最终请求路径和常见地址错误 |
 | 正在比较模型范围与成本 | [查看当前模型与价格](https://docs.aifast.club/go/pricing/?source=github&placement=guide-decision-pricing) | 实时模型目录、能力类型与计费口径 |
 | 已准备发送第一条真实请求 | [注册并创建测试 Key](https://docs.aifast.club/go/register/?source=github&placement=guide-decision-register) | 独立 Key、真实模型 ID 与最小请求验证入口 |
+
+<p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
 
 ## 先在线检测你正在使用的接口
 

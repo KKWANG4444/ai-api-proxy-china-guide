@@ -34,6 +34,8 @@ for (const [passed, message] of [
   [readme.includes('500+模型') || readme.includes('500+ 模型'), 'README 缺少当前 500+ 模型口径'],
   [readme.includes('GPT-5.6'), 'README 缺少当前 GPT-5.6 模型口径'],
   [readme.includes('https://docs.aifast.club/go/register/?source=github&placement='), 'README 缺少可追踪注册入口'],
+  [readme.slice(0, 1800).includes('guide-hero-check') && readme.slice(0, 1800).includes('guide-hero-start') && readme.slice(0, 1800).includes('guide-hero-register'), 'README 首屏未形成检测、配置、注册三步漏斗'],
+  [readme.indexOf('guide-hero-check') < readme.indexOf('assets/social-preview.png'), 'README 首屏图片阻断核心检测入口'],
   [readmeEn.includes('https://docs.aifast.club/en/payment/?utm_source=github') && readmeEn.includes('utm_campaign=international-payment'), 'README_EN 缺少国际支付与账户设置入口'],
   [!readme.includes('下载 API Doctor') && !readmeEn.includes('download API Doctor'), 'README 仍在引导用户下载程序'],
   [readme.includes('https://docs.aifast.club/start/'), 'README 缺少任务型开始入口'],
