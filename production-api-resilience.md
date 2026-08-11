@@ -19,7 +19,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="sk-...",
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     max_retries=0,  # 由下面的装饰器统一控制，避免双重重试
 )
 ```
@@ -234,6 +234,6 @@ def resilient_call(messages, models, cb, max_retries=3):
 ## 参考
 
 - [OpenAI SDK 重试与超时配置](openai-sdk-advanced-config.md)
-- [AI快站模型目录（按能力筛选）](https://www.aifast.club)
+- [AI快站模型目录（按能力筛选）](https://www.aifast.hk)
 - [常见错误码排除清单](https://github.com/KKWANG4444/llm-api-proxy-china#常见错误)
 - [应用侧模型分组与回退（指南）](README.md#自动故障切换与应用回退)

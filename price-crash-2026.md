@@ -1,6 +1,6 @@
 # AI API 成本变化后，怎么重新做技术选型
 
-[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.club)
+[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.hk)
 
 模型厂商和聚合平台的计费会持续变化。与其维护一张很快过期的价格表，不如保留一套重新评估的方法。
 
@@ -59,6 +59,6 @@ retry_rate
 
 ## 相关入口
 
-- [AI快站控制台](https://www.aifast.club)
+- [AI快站控制台](https://www.aifast.hk)
 - [完整接入指南](README.md)
 - [成本评估说明](https://github.com/KKWANG4444/AI-API-Stability-Tracker/blob/main/price-guide.md)

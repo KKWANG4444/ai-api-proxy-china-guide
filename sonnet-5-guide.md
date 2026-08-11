@@ -1,6 +1,6 @@
 # Claude Sonnet 5 接入指南
 
-[![模型目录](https://img.shields.io/badge/Claude-Sonnet_5-blueviolet)](https://www.aifast.club)
+[![模型目录](https://img.shields.io/badge/Claude-Sonnet_5-blueviolet)](https://www.aifast.hk)
 
 这份说明只覆盖可以从 AI快站当前配置和实际请求核验的接入内容，不保留未经来源复核的基准分数、固定上下文或价格比较。
 
@@ -19,7 +19,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     api_key=os.environ["AIFAST_API_KEY"],
 )
 
@@ -38,7 +38,7 @@ print(response.choices[0].message.content)
 Anthropic 文档使用：
 
 ```bash
-export ANTHROPIC_BASE_URL="https://www.aifast.club/v1"
+export ANTHROPIC_BASE_URL="https://www.aifast.hk/v1"
 export ANTHROPIC_AUTH_TOKEN="$AIFAST_API_KEY"
 claude
 ```
@@ -69,7 +69,7 @@ claude
 
 ## 相关入口
 
-- [AI快站模型广场](https://www.aifast.club)
+- [AI快站模型广场](https://www.aifast.hk)
 - [完整接入指南](README.md)
 - [工具配置](tools-integration-guide.md)
 - [目录与维护参考](https://kkwang4444.github.io/api-status/)

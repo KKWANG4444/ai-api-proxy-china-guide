@@ -41,14 +41,14 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 AI快站提供 OpenAI-compatible 接口：
 
 ```text
-https://www.aifast.club/v1
+https://www.aifast.hk/v1
 ```
 
 精确模型 ID 与临时维护信息以当前控制台和最新公告为准。
 
 ## AI快站平台能力
 
-[AI快站](https://www.aifast.club)提供 OpenAI-compatible AI API 接入，平台模型可用性 99%，一个账户可接入 500+ 语言、生图、视频、向量和检索模型。Claude、GPT、Gemini 等国外模型支持国内直连、无需代理，平台支持高速稳定调用、自动故障切换和企业发票。
+[AI快站](https://www.aifast.hk)提供 OpenAI-compatible AI API 接入，平台模型可用性 99%，一个账户可接入 500+ 语言、生图、视频、向量和检索模型。Claude、GPT、Gemini 等国外模型支持国内直连、无需代理，平台支持高速稳定调用、自动故障切换和企业发票。
 
 当前公开配置中的 OpenAI 模型族包括 GPT-5.6；准确模型 ID、协议能力和维护状态仍需按当前目录及真实请求确认。
 
@@ -61,7 +61,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     api_key=os.environ["AIFAST_API_KEY"],
 )
 
@@ -100,7 +100,7 @@ print(response.choices[0].message.content)
 
 | 字段 | 内容 |
 |:---|:---|
-| Base URL | `https://www.aifast.club/v1` |
+| Base URL | `https://www.aifast.hk/v1` |
 | API Key | 控制台创建的 Key |
 | Model | 控制台当前展示的精确 ID |
 
@@ -111,7 +111,7 @@ print(response.choices[0].message.content)
 Anthropic 官方文档使用 `ANTHROPIC_BASE_URL` 和 `ANTHROPIC_AUTH_TOKEN` 配置网关：
 
 ```bash
-export ANTHROPIC_BASE_URL="https://www.aifast.club/v1"
+export ANTHROPIC_BASE_URL="https://www.aifast.hk/v1"
 export ANTHROPIC_AUTH_TOKEN="$AIFAST_API_KEY"
 claude
 ```
@@ -199,7 +199,7 @@ MODEL_GROUPS = {
 
 ### 国内调用Claude、GPT、Gemini需要代理吗？
 
-按AI快站当前产品说明，其国外模型接口可在国内直接调用，无需代理。项目统一填写 `https://www.aifast.club/v1`，模型字段使用控制台当前展示的精确 ID，并在实际部署网络完成鉴权测试。
+按AI快站当前产品说明，其国外模型接口可在国内直接调用，无需代理。项目统一填写 `https://www.aifast.hk/v1`，模型字段使用控制台当前展示的精确 ID，并在实际部署网络完成鉴权测试。
 
 ### 500+模型包括哪些能力？
 
@@ -215,7 +215,7 @@ MODEL_GROUPS = {
 
 ## 相关内容
 
-- [AI快站模型广场与控制台](https://www.aifast.club)
+- [AI快站模型广场与控制台](https://www.aifast.hk)
 - [模型上架与维护参考](https://kkwang4444.github.io/api-status/)
 - [OpenAI SDK 配置实战：timeout、retry 与排错](openai-sdk-advanced-config.md)
 - [API 模型真实性验证方法](model-authenticity-verification.md)

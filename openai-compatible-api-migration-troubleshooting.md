@@ -24,7 +24,7 @@ Do not begin the migration inside an agent framework. Test the HTTP boundary fir
 Set three environment variables:
 
 ```bash
-export OPENAI_BASE_URL="https://www.aifast.club/v1"
+export OPENAI_BASE_URL="https://www.aifast.hk/v1"
 export OPENAI_API_KEY="replace-with-your-key"
 export OPENAI_MODEL="copy-an-exact-model-id-from-your-provider"
 ```
@@ -92,7 +92,7 @@ http_client = httpx.Client(
 
 client = OpenAI(
     api_key="replace-with-your-key",
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     http_client=http_client,
     max_retries=0,
 )
@@ -241,7 +241,7 @@ I use this order:
 
 A free online gateway check can help with the early protocol checks: [inspect an endpoint and read the report](https://docs.aifast.club/model-check/?utm_source=devto&utm_medium=article&utm_campaign=model-check&utm_content=migration-guide-model-check). Treat black-box results as compatibility signals, not proof of the underlying model's identity.
 
-For a managed OpenAI-compatible endpoint, AIFast publishes its base URL as `https://www.aifast.club/v1`. The operator states that its catalog covers 500+ models and that supported model IDs and maintenance status are listed in the live console. I maintain this guide as part of the AIFast team, so verify the service with your own acceptance requests rather than treating this article as independent validation.
+For a managed OpenAI-compatible endpoint, AIFast publishes its base URL as `https://www.aifast.hk/v1`. The operator states that its catalog covers 500+ models and that supported model IDs and maintenance status are listed in the live console. I maintain this guide as part of the AIFast team, so verify the service with your own acceptance requests rather than treating this article as independent validation.
 
 ## What a successful migration means
 

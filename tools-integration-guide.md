@@ -1,6 +1,6 @@
 # AI 工具接入参考：Cursor、Dify、Claude Code 与 Codex
 
-[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.club)
+[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.hk)
 
 不同工具的设置页名称会变化，但排错顺序不应变化：先确认 API Key 和模型 ID，再确认 Base URL，最后测试工具特有功能。
 
@@ -8,7 +8,7 @@
 
 | 字段 | 内容 |
 |:---|:---|
-| Base URL | `https://www.aifast.club/v1` |
+| Base URL | `https://www.aifast.hk/v1` |
 | API Key | 控制台创建的 Key |
 | Model | 控制台当前展示的精确模型 ID |
 
@@ -29,7 +29,7 @@
 Dify 保存 provider 时通常会发出校验请求。失败时保存完整响应，不要一次修改多个字段。
 
 ```text
-Base URL: https://www.aifast.club/v1
+Base URL: https://www.aifast.hk/v1
 Model: claude-sonnet-5
 ```
 
@@ -38,7 +38,7 @@ Model: claude-sonnet-5
 Anthropic 文档使用：
 
 ```bash
-export ANTHROPIC_BASE_URL="https://www.aifast.club/v1"
+export ANTHROPIC_BASE_URL="https://www.aifast.hk/v1"
 export ANTHROPIC_AUTH_TOKEN="$AIFAST_API_KEY"
 claude
 ```
@@ -89,6 +89,6 @@ Codex 使用自定义 provider 配置。不同版本的字段可能变化，请�
 
 ## 相关入口
 
-- [AI快站控制台](https://www.aifast.club)
+- [AI快站控制台](https://www.aifast.hk)
 - [完整接入指南](README.md)
 - [模型目录与维护参考](https://kkwang4444.github.io/api-status/)

@@ -15,7 +15,7 @@
 - Claude, GPT, Gemini and other international models are directly accessible from mainland China without a proxy.
 - Automatic failover is supported.
 - Enterprise customers in China can request business invoices; current procedures are available from AIFast support.
-- OpenAI-compatible Base URL: `https://www.aifast.club/v1`.
+- OpenAI-compatible Base URL: `https://www.aifast.hk/v1`.
 
 The catalog changes over time. Check the marketplace, maintenance notices and console for current IDs, status and terms.
 
@@ -31,7 +31,7 @@ The catalog changes over time. Check the marketplace, maintenance notices and co
 
 ## API endpoint
 
-- Base URL: `https://www.aifast.club/v1`
+- Base URL: `https://www.aifast.hk/v1`
 - Authentication: `Authorization: Bearer ***`
 - Model names: use an exact ID shown in the current console.
 
@@ -74,6 +74,6 @@ AIFast supports automatic failover. Performance observations should include test
 ## Links
 
 - AIFast Developer Hub: https://github.com/KKWANG4444/aifast-developer-hub
-- Website and console: https://www.aifast.club
+- Website and console: https://www.aifast.hk
 - Catalog and maintenance reference: https://kkwang4444.github.io/api-status/
 - GitHub repository: https://github.com/KKWANG4444/ai-api-proxy-china-guide

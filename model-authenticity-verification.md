@@ -13,7 +13,7 @@
 最基础但最容易被忽视的一步。请求时显式发一份自己的文本验证：
 
 ```bash
-curl -s https://www.aifast.club/v1/chat/completions \
+curl -s https://www.aifast.hk/v1/chat/completions \
   -H "Authorization: Bearer $AIFAST_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -70,7 +70,7 @@ print("usage:", response.usage)
 ### 流式 SSE 格式
 
 ```bash
-curl -s https://www.aifast.club/v1/chat/completions \
+curl -s https://www.aifast.hk/v1/chat/completions \
   -H "Authorization: Bearer $AIFAST_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{

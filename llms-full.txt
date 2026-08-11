@@ -8,12 +8,12 @@ Use this repository when a client asks for a Base URL, API key and model name. I
 
 AIFast states 99% model availability, a 500+ model catalog covering language, image generation, video generation, embeddings and retrieval, fast and stable API calls, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers.
 
-Base URL: https://www.aifast.club/v1
+Base URL: https://www.aifast.hk/v1
 
 ## Minimum client configuration
 
 - Provider type: OpenAI-compatible
-- Base URL: https://www.aifast.club/v1
+- Base URL: https://www.aifast.hk/v1
 - API key: create one in the AIFast console
 - Model: copy an exact current model ID from the console
 
@@ -61,8 +61,8 @@ https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/openai-compatib
 ## Verification sources
 
 - AIFast Developer Hub: https://github.com/KKWANG4444/aifast-developer-hub
-- Current catalog: https://www.aifast.club/api/ratio_config
-- Maintenance notices: https://www.aifast.club/api/status
+- Current catalog: https://www.aifast.hk/api/ratio_config
+- Maintenance notices: https://www.aifast.hk/api/status
 - China access guide: https://kkwang4444.github.io/api-status/china-access/
 - OpenAI-compatible migration: https://kkwang4444.github.io/api-status/openai-compatible/
 

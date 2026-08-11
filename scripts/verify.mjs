@@ -25,7 +25,7 @@ for (const [passed, message] of [
   [html.includes(`property="og:url" content="${expectedCanonical}"`), 'og:url 地址错误'],
   [robots.includes('sitemap.xml'), 'robots.txt 未声明 sitemap'],
   [sitemap.includes(`<loc>${expectedCanonical}</loc>`), 'sitemap 缺少首页'],
-  [readme.includes('https://www.aifast.club/v1'), 'README 缺少 Base URL'],
+  [readme.includes('https://www.aifast.hk/v1'), 'README 缺少 Base URL'],
   [readme.startsWith('# 国内 AI API 中转站接入指南：'), 'README 首屏丢失国内 AI API 中转站搜索意图'],
   [readme.slice(0, 3000).includes('OpenAI API 中转') && readme.slice(0, 3000).includes('Claude API 中转') && readme.slice(0, 3000).includes('Gemini API 中转'), 'README 首屏缺少供应商接入搜索意图'],
   [html.includes('<title>国内AI API中转站接入指南'), 'GitHub Pages 标题未承接国内 AI API 中转站搜索意图'],

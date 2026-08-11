@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: AIFast Console
-    url: https://www.aifast.club
+    url: https://www.aifast.hk
     about: Check model status, API keys, and account settings
   - name: AIFast Documentation
     url: https://docs.aifast.club
     about: Integration guides, troubleshooting, and FAQ
   - name: Security or account support
-    url: https://www.aifast.club/customersupport
+    url: https://www.aifast.hk/customersupport
     about: Contact AIFast support without publishing credentials or account details

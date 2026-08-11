@@ -1,6 +1,6 @@
 # AI API 接入避坑：从模型 ID 到生产回退
 
-[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.club)
+[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.hk)
 
 这篇短指南保留四个真正影响上线的问题：模型名、鉴权、兼容性和回退。固定模型数量、延迟、成功率和“比官方便宜”都没有写，因为这些结论会随时间、地区和账户变化。
 
@@ -25,7 +25,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     api_key=os.environ["AIFAST_API_KEY"],
 )
 
@@ -69,6 +69,6 @@ MODEL_GROUPS = {
 
 ## 相关入口
 
-- [AI快站控制台](https://www.aifast.club)
+- [AI快站控制台](https://www.aifast.hk)
 - [完整接入指南](README.md)
 - [模型目录与维护参考](https://kkwang4444.github.io/api-status/)

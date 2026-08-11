@@ -5,7 +5,7 @@
   <rect x="38" y="34" width="1204" height="572" rx="22" fill="#10141f" stroke="#242a39"/>
   <circle cx="76" cy="76" r="18" fill="#ffb84d"/>
   <text x="106" y="84" font-family="Arial Unicode MS" font-size="25" font-weight="700" fill="#f7f8fb">AI快站</text>
-  <text x="1170" y="82" text-anchor="end" font-family="Arial Unicode MS" font-size="20" font-weight="500" fill="#9ea6b8">aifast.club</text>
+  <text x="1170" y="82" text-anchor="end" font-family="Arial Unicode MS" font-size="20" font-weight="500" fill="#9ea6b8">aifast.hk</text>
   <line x1="72" y1="112" x2="1208" y2="112" stroke="#2b3140"/>
   <text x="72" y="174" font-family="Arial Unicode MS" font-size="16" font-weight="700" letter-spacing="2" fill="#ffb84d">CHINA AI API INTEGRATION GUIDE</text>
   <text x="72" y="245" font-family="Arial Unicode MS" font-size="48" font-weight="700" fill="#f7f8fb">国内大模型 API 接入指南</text>

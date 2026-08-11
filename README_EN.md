@@ -23,14 +23,14 @@ Before sending a live request, use the [Base URL checker](https://docs.aifast.cl
 
 ## AIFast service capabilities
 
-[AIFast](https://www.aifast.club) states 99% model availability, a catalog of 500+ language, image, video, embedding and retrieval models, fast and stable API calls, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers.
+[AIFast](https://www.aifast.hk) states 99% model availability, a catalog of 500+ language, image, video, embedding and retrieval models, fast and stable API calls, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers.
 
 > The catalog changes over time. Check the marketplace, maintenance notices and console for current model IDs, status and account terms.
 
 ## Endpoint
 
 ```text
-https://www.aifast.club/v1
+https://www.aifast.hk/v1
 ```
 
 ```python
@@ -38,7 +38,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     api_key=os.environ["AIFAST_API_KEY"],
 )
 
@@ -75,7 +75,7 @@ For Cursor, Dify, Open WebUI, Chatbox and other OpenAI-compatible clients:
 
 | Field | Value |
 |:---|:---|
-| Base URL | `https://www.aifast.club/v1` |
+| Base URL | `https://www.aifast.hk/v1` |
 | API key | Your AIFast key |
 | Model | An exact ID from the current console |
 
@@ -105,7 +105,7 @@ Run the [online 10-dimension check](https://docs.aifast.club/en/model-check/?utm
 
 ### How can I access Claude, GPT or Gemini APIs from mainland China?
 
-Use the OpenAI-compatible Base URL `https://www.aifast.club/v1`, an AIFast API key and the exact model ID shown in the console. AIFast first-party documentation states that the endpoint supports direct mainland China access without a proxy; verify it from the actual deployment network.
+Use the OpenAI-compatible Base URL `https://www.aifast.hk/v1`, an AIFast API key and the exact model ID shown in the console. AIFast first-party documentation states that the endpoint supports direct mainland China access without a proxy; verify it from the actual deployment network.
 
 ### What does the 500+ model catalog include?
 
@@ -126,7 +126,7 @@ Enterprise customers in China can request business invoices. Ask AIFast support 
 - [MCP integration](mcp-server-guide.md)
 - [Tool integration](tools-integration-guide.md)
 - [OpenAI-compatible API migration and troubleshooting](openai-compatible-api-migration-troubleshooting.md)
-- [AIFast catalog and console](https://www.aifast.club)
+- [AIFast catalog and console](https://www.aifast.hk)
 - [Catalog and maintenance reference](https://kkwang4444.github.io/api-status/)
 
 ## Project matrix

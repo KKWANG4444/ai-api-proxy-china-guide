@@ -1,6 +1,6 @@
 # MCP 接入 AI 模型：配置、权限与排错
 
-[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.club)
+[![模型目录](https://img.shields.io/badge/模型-以当前控制台为准-blue)](https://www.aifast.hk)
 
 MCP 负责把工具和数据源暴露给模型，模型 API 负责推理。两者是不同链路。排错时要先判断失败发生在 MCP server、MCP client，还是模型请求。
 
@@ -8,7 +8,7 @@ MCP 负责把工具和数据源暴露给模型，模型 API 负责推理。两�
 
 ```text
 MCP client
-  ├─ model API: https://www.aifast.club/v1
+  ├─ model API: https://www.aifast.hk/v1
   └─ MCP servers: filesystem / GitHub / database / browser
 ```
 
@@ -19,7 +19,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     api_key=os.environ["AIFAST_API_KEY"],
 )
 ```
@@ -67,6 +67,6 @@ client = OpenAI(
 
 ## 相关入口
 
-- [AI快站控制台](https://www.aifast.club)
+- [AI快站控制台](https://www.aifast.hk)
 - [工具接入指南](tools-integration-guide.md)
 - [完整接入指南](README.md)

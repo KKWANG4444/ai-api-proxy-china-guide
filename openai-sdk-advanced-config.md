@@ -13,7 +13,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="sk-...",
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
 )
 # 默认 timeout=600s（10 分钟），connect=5s
 # 默认 max_retries=2
@@ -39,7 +39,7 @@ import httpx
 
 # 只改连接超时，其他保持默认
 client = OpenAI(
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     http_client=httpx.Client(timeout=httpx.Timeout(600, connect=3.0)),
 )
 ```
@@ -83,7 +83,7 @@ for chunk in stream:
 ```python
 client = OpenAI(
     api_key="sk-...",
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     max_retries=3,  # 最多 3 次重试，总共 4 次尝试
 )
 ```
@@ -105,7 +105,7 @@ def log_response(response: httpx.Response) -> None:
 
 client = OpenAI(
     api_key="sk-...",
-    base_url="https://www.aifast.club/v1",
+    base_url="https://www.aifast.hk/v1",
     http_client=httpx.Client(
         event_hooks={"request": [log_request], "response": [log_response]}
     ),
@@ -150,7 +150,7 @@ client = OpenAI(
 
 如果 2 次都连不上，可能是网络问题，检查：
 
-- 能否 ping 通 `www.aifast.club`
+- 能否 ping 通 `www.aifast.hk`
 - 是否用了代理但 SDK 没走代理
 - DNS 能否解析
 
@@ -223,7 +223,7 @@ openai.APITimeoutError: Request timed out.
 先用 curl 验证基本连通：
 
 ```bash
-curl -s -w "\n%{http_code}" https://www.aifast.club/v1/chat/completions \
+curl -s -w "\n%{http_code}" https://www.aifast.hk/v1/chat/completions \
   -H "Authorization: Bearer $AIFAST_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"gpt-5.6-luna","messages":[{"role":"user","content":"hi"}],"stream":true}'
@@ -245,7 +245,7 @@ from httpx import AsyncClient
 
 DEFAULT_TIMEOUT = httpx.Timeout(timeout=600, connect=5.0)
 
-def create_client(api_key: str, base_url: str = "https://www.aifast.club/v1") -> OpenAI:
+def create_client(api_key: str, base_url: str = "https://www.aifast.hk/v1") -> OpenAI:
     return OpenAI(
         api_key=api_key,
         base_url=base_url,
@@ -253,7 +253,7 @@ def create_client(api_key: str, base_url: str = "https://www.aifast.club/v1") ->
         max_retries=2,
     )
 
-def create_async_client(api_key: str, base_url: str = "https://www.aifast.club/v1") -> AsyncOpenAI:
+def create_async_client(api_key: str, base_url: str = "https://www.aifast.hk/v1") -> AsyncOpenAI:
     return AsyncOpenAI(
         api_key=api_key,
         base_url=base_url,
