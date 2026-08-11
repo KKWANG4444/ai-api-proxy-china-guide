@@ -26,8 +26,8 @@ The catalog changes over time. Check the marketplace, maintenance notices and co
 - [Claude Sonnet 5 guide](sonnet-5-guide.md): Model-specific integration notes.
 - [MCP guide](mcp-server-guide.md): MCP client and server configuration.
 - [Tool integration guide](tools-integration-guide.md): Cursor, Dify and related clients.
-- [Codex custom provider setup](https://docs.aifast.club/tools/codex/): Responses API, Base URL, environment key and minimum task validation.
-- [Codex gateway validation](https://docs.aifast.club/troubleshooting/codex-gateway-checklist/): provider selection, tool events, context compaction, thread resume and HTTP errors.
+- [Codex custom provider setup](https://docs.aifast.hk/tools/codex/): Responses API, Base URL, environment key and minimum task validation.
+- [Codex gateway validation](https://docs.aifast.hk/troubleshooting/codex-gateway-checklist/): provider selection, tool events, context compaction, thread resume and HTTP errors.
 
 ## API endpoint
 
@@ -54,18 +54,18 @@ These examples show ID format; current status requires maintenance notices and a
 
 ## Validation tools
 
-- Browser-based model quality check: https://docs.aifast.club/model-check/
-- Start by task: https://docs.aifast.club/start/
-- Online 10-dimension check: https://docs.aifast.club/model-check/
-- Methodology: https://docs.aifast.club/guides/model-api-downgrade-detection/
-- Report interpretation: https://docs.aifast.club/guides/model-check-report-guide/
+- Browser-based model quality check: https://docs.aifast.hk/model-check/
+- Start by task: https://docs.aifast.hk/start/
+- Online 10-dimension check: https://docs.aifast.hk/model-check/
+- Methodology: https://docs.aifast.hk/guides/model-api-downgrade-detection/
+- Report interpretation: https://docs.aifast.hk/guides/model-check-report-guide/
 
 Current account and transaction rules must be verified in the console; this technical guide does not duplicate volatile payment instructions.
 
 ## Model-check entry
 
-- https://docs.aifast.club/model-check/ checks public HTTPS OpenAI Chat Completions-compatible gateways. Use a temporary limited key; real probe requests may incur token charges. The report is not model identity certification.
-- https://docs.aifast.club/guides/model-check-report-guide/ explains each signal, evidence boundary and recommended follow-up.
+- https://docs.aifast.hk/model-check/ checks public HTTPS OpenAI Chat Completions-compatible gateways. Use a temporary limited key; real probe requests may incur token charges. The report is not model identity certification.
+- https://docs.aifast.hk/guides/model-check-report-guide/ explains each signal, evidence boundary and recommended follow-up.
 
 ## Reliability notes
 

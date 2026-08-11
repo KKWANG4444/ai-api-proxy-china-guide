@@ -8,6 +8,6 @@ Thank you for considering a contribution. This repository documents tool-specifi
 
 ## Before opening an issue
 
-1. Check the [documentation](https://docs.aifast.club).
+1. Check the [documentation](https://docs.aifast.hk).
 2. Search [existing issues](https://github.com/KKWANG4444/ai-api-proxy-china-guide/issues) to avoid duplicates.
 3. Make sure the model ID, Base URL and API key format match the current AIFast console.

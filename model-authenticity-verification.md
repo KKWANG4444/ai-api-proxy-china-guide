@@ -148,7 +148,7 @@ expected = numbers[0] * numbers[1] + numbers[2] - numbers[3] / numbers[4]
 
 不想写代码，可以直接用现成的检测。
 
-[大模型 API 中转站在线检测 →](https://docs.aifast.club/model-check/)
+[大模型 API 中转站在线检测 →](https://docs.aifast.hk/model-check/)
 
 填入 base_url、临时限额的 API key 和模型 ID，检测会覆盖：
 

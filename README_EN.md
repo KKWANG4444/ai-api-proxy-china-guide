@@ -1,25 +1,25 @@
 # AI API integration guide for China and international users
 
-> **Three-step path:** 1. [check an existing endpoint](https://docs.aifast.club/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check-en), 2. [choose the matching setup guide](https://docs.aifast.club/en/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start-en), 3. [review payment and account setup](https://docs.aifast.club/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-hero-payment-en). All three steps stay in the browser; no program download is required.
+> **Three-step path:** 1. [check an existing endpoint](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check-en), 2. [choose the matching setup guide](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start-en), 3. [review payment and account setup](https://docs.aifast.hk/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-hero-payment-en). All three steps stay in the browser; no program download is required.
 
-> **Tool-specific setup:** [OpenAI-compatible API](https://docs.aifast.club/en/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible-en) · [Codex](https://docs.aifast.club/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-en) · [Cursor](https://docs.aifast.club/en/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor-en)
+> **Tool-specific setup:** [OpenAI-compatible API](https://docs.aifast.hk/en/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible-en) · [Codex](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-en) · [Cursor](https://docs.aifast.hk/en/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor-en)
 
 [![中文](https://img.shields.io/badge/中文-README-red)](README.md)
-[![Start](https://img.shields.io/badge/Docs-quick_start-FF6B35)](https://docs.aifast.club/en/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-start-en)
-[![Model selection](https://img.shields.io/badge/Models-selection_guide-blue)](https://docs.aifast.club/en/models/model-selection/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-model-selection-en)
-[![Codex](https://img.shields.io/badge/Codex-Responses_API-22c55e)](https://docs.aifast.club/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-codex-en)
+[![Start](https://img.shields.io/badge/Docs-quick_start-FF6B35)](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-start-en)
+[![Model selection](https://img.shields.io/badge/Models-selection_guide-blue)](https://docs.aifast.hk/en/models/model-selection/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-model-selection-en)
+[![Codex](https://img.shields.io/badge/Codex-Responses_API-22c55e)](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-codex-en)
 
 Tool configuration guide for OpenAI-compatible AI API gateways: Cursor, Dify, Claude Code, Codex, Open WebUI, Chatbox and other clients. Copy the Base URL, add an API key and verify one feature at a time.
 
-> **Codex:** [configure a custom provider](https://docs.aifast.club/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup-en) · [validate Responses, tool calls, compaction and thread resume](https://docs.aifast.club/en/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting-en)
+> **Codex:** [configure a custom provider](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup-en) · [validate Responses, tool calls, compaction and thread resume](https://docs.aifast.hk/en/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting-en)
 
-**Check an existing gateway first:** [run the public model check](https://docs.aifast.club/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-check-en) with a temporary limited key. It checks model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
+**Check an existing gateway first:** [run the public model check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-check-en) with a temporary limited key. It checks model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
 
 For implementation review, see the public [protocol checks, report schema and regression evidence](https://github.com/KKWANG4444/openai-compatible-api-check/blob/main/README_EN.md). Regular users do not need to install a program.
 
-Before sending a live request, use the [Base URL checker](https://docs.aifast.club/en/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.club/en/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
+Before sending a live request, use the [Base URL checker](https://docs.aifast.hk/en/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.hk/en/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
 
-**Verify before changing client settings:** use the [browser-based model check](https://docs.aifast.club/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-verify-en) to inspect authentication, model claims, token fields, streaming and tool calls. If the endpoint fits your application, review [international payment and account setup](https://docs.aifast.club/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-readme-payment-en).
+**Verify before changing client settings:** use the [browser-based model check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-verify-en) to inspect authentication, model claims, token fields, streaming and tool calls. If the endpoint fits your application, review [international payment and account setup](https://docs.aifast.hk/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-readme-payment-en).
 
 ## AIFast service capabilities
 
@@ -90,7 +90,7 @@ Test plain text first. Add streaming, tools, images and structured output separa
 - Tools: parameter schema, tool selection and tool-result continuation work end to end.
 - Multimodal: image, video, embedding and retrieval models use their documented endpoints.
 
-Run the [online 10-dimension check](https://docs.aifast.club/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-validation-online-en) first. If it exposes authentication, rate-limit or upstream errors, continue with the [website troubleshooting guide](https://docs.aifast.club/en/troubleshooting/api-errors/).
+Run the [online 10-dimension check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-validation-online-en) first. If it exposes authentication, rate-limit or upstream errors, continue with the [website troubleshooting guide](https://docs.aifast.hk/en/troubleshooting/api-errors/).
 
 ## Production checklist
 
@@ -131,8 +131,8 @@ Enterprise customers in China can request business invoices. Ask AIFast support 
 
 ## Project matrix
 
-- [Online gateway check](https://docs.aifast.club/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-project-map-en)
-- [Report interpretation and false-positive boundaries](https://docs.aifast.club/en/guides/model-check-report-guide/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-project-report-en)
+- [Online gateway check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-project-map-en)
+- [Report interpretation and false-positive boundaries](https://docs.aifast.hk/en/guides/model-check-report-guide/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-project-report-en)
 - [Production troubleshooting and fallback](https://github.com/KKWANG4444/llm-api-proxy-china)
 - [Catalog and evidence center](https://github.com/KKWANG4444/api-status)
 - [Reproducible observation method](https://github.com/KKWANG4444/AI-API-Stability-Tracker)
