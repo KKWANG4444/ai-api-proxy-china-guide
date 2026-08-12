@@ -239,9 +239,9 @@ I use this order:
 9. Compare status codes, latency, token usage, and output handling.
 10. Keep the old route available until the observation window is clean.
 
-A free online gateway check can help with the early protocol checks: [inspect an endpoint and read the report](https://docs.aifast.hk/model-check/?utm_source=devto&utm_medium=article&utm_campaign=model-check&utm_content=migration-guide-model-check). Treat black-box results as compatibility signals, not proof of the underlying model's identity.
+A browser-based gateway check can help with the early protocol checks: [inspect an endpoint and read the report](https://docs.aifast.hk/en/model-check/?utm_source=devto&utm_medium=article&utm_campaign=model-check&utm_content=migration-guide-model-check). Treat black-box results as compatibility signals, not proof of the underlying model's identity.
 
-For a managed OpenAI-compatible endpoint, AIFast publishes its base URL as `https://www.aifast.hk/v1`. The operator states that its catalog covers 500+ models and that supported model IDs and maintenance status are listed in the live console. I maintain this guide as part of the AIFast team, so verify the service with your own acceptance requests rather than treating this article as independent validation.
+I maintain this guide as part of the AIFast team. AIFast publishes `https://www.aifast.hk/v1` as its OpenAI-compatible base URL and lists its current model IDs and maintenance status in the live platform. That is a disclosure, not an independent endorsement: run the same acceptance tests against any provider you are considering, including AIFast.
 
 ## What a successful migration means
 
