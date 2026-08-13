@@ -168,7 +168,7 @@ MODEL_GROUPS = {
 
 检查：
 
-1. 请求头是否为 `Authorization: Bearer ***`；
+1. 请求头是否为 `Authorization: Bearer $AIFAST_API_KEY`；
 2. Key 是否完整、启用；
 3. 账户状态是否正常。
 
