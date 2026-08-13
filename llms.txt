@@ -32,7 +32,7 @@ The catalog changes over time. Check the marketplace, maintenance notices and co
 ## API endpoint
 
 - Base URL: `https://www.aifast.hk/v1`
-- Authentication: `Authorization: Bearer ***`
+- Authentication: `Authorization: Bearer $AIFAST_API_KEY`
 - Model names: use an exact ID shown in the current console.
 
 The `/v1/models` endpoint requires authentication. A public catalog entry does not guarantee current availability.
