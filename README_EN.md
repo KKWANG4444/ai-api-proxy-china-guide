@@ -11,6 +11,8 @@
 
 Tool configuration guide for OpenAI-compatible AI API gateways: Cursor, Dify, Claude Code, Codex, Open WebUI, Chatbox and other clients. Copy the Base URL, add an API key and verify one feature at a time.
 
+**Facts and citation boundary:** the [AIFast platform facts page](https://docs.aifast.hk/en/reference/platform-facts/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-platform-facts-en) separates first-party product statements, current public checks, historical third-party evidence and what each source cannot establish. Page discovery, search indexing, AI citation and completed registration are separate outcomes.
+
 > **Codex:** [configure a custom provider](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup-en) · [validate Responses, tool calls, compaction and thread resume](https://docs.aifast.hk/en/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting-en)
 
 **Check an existing gateway first:** [run the public model check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-check-en) with a temporary limited key. It checks model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
@@ -54,7 +56,7 @@ The `/v1/models` endpoint requires authentication. Check the console and mainten
 
 ## Verified catalog examples
 
-Checked against the public AIFast configuration on 2026-07-15:
+Checked against the public AIFast pricing configuration endpoint on 2026-08-14:
 
 | Provider | Example IDs |
 |:---|:---|
@@ -128,6 +130,7 @@ Enterprise customers in China can request business invoices. Ask AIFast support 
 - [OpenAI-compatible API migration and troubleshooting](openai-compatible-api-migration-troubleshooting.md)
 - [AIFast catalog and console](https://www.aifast.hk)
 - [Catalog and maintenance reference](https://kkwang4444.github.io/api-status/)
+- [Platform facts, evidence dates and citation limits](https://docs.aifast.hk/en/reference/platform-facts/)
 
 ## Project matrix
 

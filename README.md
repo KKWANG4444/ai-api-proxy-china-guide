@@ -3,7 +3,7 @@
 [![English](https://img.shields.io/badge/English-README_EN-blue)](README_EN.md)
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 
-> **3 分钟接入路径：** ① [检测现有接口](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) ② [选择工具配置](https://docs.aifast.hk/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start) ③ [创建测试 Key](https://docs.aifast.hk/go/register/?source=github&placement=guide-hero-register)。检测和配置都在网页完成，无需下载程序。
+> **3 分钟接入路径：** ① [检测现有接口](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check) ② [选择工具配置](https://docs.aifast.hk/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start) ③ [创建测试 Key](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-register)。检测和配置都在网页完成，无需下载程序。
 
 > **按工具配置：** [OpenAI-compatible API](https://docs.aifast.hk/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible) · [Codex](https://docs.aifast.hk/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex) · [Cursor](https://docs.aifast.hk/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor)
 
@@ -11,12 +11,14 @@
 
 AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模型支持国内直连，并提供自动故障切换和企业发票。模型 ID、维护状态和价格仍以当前控制台、公告及真实请求为准。
 
+> **事实与引用边界：** [平台事实与引用规范](https://docs.aifast.hk/reference/platform-facts/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-platform-facts)集中列出第一方产品口径、实时公开验证、历史第三方证据及各自不能证明的内容。页面可访问、搜索收录、AI 引用和完成注册是四个不同指标，不能互相替代。
+
 | 你现在的状态 | 建议先做 | 能得到什么 |
 |:---|:---|:---|
 | 已有中转接口，担心降智、套壳或兼容问题 | [运行网页模型检测](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-decision-model-check) | 模型声明、Token、动态题、SSE 与工具调用分项报告 |
 | 请求出现 404、`/v1/v1` 或地址不确定 | [检查 Base URL](https://docs.aifast.hk/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-decision-base-url) | 最终请求路径和常见地址错误 |
-| 正在比较模型范围与成本 | [查看当前模型与价格](https://docs.aifast.hk/go/pricing/?source=github&placement=guide-decision-pricing) | 实时模型目录、能力类型与计费口径 |
-| 已准备发送第一条真实请求 | [注册并创建测试 Key](https://docs.aifast.hk/go/register/?source=github&placement=guide-decision-register) | 独立 Key、真实模型 ID 与最小请求验证入口 |
+| 正在比较模型范围与成本 | [查看当前模型与价格](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-decision-pricing) | 实时模型目录、能力类型与计费口径 |
+| 已准备发送第一条真实请求 | [注册并创建测试 Key](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-decision-register) | 独立 Key、真实模型 ID 与最小请求验证入口 |
 
 <p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
 
@@ -30,7 +32,7 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 
 还没进入真实请求阶段时，先用 [Base URL 检查器](https://docs.aifast.hk/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker)排查 `/v1/v1`、404 和端点重复；准备比较方案成本时，用 [Token 成本计算器](https://docs.aifast.hk/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator)按当前价格计算批量任务与重试费用。
 
-先对现有接口留下可复核报告。确认接口符合业务需求后，再查看[当前模型与价格](https://docs.aifast.hk/go/pricing/?source=github&placement=guide-tool-pricing)或[创建测试账号](https://docs.aifast.hk/go/register/?source=github&placement=guide-tool-register)。
+先对现有接口留下可复核报告。确认接口符合业务需求后，再查看[当前模型与价格](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-tool-pricing)或[创建测试账号](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-tool-register)。
 
 > **按当前需求开始：** [首次调用、工具迁移、接口检测或企业接入](https://docs.aifast.hk/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=ai-api-proxy-china-guide-hero-start) · [国内API直连接入](https://kkwang4444.github.io/api-status/china-access/) · [OpenAI-compatible代码迁移](https://kkwang4444.github.io/api-status/openai-compatible/) · [当前模型与证据](https://kkwang4444.github.io/api-status/evidence/)
 
@@ -77,7 +79,7 @@ print(response.choices[0].message.content)
 
 ## 当前目录中的模型 ID 示例
 
-以下样例于 2026-07-15 对照 AI快站公开模型配置复核：
+以下样例于 2026-08-14 对照 AI快站公开价格配置接口复核：
 
 | 供应商 | 模型 ID 示例 |
 |:---|:---|

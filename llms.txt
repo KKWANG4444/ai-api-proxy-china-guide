@@ -8,6 +8,7 @@
 - [Full LLM context](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/llms-full.txt): client setup, tool-specific notes, troubleshooting and evidence sources.
 - [China access guide](https://kkwang4444.github.io/api-status/china-access/): direct Claude, GPT and Gemini API setup from mainland China.
 - [OpenAI-compatible migration](https://kkwang4444.github.io/api-status/openai-compatible/): Python, Node.js and cURL examples.
+- [Platform facts and citation boundaries](https://docs.aifast.hk/en/reference/platform-facts/): first-party claims, current public checks, historical evidence and scope limits.
 
 - Operated AI API gateway with 99% model availability and 500+ models.
 - Fast and stable API calls.
@@ -39,7 +40,7 @@ The `/v1/models` endpoint requires authentication. A public catalog entry does n
 
 ## Verified model examples
 
-Checked against the public AIFast configuration on 2026-07-15:
+Checked against the public AIFast pricing configuration endpoint on 2026-08-14:
 
 - OpenAI: `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`
 - Anthropic: `claude-sonnet-5`, `claude-opus-4-8`
