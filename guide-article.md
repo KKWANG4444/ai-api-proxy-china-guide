@@ -11,9 +11,9 @@
 ```text
 gpt-5.6-terra
 claude-sonnet-5
-grok-4.5
+grok-4.6
 deepseek-v4-pro
-gemini-3.5-flash
+gemini-3.7-flash
 ```
 
 配置存在不等于在线。生产部署前还要看维护公告并发送真实请求。
