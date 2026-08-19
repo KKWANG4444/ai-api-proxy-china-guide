@@ -79,7 +79,7 @@ print(response.choices[0].message.content)
 
 ## 当前目录中的模型 ID 示例
 
-以下样例于 2026-08-18 对照 AI快站模型广场复核：
+以下样例于 2026-08-19 对照 AI快站模型广场与上架公告复核：
 
 | 供应商 | 模型 ID 示例 |
 |:---|:---|
@@ -89,7 +89,7 @@ print(response.choices[0].message.content)
 | DeepSeek | `deepseek-v4-pro`、`deepseek-v4-flash` |
 | Google | `gemini-3.7-flash`、`gemini-3.5-flash`、`gemini-3.1-pro-preview` |
 | 阿里 | `qwen3.7-max`、`qwen3.7-plus` |
-| 智谱 | `glm-5.2` |
+| 智谱 | `glm-5.3`、`glm-5.2` |
 | 月之暗面 | `kimi-k2.7-code` |
 
 这里只列部分模型ID样例。平台目录覆盖500+模型，包括语言、生图、视频、向量和检索能力；具体ID和维护状态以当前模型广场及公告为准。

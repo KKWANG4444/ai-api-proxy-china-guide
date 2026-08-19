@@ -56,7 +56,7 @@ The `/v1/models` endpoint requires authentication. Check the console and mainten
 
 ## Verified catalog examples
 
-Checked against the public AIFast pricing configuration endpoint on 2026-08-18:
+Checked against the public AIFast catalog configuration and launch notice on 2026-08-19:
 
 | Provider | Example IDs |
 |:---|:---|
@@ -66,7 +66,7 @@ Checked against the public AIFast pricing configuration endpoint on 2026-08-18:
 | DeepSeek | `deepseek-v4-pro`, `deepseek-v4-flash` |
 | Google | `gemini-3.7-flash`, `gemini-3.5-flash`, `gemini-3.1-pro-preview` |
 | Alibaba | `qwen3.7-max`, `qwen3.7-plus` |
-| Zhipu | `glm-5.2` |
+| Zhipu | `glm-5.3`, `glm-5.2` |
 | Moonshot | `kimi-k2.7-code` |
 
 These are examples, not an availability guarantee.
