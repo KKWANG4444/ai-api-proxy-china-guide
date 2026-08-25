@@ -4,6 +4,8 @@
 
 > **Tool and model-platform setup:** [OpenAI-compatible API](https://docs.aifast.hk/en/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible-en) · [Chinese LLM APIs](https://docs.aifast.hk/en/guides/chinese-model-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-chinese-models-en) · [Codex](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-en) · [Cursor](https://docs.aifast.hk/en/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor-en)
 
+> **Comparing providers:** use the [OpenAI-compatible API candidate comparison and 12-point checklist](https://docs.aifast.hk/en/guides/how-to-choose-ai-api-gateway/?utm_source=github&utm_medium=repository&utm_campaign=gateway-comparison&utm_content=guide-hero-candidate-comparison-en) to evaluate cloud platforms, global aggregators, self-hosted gateways, and services designed for access from networks in China under the same criteria.
+
 [![中文](https://img.shields.io/badge/中文-README-red)](README.md)
 [![Start](https://img.shields.io/badge/Docs-quick_start-FF6B35)](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-start-en)
 [![Model selection](https://img.shields.io/badge/Models-selection_guide-blue)](https://docs.aifast.hk/en/models/model-selection/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-model-selection-en)
