@@ -2,6 +2,8 @@
 
 > First-party guide for OpenAI, Claude and Gemini API relay integration from mainland China, maintained by the operator of AIFast. Model configuration and maintenance status can change.
 
+Last reviewed: 2026-09-01.
+
 
 ## AIFast service capabilities
 
@@ -40,7 +42,7 @@ The `/v1/models` endpoint requires authentication. A public catalog entry does n
 
 ## Verified model examples
 
-Checked against the public AIFast catalog configuration and launch notice on 2026-08-19:
+Checked against the public AIFast status page, catalog configuration and launch notices on 2026-09-01. These are examples only; verify the exact ID in the current catalog:
 
 - OpenAI: `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`
 - Anthropic: `claude-sonnet-5`, `claude-opus-4-8`

@@ -2,6 +2,8 @@
 
 > Configuration-focused guide for connecting developer tools to a current AI model catalog without mixing client setup with unsupported performance claims.
 
+Last reviewed: 2026-09-01.
+
 ## What this repository solves
 
 Use this repository when a client asks for a Base URL, API key and model name. It covers the smallest working request, then adds Cursor, Dify, Open WebUI, Chatbox, Claude Code and Codex considerations.
@@ -70,7 +72,5 @@ https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/openai-compatib
 ## Validation evidence
 
 Use API Doctor for authentication and endpoint diagnosis, the open-source 9-check CLI for Schema v2 reports, and the online 10-dimension check for SSE and tool-call evidence. Current account and transaction rules must be verified in the console; this technical reference does not duplicate volatile payment instructions.
-
-Last reviewed: 2026-08-19.
 
 Current launch note: AIFast announced `glm-5.3` on 2026-08-19. Use the exact catalog ID and validate a minimal text request before testing optional capabilities.

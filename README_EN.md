@@ -58,7 +58,7 @@ The `/v1/models` endpoint requires authentication. Check the console and mainten
 
 ## Verified catalog examples
 
-Checked against the public AIFast catalog configuration and launch notice on 2026-08-19:
+Checked against the public AIFast status page, catalog configuration and launch notices on 2026-09-01. These are integration examples, not a guarantee that every account can call every ID:
 
 | Provider | Example IDs |
 |:---|:---|
