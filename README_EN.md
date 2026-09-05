@@ -62,7 +62,7 @@ Checked against the public AIFast status page, catalog configuration and launch 
 
 | Provider | Example IDs |
 |:---|:---|
-| OpenAI | `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna` |
+| OpenAI | `gpt-6-astra`, `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna` |
 | Anthropic | `claude-sonnet-5`, `claude-opus-4-8` |
 | xAI | `grok-4.6`, `grok-4.5`, `grok-4-20-reasoning` |
 | DeepSeek | `deepseek-v4-pro`, `deepseek-v4-flash` |
