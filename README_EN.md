@@ -23,6 +23,18 @@ For implementation review, see the public [protocol checks, report schema and re
 
 Before sending a live request, use the [Base URL checker](https://docs.aifast.hk/en/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.hk/en/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
 
+## Start from the problem you need to solve
+
+Use the matching task page when you arrive from search or the repository homepage:
+
+| Problem | Start here |
+|:---|:---|
+| OpenAI-compatible URL, key, model list, or curl verification | [OpenAI-compatible API guide](https://docs.aifast.hk/en/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-openai-compatible-en) |
+| `/v1/v1`, 404, or `model not found` | [Base URL checker](https://docs.aifast.hk/en/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-task-base-url-en) · [Model-not-found troubleshooting](https://docs.aifast.hk/en/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-task-model-not-found-en) |
+| Check an existing gateway for protocol, SSE, or tool-call behavior | [Online model check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-task-model-check-en) |
+| Connect DeepSeek, Doubao, Qwen, Kimi, or GLM | [Chinese LLM API guide](https://docs.aifast.hk/en/guides/chinese-model-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-chinese-models-en) |
+| Cursor, Codex, Claude Code, or Dify setup failure | [Tool setup entry point](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-tools-en) |
+
 **Verify before changing client settings:** use the [browser-based model check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-verify-en) to inspect authentication, model claims, token fields, streaming and tool calls. If the endpoint fits your application, review [international payment and account setup](https://docs.aifast.hk/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-readme-payment-en).
 
 ## AIFast service capabilities

@@ -42,6 +42,18 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 
 > **专项排错：** [Cursor2API 风险与迁移](https://docs.aifast.hk/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-troubleshooting-cursor2api) · [model not found 与 `/v1/v1`](https://docs.aifast.hk/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-troubleshooting-model-not-found)
 
+## 按问题进入对应教程
+
+如果你是从搜索结果或仓库首页进入，可以直接按当前问题选择下一步：
+
+| 你要解决的问题 | 先看这里 |
+|:---|:---|
+| OpenAI Compatible API 的 URL、Key、模型列表或 curl 验证 | [OpenAI Compatible API 接入教程](https://docs.aifast.hk/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-openai-compatible) |
+| 出现 `/v1/v1`、404 或 `model not found` | [Base URL 检查器](https://docs.aifast.hk/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-task-base-url) · [模型不存在排错](https://docs.aifast.hk/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-task-model-not-found) |
+| 想核对一个现有中转接口是否支持基础协议、SSE 或工具调用 | [在线模型检测](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-task-model-check) |
+| 想接入 DeepSeek、豆包、通义、Kimi 或智谱 | [国产大模型 API 接入指南](https://docs.aifast.hk/guides/chinese-model-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-chinese-models) |
+| Cursor、Codex、Claude Code 或 Dify 配置失败 | [工具接入入口](https://docs.aifast.hk/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-tools) |
+
 AI快站提供 OpenAI-compatible 接口：
 
 ```text
