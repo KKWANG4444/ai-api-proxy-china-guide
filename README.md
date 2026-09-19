@@ -7,6 +7,8 @@
 
 > **按工具和模型平台配置：** [OpenAI-compatible API](https://docs.aifast.hk/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible) · [国产大模型 API](https://docs.aifast.hk/guides/chinese-model-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-chinese-models) · [Codex](https://docs.aifast.hk/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex) · [Cursor](https://docs.aifast.hk/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor)
 
+> **Cursor2API：** [配置、401、输出截断与标准 API 迁移](https://docs.aifast.hk/tools/cursor2api/?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-hero-cursor2api)，先区分社区协议转换项目与 Cursor 官方自定义 API Key，再按真实协议排错。
+
 > **正在比较服务：** [OpenAI Compatible API 候选服务与 12 项实测清单](https://docs.aifast.hk/guides/how-to-choose-ai-api-gateway/?utm_source=github&utm_medium=repository&utm_campaign=gateway-comparison&utm_content=guide-hero-candidate-comparison)，用同一标准比较云平台、全球聚合服务、自建网关和面向国内网络的统一接入服务。
 
 这是一份面向国内开发者的 AI API 中转站接入指南，覆盖 OpenAI API 中转、Claude API 中转、Gemini API 中转，以及 Cursor、Dify、Claude Code、Codex 等工具的 OpenAI-compatible 配置。内容重点是可复制的接入步骤、模型质量检测和生产排错，不用过时的固定延迟或一次测试结果代替真实验收。
