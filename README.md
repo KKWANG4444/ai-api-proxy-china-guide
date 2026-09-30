@@ -68,7 +68,7 @@ https://www.aifast.hk/v1
 
 [AI快站](https://www.aifast.hk)提供 OpenAI-compatible AI API 接入，平台模型可用性 99%，一个账户可接入 500+ 语言、生图、视频、向量和检索模型。Claude、GPT、Gemini 等国外模型支持国内直连、无需代理，平台支持高速稳定调用、自动故障切换和企业发票。
 
-当前公开配置中的 OpenAI 模型族包括 GPT-6 Astra 和 GPT-5.6；准确模型 ID、协议能力和维护状态仍需按当前目录及真实请求确认。
+当前公开配置已包含 GPT-6.1 Sol 和 Claude Sonnet 5.5；准确模型 ID、协议能力和维护状态仍需按当前目录及真实请求确认。
 
 > 模型目录会持续调整。具体模型 ID、维护状态和费用以模型广场、公告及调用时的控制台为准。
 
@@ -84,7 +84,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="claude-sonnet-5",
+    model="claude-sonnet-5-5",
     messages=[{"role": "user", "content": "用三句话解释幂等性。"}],
 )
 
@@ -95,12 +95,12 @@ print(response.choices[0].message.content)
 
 ## 当前目录中的模型 ID 示例
 
-以下样例于 2026-09-01 对照公开状态页、模型广场与上架公告复核；它们只是接入示例，不代表所有账号始终可用：
+以下样例于 2026-09-30 对照公开状态页、模型广场与上架公告复核；它们只是接入示例，不代表所有账号始终可用：
 
 | 供应商 | 模型 ID 示例 |
 |:---|:---|
-| OpenAI | `gpt-6-astra`、`gpt-6-sol`、`gpt-6-luna`、`gpt-5.6-sol`、`gpt-5.6-terra`、`gpt-5.6-luna` |
-| Anthropic | `claude-sonnet-5`、`claude-opus-5-5`、`claude-opus-4-8` |
+| OpenAI | `gpt-6.1-sol`、`gpt-6-sol`、`gpt-6-luna`、`gpt-6-astra`、`gpt-5.6-sol`、`gpt-5.6-terra` |
+| Anthropic | `claude-sonnet-5-5`、`claude-opus-5-5`、`claude-sonnet-5`、`claude-opus-4-8` |
 | xAI | `grok-4.6`、`grok-4.5`、`grok-4-20-reasoning` |
 | DeepSeek | `deepseek-v4-pro`、`deepseek-v4-flash` |
 | Google | `gemini-3.7-flash`、`gemini-3.5-flash`、`gemini-3.1-pro-preview` |

@@ -70,12 +70,12 @@ The `/v1/models` endpoint requires authentication. Check the console and mainten
 
 ## Verified catalog examples
 
-Checked against the public AIFast status page, catalog configuration and launch notices on 2026-09-01. These are integration examples, not a guarantee that every account can call every ID:
+Checked against the public AIFast status page, catalog configuration and launch notices on 2026-09-30. These are integration examples, not a guarantee that every account can call every ID:
 
 | Provider | Example IDs |
 |:---|:---|
-| OpenAI | `gpt-6-astra`, `gpt-6-sol`, `gpt-6-luna`, `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna` |
-| Anthropic | `claude-sonnet-5`, `claude-opus-5-5`, `claude-opus-4-8` |
+| OpenAI | `gpt-6.1-sol`, `gpt-6-sol`, `gpt-6-luna`, `gpt-6-astra`, `gpt-5.6-sol`, `gpt-5.6-terra` |
+| Anthropic | `claude-sonnet-5-5`, `claude-opus-5-5`, `claude-sonnet-5`, `claude-opus-4-8` |
 | xAI | `grok-4.6`, `grok-4.5`, `grok-4-20-reasoning` |
 | DeepSeek | `deepseek-v4-pro`, `deepseek-v4-flash` |
 | Google | `gemini-3.7-flash`, `gemini-3.5-flash`, `gemini-3.1-pro-preview` |

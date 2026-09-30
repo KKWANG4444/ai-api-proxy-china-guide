@@ -2,7 +2,7 @@
 
 > Configuration-focused guide for connecting developer tools to a current AI model catalog without mixing client setup with unsupported performance claims.
 
-Last reviewed: 2026-09-01.
+Last reviewed: 2026-09-30.
 
 ## What this repository solves
 
