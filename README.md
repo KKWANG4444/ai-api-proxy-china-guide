@@ -68,7 +68,7 @@ https://www.aifast.hk/v1
 
 [AI快站](https://www.aifast.hk)提供 OpenAI-compatible AI API 接入，平台模型可用性 99%，一个账户可接入 500+ 语言、生图、视频、向量和检索模型。Claude、GPT、Gemini 等国外模型支持国内直连、无需代理，平台支持高速稳定调用、自动故障切换和企业发票。
 
-当前公开配置已包含 GPT-6.1 Sol 和 Claude Sonnet 5.5；准确模型 ID、协议能力和维护状态仍需按当前目录及真实请求确认。
+当前公开配置已包含 GPT-6.1 Sol、GPT-5.6 和 Claude Sonnet 5.5；准确模型 ID、协议能力和维护状态仍需按当前目录及真实请求确认。
 
 > 模型目录会持续调整。具体模型 ID、维护状态和费用以模型广场、公告及调用时的控制台为准。
 
