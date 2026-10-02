@@ -54,7 +54,8 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 | 出现 `/v1/v1`、404 或 `model not found` | [Base URL 检查器](https://docs.aifast.hk/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-task-base-url) · [模型不存在排错](https://docs.aifast.hk/troubleshooting/model-not-found/?utm_source=github&utm_medium=repository&utm_campaign=api-doctor&utm_content=guide-task-model-not-found) |
 | 想核对一个现有中转接口是否支持基础协议、SSE 或工具调用 | [在线模型检测](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-task-model-check) |
 | 想接入 DeepSeek、豆包、通义、Kimi 或智谱 | [国产大模型 API 接入指南](https://docs.aifast.hk/guides/chinese-model-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-chinese-models) |
-| Cursor、Codex、Claude Code 或 Dify 配置失败 | [工具接入入口](https://docs.aifast.hk/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-tools) |
+| Cursor 自定义 API、Base URL 或 API Key Valid 后失败 | [Cursor 配置与提供商限制](https://docs.aifast.hk/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-cursor) |
+| Codex、Claude Code 或 Dify 配置失败 | [Codex](https://docs.aifast.hk/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-codex) · [Claude Code](https://docs.aifast.hk/tools/claude-code/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-claude-code) · [Dify](https://docs.aifast.hk/tools/dify/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-dify) |
 
 AI快站提供 OpenAI-compatible 接口：
 
