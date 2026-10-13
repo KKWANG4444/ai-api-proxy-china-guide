@@ -16,6 +16,7 @@ const [html, readme, readmeEn, llms, llmsFull, robots, sitemap] = await Promise.
 const errors = [];
 const expectedCanonical = 'https://kkwang4444.github.io/ai-api-proxy-china-guide/';
 const count = (source, pattern) => (source.match(pattern) ?? []).length;
+const fixedAvailabilityClaim = /(?:(?:99(?:\.\d+)?|100)\s*[%％]\s*(?:(?:model|模型)\s*)?(?:availability|可用|成功)|(?:可用性|成功率|availability|success rate)\s*(?:为|of|:|：)?\s*(?:99(?:\.\d+)?|100)\s*[%％])/i;
 
 for (const [passed, message] of [
   [count(html, /<title>/g) === 1, 'title 数量不是 1'],
@@ -25,16 +26,24 @@ for (const [passed, message] of [
   [html.includes(`property="og:url" content="${expectedCanonical}"`), 'og:url 地址错误'],
   [robots.includes('sitemap.xml'), 'robots.txt 未声明 sitemap'],
   [sitemap.includes(`<loc>${expectedCanonical}</loc>`), 'sitemap 缺少首页'],
+  [sitemap.includes('<lastmod>2026-10-14</lastmod>'), 'Sitemap 修改日期未同步本次更新'],
+  [html.indexOf('<div class="actions">') < html.indexOf('<section class="grid">'), 'Pages 接入与检测入口不应埋在长正文之后'],
   [readme.includes('https://www.aifast.hk/v1'), 'README 缺少 Base URL'],
   [readme.startsWith('# 国内 AI API 中转站接入指南：'), 'README 首屏丢失国内 AI API 中转站搜索意图'],
   [readme.slice(0, 3000).includes('OpenAI API 中转') && readme.slice(0, 3000).includes('Claude API 中转') && readme.slice(0, 3000).includes('Gemini API 中转'), 'README 首屏缺少供应商接入搜索意图'],
   [html.includes('<title>国内AI API中转站接入指南'), 'GitHub Pages 标题未承接国内 AI API 中转站搜索意图'],
-  [html.includes('"dateModified": "2026-09-01"'), 'JSON-LD dateModified 未同步当前发布日'],
+  [html.includes('"dateModified": "2026-10-14"'), 'JSON-LD dateModified 未同步本次内容更新日期'],
   [!/(572\s*(?:个\s*模型|models?)|GPT[-‐‑‒–—― .]?5\.5|Claude[-‐‑‒–—― .]?4\.7|Claude[-‐‑‒–—― .]?Fable[-‐‑‒–—― .]?5)/iu.test(`${readme}\n${readmeEn}\n${html}\n${llms}\n${llmsFull}`), '公开内容仍包含旧模型数量、旧模型名、已下架模型或旧仓库口径'],
   [readme.includes('500+模型') || readme.includes('500+ 模型'), 'README 缺少当前 500+ 模型口径'],
   [readme.includes('GPT-5.6'), 'README 缺少当前 GPT-5.6 模型口径'],
   [readme.includes('https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository'), 'README 缺少 GitHub 专属注册入口'],
-  [readme.slice(0, 1800).includes('guide-hero-check') && readme.slice(0, 1800).includes('guide-hero-start') && readme.slice(0, 1800).includes('guide-hero-register'), 'README 首屏未形成检测、配置、注册三步漏斗'],
+  [readme.slice(0, 1800).includes('guide-hero-check') && readme.slice(0, 1800).includes('guide-hero-start') && readme.slice(0, 1800).includes('guide-hero-register'), 'README 首屏缺少接入、注册或已有接口检测入口'],
+  [readme.includes('首次接入、还没有 Key') && readme.includes('已有接口、需要排错') && readme.indexOf('guide-hero-start') < readme.indexOf('guide-hero-check'), 'README 未区分首次接入与已有接口检测'],
+  [readmeEn.includes('First-time setup, no API key yet') && readmeEn.includes('Already have an endpoint') && readmeEn.indexOf('guide-hero-start-en') < readmeEn.indexOf('guide-hero-check-en'), '英文 README 未区分首次接入与已有接口检测'],
+  [readme.includes('真实探测可能产生调用费用') && readmeEn.includes('real probe requests may incur API charges'), 'README 缺少真实探测费用提醒'],
+  [!fixedAvailabilityClaim.test(`${readme}\n${readmeEn}\n${llms}\n${llmsFull}`), 'README 或机器可读说明重新出现未经测量的固定成功率'],
+  [!fixedAvailabilityClaim.test(html), 'Pages 正文或结构化数据重新出现固定可用性承诺'],
+  [!/(?:https?:\/\/)(?:[a-z0-9-]+\.)*aifast\.(?:link|club)\b/i.test(`${readme}\n${readmeEn}\n${html}\n${llms}\n${llmsFull}`), 'HK 公开内容混入 Link 或 Club 域名'],
   [readme.indexOf('guide-hero-check') < readme.indexOf('assets/social-preview.png'), 'README 首屏图片阻断核心检测入口'],
   [readmeEn.includes('https://docs.aifast.hk/en/payment/?utm_source=github') && readmeEn.includes('utm_campaign=international-payment'), 'README_EN 缺少国际支付与账户设置入口'],
   [!readme.includes('下载 API Doctor') && !readmeEn.includes('download API Doctor'), 'README 仍在引导用户下载程序'],

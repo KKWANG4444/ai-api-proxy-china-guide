@@ -12,8 +12,8 @@ Last reviewed: 2026-09-30.
 - [OpenAI-compatible migration](https://kkwang4444.github.io/api-status/openai-compatible/): Python, Node.js and cURL examples.
 - [Platform facts and citation boundaries](https://docs.aifast.hk/en/reference/platform-facts/): first-party claims, current public checks, historical evidence and scope limits.
 
-- Operated AI API gateway with 99% model availability and 500+ models.
-- Fast and stable API calls.
+- Operated AI API gateway with a catalog of 500+ models.
+- Availability and latency must be measured for the selected model, deployment network and observation window; this guide provides no numerical availability guarantee.
 - Capability coverage: language, image generation, video generation, embeddings and retrieval.
 - Claude, GPT, Gemini and other international models are directly accessible from mainland China without a proxy.
 - Automatic failover is supported.
