@@ -1,10 +1,8 @@
 # AI API integration guide for China and international users
 
-> **Three-step path:** 1. [check an existing endpoint](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check-en), 2. [choose the matching setup guide](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start-en), 3. [review payment and account setup](https://docs.aifast.hk/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-hero-payment-en). All three steps stay in the browser; no program download is required.
-
-> **Tool and model-platform setup:** [OpenAI-compatible API](https://docs.aifast.hk/en/guides/openai-compatible-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-openai-compatible-en) · [Chinese LLM APIs](https://docs.aifast.hk/en/guides/chinese-model-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-chinese-models-en) · [Codex](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-en) · [Cursor](https://docs.aifast.hk/en/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-cursor-en)
-
-> **Comparing providers:** use the [OpenAI-compatible API candidate comparison and 12-point checklist](https://docs.aifast.hk/en/guides/how-to-choose-ai-api-gateway/?utm_source=github&utm_medium=repository&utm_campaign=gateway-comparison&utm_content=guide-hero-candidate-comparison-en) to evaluate cloud platforms, global aggregators, self-hosted gateways, and services designed for access from networks in China under the same criteria.
+> **First-time setup, no API key yet:** [choose the matching setup guide](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start-en), [review payment and account setup](https://docs.aifast.hk/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-hero-payment-en), then create a key in the console and [send a minimal request](#endpoint). No endpoint check is required before account setup.
+>
+> **Already have an endpoint:** use a public HTTPS Base URL, temporary limited key and model ID to [check the existing endpoint](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check-en). No diagnostic program download is required; real probe requests may incur API charges.
 
 [![中文](https://img.shields.io/badge/中文-README-red)](README.md)
 [![Start](https://img.shields.io/badge/Docs-quick_start-FF6B35)](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-badge-start-en)
@@ -13,11 +11,7 @@
 
 Tool configuration guide for OpenAI-compatible AI API gateways: Cursor, Dify, Claude Code, Codex, Open WebUI, Chatbox and other clients. Copy the Base URL, add an API key and verify one feature at a time.
 
-**Facts and citation boundary:** the [AIFast platform facts page](https://docs.aifast.hk/en/reference/platform-facts/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-platform-facts-en) separates first-party product statements, current public checks, historical third-party evidence and what each source cannot establish. Page discovery, search indexing, AI citation and completed registration are separate outcomes.
-
-> **Codex:** [configure a custom provider](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-setup-en) · [validate Responses, tool calls, compaction and thread resume](https://docs.aifast.hk/en/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting-en)
-
-**Check an existing gateway first:** [run the public model check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-check-en) with a temporary limited key. It checks model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
+For existing endpoints, the model check covers model declarations, token metadata, randomized probes, SSE and tool calls; the result is a compatibility screen, not vendor certification.
 
 For implementation review, see the public [protocol checks, report schema and regression evidence](https://github.com/KKWANG4444/openai-compatible-api-check/blob/main/README_EN.md). Regular users do not need to install a program.
 
@@ -36,12 +30,14 @@ Use the matching task page when you arrive from search or the repository homepag
 | Connect DeepSeek, Doubao, Qwen, Kimi, or GLM | [Chinese LLM API guide](https://docs.aifast.hk/en/guides/chinese-model-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-chinese-models-en) |
 | Cursor custom API, missing Base URL, or API Key Valid but chat fails | [Cursor setup and provider limits](https://docs.aifast.hk/en/tools/cursor/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-cursor-en) |
 | Codex, Claude Code, or Dify setup failure | [Codex](https://docs.aifast.hk/en/tools/codex/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-codex-en) · [Claude Code](https://docs.aifast.hk/en/tools/claude-code/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-claude-code-en) · [Dify](https://docs.aifast.hk/en/tools/dify/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-task-dify-en) |
-
-**Verify before changing client settings:** use the [browser-based model check](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-readme-verify-en) to inspect authentication, model claims, token fields, streaming and tool calls. If the endpoint fits your application, review [international payment and account setup](https://docs.aifast.hk/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-readme-payment-en).
+| Codex setup works but Responses, tool calls, compaction or thread resume fail | [Codex gateway validation checklist](https://docs.aifast.hk/en/troubleshooting/codex-gateway-checklist/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-hero-codex-troubleshooting-en) |
+| Compare provider capabilities and costs before integration | [Candidate comparison and 12-point checklist](https://docs.aifast.hk/en/guides/how-to-choose-ai-api-gateway/?utm_source=github&utm_medium=repository&utm_campaign=gateway-comparison&utm_content=guide-hero-candidate-comparison-en) |
 
 ## AIFast service capabilities
 
-[AIFast](https://www.aifast.hk) states 99% model availability, a catalog of 500+ language, image, video, embedding and retrieval models, fast and stable API calls, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers.
+[AIFast](https://www.aifast.hk) provides an OpenAI-compatible API gateway with a catalog of 500+ language, image, video, embedding and retrieval models, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers. Measure availability and response times from your deployment network and check maintenance notices for the models you use.
+
+The [platform facts page](https://docs.aifast.hk/en/reference/platform-facts/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-platform-facts-en) documents product statements and their scope. A catalog entry or one successful check is not a long-term availability guarantee.
 
 > The catalog changes over time. Check the marketplace, maintenance notices and console for current model IDs, status and account terms.
 

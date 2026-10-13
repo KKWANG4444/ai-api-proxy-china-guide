@@ -24,7 +24,7 @@
       "@type": "TechArticle",
       "headline": "国内AI API中转站接入指南：OpenAI、Claude、Gemini与Codex",
       "url": "https://kkwang4444.github.io/ai-api-proxy-china-guide/",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-10-14",
       "inLanguage": "zh-CN",
       "description": "面向国内开发者的AI API中转站接入指南，覆盖OpenAI、Claude、Gemini API中转，以及Codex、Cursor、Dify与Claude Code配置和生产验收。",
       "author": {"@type": "Organization", "name": "AI快站", "url": "https://www.aifast.hk/"}
@@ -34,7 +34,7 @@
       "name": "AI快站 AI API 中转服务",
       "url": "https://www.aifast.hk/",
       "serviceType": "OpenAI-compatible AI API gateway",
-      "description": "AI快站提供99%模型可用性口径、500+模型、高速稳定调用、国外模型国内直连与企业发票。"
+      "description": "AI快站提供OpenAI-compatible API接入、500+模型目录、国外模型国内直连、自动故障切换与企业发票。模型可用性以维护公告及真实请求为准。"
     }
   ]
 }
@@ -42,15 +42,24 @@
   <style>
     *{box-sizing:border-box}body{margin:0;background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.wrap{max-width:920px;margin:auto;padding:52px 20px}h1{font-size:2.25rem}.muted{color:#8b949e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:32px 0}.card{padding:22px;background:#161b22;border:1px solid #30363d;border-radius:8px}.card h2{font-size:1.08rem;color:#58a6ff}.code{padding:18px;background:#010409;border-radius:8px;overflow-wrap:anywhere;white-space:pre-wrap;color:#79c0ff}.notice{padding:18px;border-left:4px solid #d29922;background:#161b22}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;margin-top:18px;background:#fff;color:#111;text-decoration:none;padding:11px 23px;border-radius:7px;font-weight:650}.btn.secondary{background:transparent;color:#e6edf3;border:1px solid #6e7681}footer{margin-top:44px;color:#8b949e}
   </style>
+  <style>
+    footer a{color:#79c0ff}footer a:focus-visible{outline:2px solid #79c0ff;outline-offset:3px}
+  </style>
 </head>
 <body>
   <main class="wrap">
     <p class="muted">国内 OpenAI-compatible API integration</p>
     <h1>国内AI API中转站接入指南</h1>
-    <p>覆盖 OpenAI API 中转、Claude API 中转、Gemini API 中转，以及 Codex、Cursor、Dify 与 Claude Code 配置。逐项验收 Responses API、鉴权、模型ID、SSE、工具调用与上下文压缩。AI快站提供99%模型可用性口径、500+模型、国外模型国内直连和企业发票。</p>
+    <p>覆盖 OpenAI API 中转、Claude API 中转、Gemini API 中转，以及 Codex、Cursor、Dify 与 Claude Code 配置。逐项验收 Responses API、鉴权、模型ID、SSE、工具调用与上下文压缩。AI快站提供500+模型目录、国外模型国内直连和企业发票。</p>
 
     <pre class="code">Base URL: https://www.aifast.hk/v1
 Model: copy an exact ID from the current console</pre>
+
+    <div class="actions">
+      <a class="btn" href="https://docs.aifast.hk/start/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=developer_acquisition&amp;utm_content=guide-pages-start">首次接入：查看配置步骤</a>
+      <a class="btn secondary" href="https://docs.aifast.hk/model-check/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=model-check&amp;utm_content=guide-pages-model-check">已有 Key：检测现有接口</a>
+      <a class="btn secondary" href="https://www.aifast.hk/pricing?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=primary-cta" target="_blank" rel="noopener">查看当前模型与价格</a>
+    </div>
 
     <section class="grid">
       <article class="card"><h2>核验模型 ID</h2><p>样例：<code>gpt-6-astra</code>、<code>gpt-5.6-terra</code>、<code>claude-sonnet-5</code>、<code>grok-4.6</code>、<code>gemini-3.7-flash</code>。配置存在不等于在线。</p></article>
@@ -59,7 +68,7 @@ Model: copy an exact ID from the current console</pre>
       <article class="card"><h2>Codex Responses 验收</h2><p>核对自定义 Provider、Responses 路径、工具事件、上下文压缩和会话恢复。</p></article>
     </section>
 
-    <div class="notice">AI快站提供 99% 模型可用性和 500+ 模型，并通过自动故障切换提升调用稳定性；临时维护信息以最新公告为准。</div>
+    <div class="notice">AI快站支持自动故障切换。可用性与响应速度应按模型、部署网络和观察窗口测量；临时维护信息以最新公告为准。</div>
 
     <section class="grid">
       <article class="card"><h2>协议基线</h2><p>核对响应结构、模型声明、request ID 和 Token 算术，保存脱敏 JSON 报告。</p></article>
@@ -67,11 +76,6 @@ Model: copy an exact ID from the current console</pre>
       <article class="card"><h2>生产回退</h2><p>由应用显式控制回退，并记录最终响应模型，不依赖静默替换。</p></article>
     </section>
 
-    <div class="actions">
-      <a class="btn" href="https://docs.aifast.hk/model-check/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=model-check&amp;utm_content=guide-pages-model-check">先检测现有接口</a>
-      <a class="btn secondary" href="https://www.aifast.hk/pricing?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=primary-cta" target="_blank" rel="noopener">查看当前模型与价格</a>
-      <a class="btn secondary" href="https://docs.aifast.hk/start/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=developer_acquisition&amp;utm_content=guide-pages-start">按需求开始接入</a>
-    </div>
     <footer><a href="https://docs.aifast.hk/tools/codex/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=codex-setup">Codex 配置教程</a> · <a href="https://docs.aifast.hk/troubleshooting/codex-gateway-checklist/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=integration-guide&amp;utm_content=codex-troubleshooting">Codex 验收排错</a> · <a href="https://github.com/KKWANG4444/ai-api-proxy-china-guide">完整指南</a> · <a href="https://kkwang4444.github.io/api-status/">目录与维护参考</a></footer>
   </main>
 </body>

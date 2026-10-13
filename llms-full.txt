@@ -8,7 +8,7 @@ Last reviewed: 2026-09-30.
 
 Use this repository when a client asks for a Base URL, API key and model name. It covers the smallest working request, then adds Cursor, Dify, Open WebUI, Chatbox, Claude Code and Codex considerations.
 
-AIFast states 99% model availability, a 500+ model catalog covering language, image generation, video generation, embeddings and retrieval, fast and stable API calls, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers.
+AIFast provides a 500+ model catalog covering language, image generation, video generation, embeddings and retrieval, direct mainland China access for international models, automatic failover, and business invoices for enterprise customers. Availability and latency must be measured for the selected model, deployment network and observation window; this guide provides no numerical availability guarantee.
 
 Base URL: https://www.aifast.hk/v1
 
