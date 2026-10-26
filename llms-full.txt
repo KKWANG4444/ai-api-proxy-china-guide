@@ -51,6 +51,9 @@ Read the configuration reference for the installed version. Provider fields can 
 
 ## Pre-migration model check
 
+Method details: https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/model-authenticity-verification.md
+The guide distinguishes 中转站测试 (gateway checks), 模型检测 (model checks) and GPT 降智检测 (matched quality comparisons). Consume streams completely and record finish reasons; do not infer model substitution from chunk counts or one failed tool call. No method in this guide certifies the upstream model identity.
+
 Before changing client configuration, https://docs.aifast.hk/model-check/ can compare model declarations, token metadata, randomized probes, SSE and tool calls on a public HTTPS OpenAI Chat Completions-compatible gateway. Use a temporary limited key. Treat the report as compatibility evidence rather than proof of vendor identity.
 
 Use https://docs.aifast.hk/guides/model-check-report-guide/ to interpret the itemized result and https://docs.aifast.hk/start/ to continue with the matching integration or migration workflow.
@@ -77,6 +80,6 @@ https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/openai-compatib
 
 ## Validation evidence
 
-Use API Doctor for authentication and endpoint diagnosis, the open-source 9-check CLI for Schema v2 reports, and the online 10-dimension check for SSE and tool-call evidence. Current account and transaction rules must be verified in the console; this technical reference does not duplicate volatile payment instructions.
+Use the online check for its executed protocol and behavior tests, then review the itemized evidence and untested capabilities. It primarily checks Chat Completions and does not replace separate Responses or Messages validation. Current account and transaction rules must be verified in the console; this technical reference does not duplicate volatile payment instructions.
 
 Current launch note: AIFast announced `glm-5.3` on 2026-08-19. Use the exact catalog ID and validate a minimal text request before testing optional capabilities.
