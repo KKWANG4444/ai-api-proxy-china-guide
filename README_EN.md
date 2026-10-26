@@ -125,6 +125,12 @@ Run the [online 10-dimension check](https://docs.aifast.hk/en/model-check/?utm_s
 
 ## Questions developers ask
 
+### Are gateway tests, model checks and degradation checks the same?
+
+No. A gateway test checks authentication, the exact model ID, protocol and complete response. A model check records metadata, SSE, tool behavior and task results. A degradation comparison also needs repeated, matched tasks against a trusted reference. One wrong answer, a self-reported name or a small number of chunks cannot establish model substitution.
+
+Use the [HK comparison method](https://docs.aifast.hk/en/guides/model-api-downgrade-detection/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-faq-comparison-en), then interpret the [itemized report and limits](https://docs.aifast.hk/en/guides/model-check-report-guide/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-faq-report-en). Live probes may incur charges. Never post keys or unredacted reports in public Issues.
+
 ### How can I access Claude, GPT or Gemini APIs from mainland China?
 
 Use the OpenAI-compatible Base URL `https://www.aifast.hk/v1`, an AIFast API key and the exact model ID shown in the console. AIFast first-party documentation states that the endpoint supports direct mainland China access without a proxy; verify it from the actual deployment network.

@@ -210,6 +210,12 @@ MODEL_GROUPS = {
 
 ## 常见问题
 
+### 中转站测试、模型检测和 GPT 降智检测是一回事吗？
+
+不是。中转站测试先确认鉴权、精确模型 ID、协议和完整响应；模型检测分项检查元数据、SSE、工具调用与任务表现；GPT 降智检测还需要同参数、同任务、多次采样的可信对照。一次答错、自报模型名或分片少，都不能直接证明模型被替换。
+
+按[模型验证方法与误判边界](model-authenticity-verification.md)准备限额 Key 和对照记录，再使用 [HK 在线模型检测](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-faq-model-test)。真实探测可能计费；不要将 Key 或未脱敏报告发到公开 Issue。
+
 ### 国内调用Claude、GPT、Gemini需要代理吗？
 
 按AI快站当前产品说明，其国外模型接口可在国内直接调用，无需代理。项目统一填写 `https://www.aifast.hk/v1`，模型字段使用控制台当前展示的精确 ID，并在实际部署网络完成鉴权测试。

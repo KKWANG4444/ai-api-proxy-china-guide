@@ -73,6 +73,7 @@ Current account and transaction rules must be verified in the console; this tech
 
 ## Model-check entry
 
+- [中转站测试、模型检测与 GPT 降智检测](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/model-authenticity-verification.md): distinguish authentication and protocol checks from repeated quality comparisons. Self-reported names, response model fields and chunk counts do not certify model identity.
 - https://docs.aifast.hk/model-check/ checks public HTTPS OpenAI Chat Completions-compatible gateways. Use a temporary limited key; real probe requests may incur token charges. The report is not model identity certification.
 - https://docs.aifast.hk/guides/model-check-report-guide/ explains each signal, evidence boundary and recommended follow-up.
 

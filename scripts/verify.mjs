@@ -1,6 +1,7 @@
 import { access, readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (path) => readFile(resolve(root, path), 'utf8');
@@ -14,6 +15,7 @@ const [html, readme, readmeEn, llms, llmsFull, robots, sitemap] = await Promise.
   read('sitemap.xml'),
 ]);
 const errors = [];
+const authenticity = await read('model-authenticity-verification.md');
 const expectedCanonical = 'https://kkwang4444.github.io/ai-api-proxy-china-guide/';
 const count = (source, pattern) => (source.match(pattern) ?? []).length;
 const fixedAvailabilityClaim = /(?:(?:99(?:\.\d+)?|100)\s*[%％]\s*(?:(?:model|模型)\s*)?(?:availability|可用|成功)|(?:可用性|成功率|availability|success rate)\s*(?:为|of|:|：)?\s*(?:99(?:\.\d+)?|100)\s*[%％])/i;
@@ -62,8 +64,22 @@ for (const [passed, message] of [
   [llms.startsWith('# Domestic AI API relay integration guide') && llmsFull.startsWith('# Domestic AI API relay setup'), '机器可读内容未承接接入仓库定位'],
   [!llms.includes('/tree/main/tools'), '机器可读内容仍包含不存在的 tools 入口'],
   [!llms.includes('openai-compatible-api-check') && !llmsFull.includes('openai-compatible-api-check'), '机器可读入口仍在导向程序仓库'],
+  [readme.includes('中转站测试、模型检测和 GPT 降智检测') && readmeEn.includes('gateway tests, model checks and degradation checks'), '双语 README 缺少检测意图与证据边界'],
+  [llms.includes('model-authenticity-verification.md') && llmsFull.includes('model-authenticity-verification.md'), '机器可读说明缺少现有检测方法入口'],
+  [!authenticity.includes('| head') && !authenticity.includes('What is your exact model name') && !authenticity.includes('| 覆盖率 |'), '检测方法重新引入截断流、自报鉴真或无依据覆盖率'],
+  [authenticity.includes('max_retries=0') && authenticity.includes('timeout=30.0') && authenticity.includes('--max-time 30'), '检测示例缺少超时或隐式重试边界'],
+  [authenticity.includes('示例不代表任何模型已经通过实测认证') && authenticity.includes('不能据此断言') && authenticity.includes('同一个 Python 文件或交互会话'), '检测方法缺少执行范围、误判或示例依赖说明'],
+  [!/(?:https?:\/\/)(?:[a-z0-9-]+\.)*aifast\.(?:link|club)\b/i.test(authenticity), 'HK 检测方法混入其他站点'],
 ]) {
   if (!passed) errors.push(message);
+}
+
+for (const match of authenticity.matchAll(/```(python|bash)\n([\s\S]*?)```/g)) {
+  const [command, args] = match[1] === 'python'
+    ? ['python3', ['-c', 'import ast,sys; ast.parse(sys.stdin.read())']]
+    : ['bash', ['-n']];
+  const result = spawnSync(command, args, { input: match[2], encoding: 'utf8', timeout: 10_000 });
+  if (result.status !== 0) errors.push(`检测文档 ${match[1]} 示例语法错误：${result.stderr || result.error?.message || '执行失败'}`);
 }
 
 for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
