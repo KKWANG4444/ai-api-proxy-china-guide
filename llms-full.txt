@@ -39,7 +39,10 @@ Create a custom provider and keep model IDs separate by capability. A chat model
 
 ### Claude Code
 
-Environment variables alone do not prove full compatibility. The gateway must support the request format used by the installed Claude Code version.
+Use the HK Anthropic-compatible base https://www.aifast.hk for the final /v1/messages route. Do not copy the OpenAI SDK base ending in /v1 into this setting. Credential source, account model access and configuration precedence must be checked before a short task; environment variables alone do not prove full compatibility.
+
+- Chinese setup and credential checks: https://docs.aifast.hk/tools/claude-code/
+- English setup and credential checks: https://docs.aifast.hk/en/tools/claude-code/
 
 ### Codex CLI
 

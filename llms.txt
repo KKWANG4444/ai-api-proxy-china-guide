@@ -40,6 +40,8 @@ The catalog changes over time. Check the marketplace, maintenance notices and co
 
 ## API endpoint
 
+Claude Code uses the Anthropic-compatible base https://www.aifast.hk and the final /v1/messages route, not the OpenAI SDK base below. Scoped setup and credential checks: https://docs.aifast.hk/en/tools/claude-code/
+
 - Base URL: `https://www.aifast.hk/v1`
 - Authentication: `Authorization: Bearer $AIFAST_API_KEY`
 - Model names: use an exact ID shown in the current console.

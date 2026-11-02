@@ -35,15 +35,7 @@ print(response.choices[0].message.content)
 
 ## Claude Code
 
-Anthropic 文档使用：
-
-```bash
-export ANTHROPIC_BASE_URL="https://www.aifast.hk/v1"
-export ANTHROPIC_AUTH_TOKEN="$AIFAST_API_KEY"
-claude
-```
-
-第三方网关还要支持当前 Claude Code 版本使用的 Anthropic 请求格式。若失败，保存 HTTP 状态码和响应体，再判断是鉴权、模型名还是接口兼容问题。
+Claude Code 使用 Anthropic Messages，HK 示例 Base URL 为 `https://www.aifast.hk`，最终路径为 `/v1/messages`，不能直接照搬 OpenAI SDK 的 `/v1` 配置。按 [HK 完整配置教程](https://docs.aifast.hk/tools/claude-code/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=sonnet-claude-safe-config)设置独立 Key 和当前模型 ID，再用 `/status` 核对有效配置。旧型号名称不代表当前账号有权限，真实任务可能计费；环境变量设置成功不等于完整 Agent 能力通过。
 
 ## 参数兼容
 
