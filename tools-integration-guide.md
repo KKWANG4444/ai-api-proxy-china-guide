@@ -35,15 +35,7 @@ Model: claude-sonnet-5
 
 ## Claude Code
 
-Anthropic 文档使用：
-
-```bash
-export ANTHROPIC_BASE_URL="https://www.aifast.hk/v1"
-export ANTHROPIC_AUTH_TOKEN="$AIFAST_API_KEY"
-claude
-```
-
-环境变量设置正确不代表所有 Claude Code 功能自动兼容。网关还需支持当前版本使用的 Anthropic 请求格式。
+Claude Code 使用 Anthropic Messages，HK 示例 Base URL 为 `https://www.aifast.hk`，最终路径为 `/v1/messages`。不要直接复制 OpenAI SDK 的 `/v1` 配置。按 [HK 完整配置教程](https://docs.aifast.hk/tools/claude-code/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=tools-claude-safe-config)设置临时限额 Key、完整模型 ID，再核对 `/status` 与设置覆盖关系。真实请求可能计费；配置成功不代表流式、工具调用或长任务已通过。
 
 ## Codex CLI
 

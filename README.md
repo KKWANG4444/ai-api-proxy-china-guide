@@ -121,15 +121,21 @@ print(response.choices[0].message.content)
 
 ### Claude Code
 
-Anthropic 官方文档使用 `ANTHROPIC_BASE_URL` 和 `ANTHROPIC_AUTH_TOKEN` 配置网关：
+Claude Code 需要 Anthropic Messages，不能把 OpenAI SDK 的 `/v1` Base URL 原样照搬。先在本地设置 HK 的临时限额 `AIFAST_API_KEY` 和该账号可用的 `AIFAST_MODEL_ID`，再在 Bash/Zsh 中启动隔离会话：
 
 ```bash
-export ANTHROPIC_BASE_URL="https://www.aifast.hk/v1"
-export ANTHROPIC_AUTH_TOKEN="$AIFAST_API_KEY"
-claude
+(
+  set -eu
+  : "${AIFAST_API_KEY:?请先设置 HK 临时限额 Key}"
+  : "${AIFAST_MODEL_ID:?请先设置 HK 账号可用的模型 ID}"
+  export ANTHROPIC_BASE_URL="https://www.aifast.hk"
+  export ANTHROPIC_AUTH_TOKEN="$AIFAST_API_KEY"
+  unset ANTHROPIC_API_KEY
+  claude --model "$AIFAST_MODEL_ID"
+)
 ```
 
-第三方网关仍需支持当前 Claude Code 版本所使用的 Anthropic 请求格式。不能仅凭环境变量设置成功就认定全部功能兼容。
+运行 `/status` 确认有效地址与认证来源，再核对最终路径为 `/v1/messages`。此示例采用 Bearer 认证，括号内变量不会覆盖原 Shell；设置文件仍可能覆盖变量。完整步骤和 `x-api-key` 区别见 [HK Claude Code 配置教程](https://docs.aifast.hk/tools/claude-code/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-claude-safe-config)。真实请求可能计费，配置示例不是完整 Agent 能力实测。
 
 ### Codex CLI
 

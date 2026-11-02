@@ -103,6 +103,12 @@ For Cursor, Dify, Open WebUI, Chatbox and other OpenAI-compatible clients:
 
 Test plain text first. Add streaming, tools, images and structured output separately.
 
+### Claude Code uses a different protocol
+
+Use the HK Anthropic-compatible base `https://www.aifast.hk` for the `/v1/messages` route, not the OpenAI SDK base ending in `/v1`. Choose an HK credential and a model available to that account; a provider's advertised model name alone does not establish access.
+
+The [HK Claude Code setup guide](https://docs.aifast.hk/en/tools/claude-code/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=guide-claude-safe-config-en) includes a scoped Bash/Zsh example, credential-header differences and `/status` checks. It does not alter existing login files. Settings files can override shell variables, and generation requests may incur charges. Configuration alone is not proof of full Agent compatibility.
+
 ## Configuration acceptance matrix
 
 - Authentication: `/models` succeeds and the exact target model ID is discoverable.

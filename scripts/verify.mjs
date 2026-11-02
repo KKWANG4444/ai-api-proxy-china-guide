@@ -16,6 +16,11 @@ const [html, readme, readmeEn, llms, llmsFull, robots, sitemap] = await Promise.
 ]);
 const errors = [];
 const authenticity = await read('model-authenticity-verification.md');
+for (const filename of ['README.md', 'sonnet-5-guide.md', 'tools-integration-guide.md']) {
+  const content = await read(filename);
+  if (/export ANTHROPIC_BASE_URL=["']https:\/\/www\.aifast\.hk\/v1/.test(content)) errors.push(`${filename}: Claude Code 仍错误复用 OpenAI SDK 的版本路径`);
+  if (!content.includes('https://docs.aifast.hk/tools/claude-code/') || !content.includes('/status')) errors.push(`${filename}: Claude Code 缺少有效配置核验入口`);
+}
 const expectedCanonical = 'https://kkwang4444.github.io/ai-api-proxy-china-guide/';
 const count = (source, pattern) => (source.match(pattern) ?? []).length;
 const fixedAvailabilityClaim = /(?:(?:99(?:\.\d+)?|100)\s*[%％]\s*(?:(?:model|模型)\s*)?(?:availability|可用|成功)|(?:可用性|成功率|availability|success rate)\s*(?:为|of|:|：)?\s*(?:99(?:\.\d+)?|100)\s*[%％])/i;
