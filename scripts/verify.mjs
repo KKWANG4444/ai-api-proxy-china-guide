@@ -33,14 +33,14 @@ for (const [passed, message] of [
   [html.includes(`property="og:url" content="${expectedCanonical}"`), 'og:url 地址错误'],
   [robots.includes('sitemap.xml'), 'robots.txt 未声明 sitemap'],
   [sitemap.includes(`<loc>${expectedCanonical}</loc>`), 'sitemap 缺少首页'],
-  [sitemap.includes('<lastmod>2026-10-15</lastmod>'), 'Sitemap 修改日期未同步本次更新'],
+  [sitemap.includes('<lastmod>2026-11-10</lastmod>'), 'Sitemap 修改日期未同步本次更新'],
   [html.indexOf('<div class="actions">') < html.indexOf('<section class="grid">'), 'Pages 接入与检测入口不应埋在长正文之后'],
   [readme.includes('https://www.aifast.hk/v1'), 'README 缺少 Base URL'],
   [readme.startsWith('# 国内 AI API 中转站接入指南：'), 'README 首屏丢失国内 AI API 中转站搜索意图'],
   [readme.slice(0, 3000).includes('OpenAI API 中转') && readme.slice(0, 3000).includes('Claude API 中转') && readme.slice(0, 3000).includes('Gemini API 中转'), 'README 首屏缺少供应商接入搜索意图'],
   [html.includes('<title>国内AI API中转站接入指南'), 'GitHub Pages 标题未承接国内 AI API 中转站搜索意图'],
-  [html.includes('"dateModified": "2026-10-15"'), 'JSON-LD dateModified 未同步本次内容更新日期'],
-  [!/(572\s*(?:个\s*模型|models?)|GPT[-‐‑‒–—― .]?5\.5|Claude[-‐‑‒–—― .]?4\.7|Claude[-‐‑‒–—― .]?Fable[-‐‑‒–—― .]?5)/iu.test(`${readme}\n${readmeEn}\n${html}\n${llms}\n${llmsFull}`), '公开内容仍包含旧模型数量、旧模型名、已下架模型或旧仓库口径'],
+  [html.includes('"dateModified": "2026-11-10"'), 'JSON-LD dateModified 未同步本次内容更新日期'],
+  [!/(572\s*(?:个\s*模型|models?)|GPT[-‐‑‒–—― .]?5\.5|Claude[-‐‑‒–—― .]?4\.7|Claude[-‐‑‒–—― .]?Fable[-‐‑‒–—― .]?5(?![.\-]\d|\d))/iu.test(`${readme}\n${readmeEn}\n${html}\n${llms}\n${llmsFull}`), '公开内容仍包含旧模型数量、旧模型名、已下架模型或旧仓库口径'],
   [readme.includes('500+模型') || readme.includes('500+ 模型'), 'README 缺少当前 500+ 模型口径'],
   [readme.includes('GPT-5.6'), 'README 缺少当前 GPT-5.6 模型口径'],
   [readme.includes('https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository'), 'README 缺少 GitHub 专属注册入口'],
@@ -79,7 +79,16 @@ for (const [passed, message] of [
   if (!passed) errors.push(message);
 }
 
-for (const match of authenticity.matchAll(/```(python|bash)\n([\s\S]*?)```/g)) {
+const fable = await read('claude-fable-5-2-guide.md');
+const legacyFable = /Claude[-‐‑‒–—― .]?Fable[-‐‑‒–—― .]?5(?![.\-]\d|\d)/iu;
+if (!legacyFable.test('Claude Fable 5') || legacyFable.test('Claude Fable 5.2') || legacyFable.test('claude-fable-5-2')) errors.push('旧 Fable 型号检查误伤新版或漏掉旧版');
+for (const [name, content] of Object.entries({ readme, readmeEn, html, llms, llmsFull, fable })) {
+  if (!content.includes('claude-fable-5-2') || !content.includes('2026-11-10')) errors.push(`${name}: 缺少带日期的 Fable 5.2 入口`);
+}
+if (!fable.includes('--max-time 60') || !fable.includes('AIFAST_API_KEY:?') || !fable.includes('本轮没有代你执行')) errors.push('Fable 示例缺少密钥检查、超时或实测边界');
+if (/(?:https?:\/\/)(?:[a-z0-9-]+\.)*aifast\.(?:link|club)\b/i.test(fable)) errors.push('HK Fable 教程混入其他站点');
+
+for (const match of `${authenticity}\n${fable}`.matchAll(/```(python|bash)\n([\s\S]*?)```/g)) {
   const [command, args] = match[1] === 'python'
     ? ['python3', ['-c', 'import ast,sys; ast.parse(sys.stdin.read())']]
     : ['bash', ['-n']];

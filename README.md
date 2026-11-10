@@ -15,6 +15,12 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 
 [![Gemini 4 Argon update](https://img.shields.io/badge/Gemini_4_Argon-2026--10--15-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md)
 
+## Claude Fable 5.2 API 国内接入（2026-11-10）
+
+HK 公开目录已列出 `claude-fable-5-2`，声明支持 Anthropic Messages 与 OpenAI 兼容接口，分组为 `Claude-Code-1/2/3`。Claude Code 使用 `https://www.aifast.hk`，OpenAI SDK 使用 `https://www.aifast.hk/v1`；目录上架不等于已完成生成、SSE 或工具调用实测。
+
+[模型 ID、完整最小请求与分组排错](claude-fable-5-2-guide.md) · [HK 实时价格](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=fable-5-2&utm_content=guide-readme-pricing)
+
 ## Gemini 4 Argon API update (2026-10-15)
 
 AIFast announced Gemini 4 Argon (`gemini-4-argon`) on 2026-10-14. The public catalog lists Gemini and OpenAI endpoint types. Use `https://www.aifast.hk/v1` for OpenAI-compatible clients; verify a small text request before testing streaming or tool calls. Catalog availability is not a measured uptime or compatibility guarantee.
