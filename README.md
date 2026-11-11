@@ -13,6 +13,14 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 
 <p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
 
+## Gemini 4 Carbon API 上架（2026-11-11）
+
+AI快站已上架 `gemini-4-carbon`。HK [公开目录](https://www.aifast.hk/api/pricing)标记 `available=true`，接口类型为 `gemini`、`openai`。OpenAI-compatible Base URL 使用 `https://www.aifast.hk/v1`。目录记录不等于你的 Key 已获权限，也不是生成、SSE 或工具调用实测。
+
+[Carbon 最小请求与分组排错](gemini-4-carbon-guide.md) · [上架公告](https://www.aifast.hk/api/announcements)。先核对精确模型 ID 和 Key 分组，再用短文本请求检查；不要直接把 Agent 或长任务配置搬到新模型。
+
+[当前价格](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-carbon-pricing) · [注册并创建 Key](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-carbon-register) · [检测现有接口](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-carbon-check)
+
 [![Gemini 4 Argon update](https://img.shields.io/badge/Gemini_4_Argon-2026--10--15-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md)
 
 ## Claude Fable 5.2 API 国内接入（2026-11-10）

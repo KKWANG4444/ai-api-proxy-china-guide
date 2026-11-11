@@ -2,7 +2,15 @@
 
 > Configuration-focused guide for connecting developer tools to a current AI model catalog without mixing client setup with unsupported performance claims.
 
-Last reviewed: 2026-09-30.
+Core guide reviewed: 2026-09-30. Gemini 4 Carbon launch entry checked: 2026-11-11.
+
+## Gemini 4 Carbon launch (2026-11-11)
+
+Exact model ID: `gemini-4-carbon`. AIFast announcement: https://www.aifast.hk/api/announcements. Catalog source: https://www.aifast.hk/api/pricing (`available=true`; endpoint types `gemini`, `openai`). OpenAI-compatible Base URL: `https://www.aifast.hk/v1`. These are public catalog observations, not authenticated inference, streaming, tool-call, uptime or model-identity test results. Check current key permissions and pricing before use.
+
+[Minimal request and troubleshooting (Chinese)](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-carbon-guide.md)
+
+[Current pricing](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-llms-carbon-pricing) · [Register](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-llms-carbon-register) · [Check an endpoint](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-llms-carbon-check)
 
 ## Claude Fable 5.2 catalog check (2026-11-10)
 
