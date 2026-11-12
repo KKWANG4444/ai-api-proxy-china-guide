@@ -3,6 +3,8 @@
 [![English](https://img.shields.io/badge/English-README_EN-blue)](README_EN.md)
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 
+> **先看结果，再决定是否调用：** [免调用报告示例](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-sample-report#sample-report)用三个人工构造案例解释认证失败、流式中断和模型标签一致能证明什么。无需 Key 或注册，不发送模型请求；示例不是任何模型的实测成绩。
+
 > **首次接入、还没有 Key：** 先[选择工具配置](https://docs.aifast.hk/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start)，确认适用后[注册并在控制台创建 Key](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-register)，再[发送最小请求](#先跑通最小请求)。无需先做接口检测。
 >
 > **已有接口、需要排错：** 准备公开 HTTPS Base URL、临时限额 Key 和模型 ID，直接[检测现有接口](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check)。网页检测无需下载程序；真实探测可能产生调用费用。

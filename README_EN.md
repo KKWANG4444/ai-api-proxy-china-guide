@@ -1,5 +1,7 @@
 # AI API integration guide for China and international users
 
+> **Preview before making a call:** the [no-call sample report](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-sample-report-en#sample-report) explains authentication rejection, incomplete streams and matching model labels with three synthetic cases. No key, registration or model request is needed; these are not measured model results.
+
 > **First-time setup, no API key yet:** [choose the matching setup guide](https://docs.aifast.hk/en/start/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-hero-start-en), [review payment and account setup](https://docs.aifast.hk/en/payment/?utm_source=github&utm_medium=repository&utm_campaign=international-payment&utm_content=guide-hero-payment-en), then create a key in the console and [send a minimal request](#endpoint). No endpoint check is required before account setup.
 >
 > **Already have an endpoint:** use a public HTTPS Base URL, temporary limited key and model ID to [check the existing endpoint](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=model-check&utm_content=guide-hero-check-en). No diagnostic program download is required; real probe requests may incur API charges.
