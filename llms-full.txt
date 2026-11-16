@@ -100,3 +100,9 @@ https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/openai-compatib
 Use the online check for its executed protocol and behavior tests, then review the itemized evidence and untested capabilities. It primarily checks Chat Completions and does not replace separate Responses or Messages validation. Current account and transaction rules must be verified in the console; this technical reference does not duplicate volatile payment instructions.
 
 Current launch note: AIFast announced `glm-5.3` on 2026-08-19. Use the exact catalog ID and validate a minimal text request before testing optional capabilities.
+
+## Gemini 4 Hydrogen / Carbon catalog update (2026-11-17)
+
+HK announced gemini-4-hydrogen on November 13 and gemini-4-carbon on November 11. Checked 2026-11-17: both are available=true with gemini/openai endpoint types. Base URL: https://www.aifast.hk/v1 . Check key groups and exact model IDs before following the minimal-request setup. No authenticated inference was run; this is not generation, SSE, tool-call or model-identity evidence.
+
+Sources: https://www.aifast.hk/api/pricing and https://www.aifast.hk/api/announcements . Setup: https://docs.aifast.hk/en/providers/gemini-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=ai-api-proxy-china-guide-gemini-llms .
