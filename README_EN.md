@@ -19,6 +19,14 @@ For implementation review, see the public [protocol checks, report schema and re
 
 Before sending a live request, use the [Base URL checker](https://docs.aifast.hk/en/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.hk/en/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
 
+## Gemini 4 Hydrogen / Carbon setup update (2026-11-17)
+
+HK [announcements](https://www.aifast.hk/api/announcements) list `gemini-4-hydrogen` (November 13) and `gemini-4-carbon` (November 11). The [public catalog](https://www.aifast.hk/api/pricing), checked on 2026-11-17, marks both as `available=true` with `gemini` and `openai` endpoint types. OpenAI-compatible Base URL: `https://www.aifast.hk/v1`.
+
+Check key groups and exact model IDs before following the minimal-request setup. No paid inference was run; catalog records do not prove generation, SSE, tool-call support or underlying model identity.
+
+[Hydrogen / Carbon groups and setup](https://docs.aifast.hk/en/providers/gemini-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=ai-api-proxy-china-guide-gemini-en) · [Current catalog and pricing](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=ai-api-proxy-china-guide-gemini-pricing-en)
+
 ## Gemini 4 Carbon API launch (2026-11-11)
 
 AIFast has listed `gemini-4-carbon`. The [HK public catalog](https://www.aifast.hk/api/pricing) marks it `available=true` and lists `gemini` and `openai` endpoint types. Use `https://www.aifast.hk/v1` for OpenAI-compatible clients. A catalog entry does not prove key access, successful generation, SSE or tool-call support.
