@@ -29,9 +29,9 @@ Use https://www.aifast.hk for Claude Code and https://www.aifast.hk/v1 for OpenA
 
 ## Gemini 4 Argon API update (2026-10-15)
 
-AIFast announced Gemini 4 Argon (`gemini-4-argon`) on 2026-10-14. The public catalog lists Gemini and OpenAI endpoint types. Use `https://www.aifast.hk/v1` for OpenAI-compatible clients; verify a small text request before testing streaming or tool calls. Catalog availability is not a measured uptime or compatibility guarantee.
+The HK public catalog checked on 2026-11-19 lists `gemini-4-argon` with `gemini` and `openai` endpoint types. For OpenAI-compatible clients, use `https://www.aifast.hk/v1`. Listing does not establish access for your key, measured uptime, or tested streaming or tool support.
 
-[Integration guide and context limits](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [Launch announcement](https://www.aifast.hk/api/status) · [Current catalog](https://www.aifast.hk/api/pricing) · [Check your endpoint](https://docs.aifast.hk/model-check/)
+[Integration guide and context limits](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [Current catalog](https://www.aifast.hk/api/pricing) · [Check your endpoint](https://docs.aifast.hk/model-check/)
 
 ## AIFast service capabilities
 

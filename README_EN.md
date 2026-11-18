@@ -45,7 +45,7 @@ AIFast has listed `gemini-4-carbon`. The [HK public catalog](https://www.aifast.
 
 [Current pricing](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-en-carbon-pricing) · [Register](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-en-carbon-register) · [Check an endpoint](https://docs.aifast.hk/en/model-check/?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-en-carbon-check)
 
-[![Gemini 4 Argon update](https://img.shields.io/badge/Gemini_4_Argon-2026--10--15-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md)
+[![Gemini 4 Argon catalog check](https://img.shields.io/badge/Gemini_4_Argon-2026--11--19-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md)
 
 ## Claude Fable 5.2 API setup (checked 2026-11-10)
 
@@ -55,9 +55,9 @@ The HK public catalog lists `claude-fable-5-2` with Anthropic and OpenAI endpoin
 
 ## Gemini 4 Argon API update (2026-10-15)
 
-AIFast announced Gemini 4 Argon (`gemini-4-argon`) on 2026-10-14. The public catalog lists Gemini and OpenAI endpoint types. Use `https://www.aifast.hk/v1` for OpenAI-compatible clients; verify a small text request before testing streaming or tool calls. Catalog availability is not a measured uptime or compatibility guarantee.
+The HK public catalog checked on 2026-11-19 lists `gemini-4-argon` with `gemini` and `openai` endpoint types. For OpenAI-compatible clients, use `https://www.aifast.hk/v1`. Listing does not establish access for your key, measured uptime, or tested streaming or tool support.
 
-[Integration guide and context limits](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [Launch announcement](https://www.aifast.hk/api/status) · [Current catalog](https://www.aifast.hk/api/pricing) · [Check your endpoint](https://docs.aifast.hk/model-check/)
+[Integration guide and context limits](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [Current catalog](https://www.aifast.hk/api/pricing) · [Check your endpoint](https://docs.aifast.hk/model-check/)
 
 ## Start from the problem you need to solve
 
