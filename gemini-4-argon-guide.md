@@ -1,8 +1,8 @@
 # Gemini 4 Argon API integration: model ID, context budget and gateway checks
 
-[![Updated](https://img.shields.io/badge/Updated-2026--10--15-blue)](https://www.aifast.hk/api/status)
+[![HK catalog checked](https://img.shields.io/badge/HK_catalog-2026--11--19-blue)](https://www.aifast.hk/api/pricing)
 
-Gemini 4 Argon uses the model ID `gemini-4-argon`. Google describes it as a flagship reasoning model for coding, agents, mathematics and science. AIFast announced the model on 2026-10-14; its public pricing catalog marks the entry available and lists `gemini` and `openai` endpoint types. Those are catalog facts, not a successful authenticated inference test.
+Gemini 4 Argon uses the model ID `gemini-4-argon`. Google describes it as a flagship reasoning model for coding, agents, mathematics and science. The HK public catalog checked on 2026-11-19 marks the entry available and lists `gemini` and `openai` endpoint types. Those are catalog facts, not a successful authenticated inference test.
 
 ## What the context number means
 
@@ -76,11 +76,11 @@ For an agent rollout, start with read-only tools. Add explicit approval for writ
 
 ## Sources and evidence boundary
 
-Reviewed 2026-10-15:
+Model documentation reviewed 2026-10-15; HK catalog rechecked 2026-11-19:
 
 - [Google Gemini 4 Argon model documentation](https://ai.google.dev/gemini-api/docs/models/gemini-4-argon): official name, ID, model positioning and context/output limits.
 - [Google latest-model documentation](https://ai.google.dev/gemini-api/docs/models/latest-model): model selection reference.
-- [AIFast status API](https://www.aifast.hk/api/status): the 2026-10-14 gateway launch announcement.
+- [AIFast HK model facts](https://docs.aifast.hk/en/reference/platform-facts/): dated catalog evidence; no separate Argon launch notice is asserted here.
 - [AIFast pricing catalog API](https://www.aifast.hk/api/pricing): availability flag and supported endpoint-type labels.
 - [Current AIFast pricing and account catalog](https://www.aifast.hk/pricing): check account-specific terms before spending.
 

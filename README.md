@@ -41,7 +41,7 @@ AI快站已上架 `gemini-4-carbon`。HK [公开目录](https://www.aifast.hk/ap
 
 [当前价格](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-carbon-pricing) · [注册并创建 Key](https://www.aifast.hk/register?channel=c_zfxp7cp4&utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-carbon-register) · [检测现有接口](https://docs.aifast.hk/model-check/?utm_source=github&utm_medium=repository&utm_campaign=gemini-4-carbon&utm_content=guide-readme-carbon-check)
 
-[![Gemini 4 Argon update](https://img.shields.io/badge/Gemini_4_Argon-2026--10--15-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md)
+[![Gemini 4 Argon catalog check](https://img.shields.io/badge/Gemini_4_Argon-2026--11--19-blue)](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md)
 
 ## Claude Fable 5.2 API 国内接入（2026-11-10）
 
@@ -51,9 +51,9 @@ HK 公开目录已列出 `claude-fable-5-2`，声明支持 Anthropic Messages �
 
 ## Gemini 4 Argon API update (2026-10-15)
 
-AIFast announced Gemini 4 Argon (`gemini-4-argon`) on 2026-10-14. The public catalog lists Gemini and OpenAI endpoint types. Use `https://www.aifast.hk/v1` for OpenAI-compatible clients; verify a small text request before testing streaming or tool calls. Catalog availability is not a measured uptime or compatibility guarantee.
+2026-11-19 核对 HK 公开模型目录：`gemini-4-argon` 标注了 `gemini` 和 `openai` 两类端点。OpenAI 兼容客户端使用 `https://www.aifast.hk/v1`。目录可见不代表你的 Key 有权限，也不是流式输出、工具调用或可用率的实测。
 
-[Integration guide and context limits](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [Launch announcement](https://www.aifast.hk/api/status) · [Current catalog](https://www.aifast.hk/api/pricing) · [Check your endpoint](https://docs.aifast.hk/model-check/)
+[Argon 接入与上下文说明](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [HK 公开模型目录](https://www.aifast.hk/api/pricing) · [模型检测工具](https://docs.aifast.hk/model-check/)
 
 ## 先在线检测你正在使用的接口
 
