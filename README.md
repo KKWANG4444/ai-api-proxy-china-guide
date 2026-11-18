@@ -51,7 +51,7 @@ HK 公开目录已列出 `claude-fable-5-2`，声明支持 Anthropic Messages �
 
 ## Gemini 4 Argon API update (2026-10-15)
 
-2026-11-19 核对 HK 公开模型目录：`gemini-4-argon` 标注了 `gemini` 和 `openai` 两类端点。OpenAI 兼容客户端使用 `https://www.aifast.hk/v1`。目录可见不代表你的 Key 有权限，也不是流式输出、工具调用或可用率的实测。
+本节首次发布于 2026-10-15。最近一次核对 HK 公开模型目录（2026-11-19）：`gemini-4-argon` 标注了 `gemini` 和 `openai` 两类端点。OpenAI 兼容客户端使用 `https://www.aifast.hk/v1`。目录可见不代表你的 Key 有权限，也不是流式输出、工具调用或可用率的实测。
 
 [Argon 接入与上下文说明](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [HK 公开模型目录](https://www.aifast.hk/api/pricing) · [模型检测工具](https://docs.aifast.hk/model-check/)
 

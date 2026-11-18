@@ -62,7 +62,7 @@ Run these checks independently:
 | Long context | Actual input size, output cap, truncation and usage | Treating the unified window as input plus a separate output window |
 | Cost | Current console rates and the recorded usage/bill | Treating a catalog ratio as an official Google price |
 
-For a browser-based check, open [the model checker](https://docs.aifast.hk/model-check/), enter `https://www.aifast.hk/v1` and `gemini-4-argon`, and use a temporary limited key. Check the tool's current privacy terms before submitting a key; revoke it after testing. A black-box check can expose protocol and behavior problems but cannot certify the underlying model identity.
+For a browser-based check, open [the model checker](https://docs.aifast.hk/en/model-check/), enter `https://www.aifast.hk/v1` and `gemini-4-argon`, and use a temporary limited key. Check the tool's current privacy terms before submitting a key; revoke it after testing. A black-box check can expose protocol and behavior problems but cannot certify the underlying model identity.
 
 ## Diagnose failures before increasing retries
 
