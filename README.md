@@ -15,6 +15,16 @@ AI快站提供 500+ 语言、生图、视频、向量和检索模型，国外模
 
 <p align="center"><img src="assets/social-preview.png" width="100%" alt="国内大模型 API 接入指南：OpenAI SDK、Cursor、Claude Code、Codex 与 Dify"></p>
 
+## GPT-6.2 Astra / Sol 已上架（2026-11-18）
+
+![Model catalog update: 2026-11-18](https://img.shields.io/badge/model_catalog-2026--11--18-blue)
+
+AI快站已上架 `gpt-6.2-astra`、`gpt-6.2-sol`。[上架公告](https://www.aifast.hk/api/announcements)与[公开目录](https://www.aifast.hk/api/pricing)均已核对：两款模型标记 `available=true`，列出 `openai`、`openai-response` 端点类型。Base URL：`https://www.aifast.hk/v1`。
+
+[OpenAI 发布说明](https://openai.com/index/introducing-gpt-6-2-astra-sol/)将 Astra 定位于复杂推理、编码与专业工作，Sol 面向日常编码和智能体任务。厂商能力与网关接入需分开验收；本次记录上架与目录信息，未执行付费推理或稳定性测试。
+
+[查看当前模型与分组](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=gpt-6-2-launch&utm_content=ai-api-proxy-china-guide) · [接入步骤](https://kkwang4444.github.io/api-status/guide/) · [目录证据](https://kkwang4444.github.io/api-status/data/gpt-6-2.json)
+
 ## Gemini 4 Hydrogen / Carbon 接入更新（2026-11-17）
 
 HK [上架公告](https://www.aifast.hk/api/announcements)已发布 `gemini-4-hydrogen`（11 月 13 日）和 `gemini-4-carbon`（11 月 11 日）。2026-11-17 [公开目录](https://www.aifast.hk/api/pricing)均标记 `available=true`，声明 `gemini`、`openai` 端点类型；OpenAI-compatible Base URL 保持 `https://www.aifast.hk/v1`。

@@ -5,6 +5,14 @@
 Core guide reviewed: 2026-09-30. Gemini 4 Carbon launch entry checked: 2026-11-11.
 
 
+## GPT-6.2 Astra / Sol launch (2026-11-18)
+
+AIFast has added `gpt-6.2-astra` and `gpt-6.2-sol`. The [launch announcement](https://www.aifast.hk/api/announcements) and [public catalog](https://www.aifast.hk/api/pricing) agree: both are marked `available=true` with `openai` and `openai-response` endpoint types. Base URL: `https://www.aifast.hk/v1`.
+
+[OpenAI describes](https://openai.com/index/introducing-gpt-6-2-astra-sol/) Astra as a model for demanding reasoning, coding and professional work, and Sol for everyday coding and agent workflows. Provider capabilities still need separate gateway checks. This update records the launch and catalog; it does not report paid inference or reliability tests.
+
+[Check current models and groups](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=gpt-6-2-launch&utm_content=ai-api-proxy-china-guide) · [Setup guide](https://kkwang4444.github.io/api-status/guide/) · [Catalog evidence](https://kkwang4444.github.io/api-status/data/gpt-6-2.json)
+
 ## Gemini 4 Carbon launch (2026-11-11)
 
 Exact model ID: `gemini-4-carbon`. AIFast announcement: https://www.aifast.hk/api/announcements. Catalog source: https://www.aifast.hk/api/pricing (`available=true`; endpoint types `gemini`, `openai`). OpenAI-compatible Base URL: `https://www.aifast.hk/v1`. These are public catalog observations, not authenticated inference, streaming, tool-call, uptime or model-identity test results. Check current key permissions and pricing before use.

@@ -19,6 +19,16 @@ For implementation review, see the public [protocol checks, report schema and re
 
 Before sending a live request, use the [Base URL checker](https://docs.aifast.hk/en/tools/base-url-checker/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-base-url-checker-en) to find duplicated version or endpoint paths. Use the [Token cost calculator](https://docs.aifast.hk/en/tools/api-cost-calculator/?utm_source=github&utm_medium=repository&utm_campaign=developer_acquisition&utm_content=guide-api-cost-calculator-en) to estimate batch and retry cost from current prices.
 
+## GPT-6.2 Astra / Sol launch (2026-11-18)
+
+![Model catalog update: 2026-11-18](https://img.shields.io/badge/model_catalog-2026--11--18-blue)
+
+AIFast has added `gpt-6.2-astra` and `gpt-6.2-sol`. The [launch announcement](https://www.aifast.hk/api/announcements) and [public catalog](https://www.aifast.hk/api/pricing) agree: both are marked `available=true` with `openai` and `openai-response` endpoint types. Base URL: `https://www.aifast.hk/v1`.
+
+[OpenAI describes](https://openai.com/index/introducing-gpt-6-2-astra-sol/) Astra as a model for demanding reasoning, coding and professional work, and Sol for everyday coding and agent workflows. Provider capabilities still need separate gateway checks. This update records the launch and catalog; it does not report paid inference or reliability tests.
+
+[Check current models and groups](https://www.aifast.hk/pricing?utm_source=github&utm_medium=repository&utm_campaign=gpt-6-2-launch&utm_content=ai-api-proxy-china-guide) · [Setup guide](https://kkwang4444.github.io/api-status/guide/) · [Catalog evidence](https://kkwang4444.github.io/api-status/data/gpt-6-2.json)
+
 ## Gemini 4 Hydrogen / Carbon setup update (2026-11-17)
 
 HK [announcements](https://www.aifast.hk/api/announcements) list `gemini-4-hydrogen` (November 13) and `gemini-4-carbon` (November 11). The [public catalog](https://www.aifast.hk/api/pricing), checked on 2026-11-17, marks both as `available=true` with `gemini` and `openai` endpoint types. OpenAI-compatible Base URL: `https://www.aifast.hk/v1`.
