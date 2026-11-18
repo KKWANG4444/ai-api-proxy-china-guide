@@ -15,6 +15,11 @@ const [html, readme, readmeEn, llms, llmsFull, robots, sitemap] = await Promise.
   read('sitemap.xml'),
 ]);
 const errors = [];
+for (const [name, text] of Object.entries({ readme, readmeEn, llms, llmsFull })) {
+  const section = text.split('## Gemini 4 Argon API update (2026-10-15)\n')[1]?.split('\n## ')[0] ?? '';
+  const prefix = name === 'readme' ? '' : 'en/';
+  if (!section.includes(`(https://docs.aifast.hk/${prefix}model-check/)`) || !/2026-10-15[\s\S]*?\d{4}-\d{2}-\d{2}/.test(section)) errors.push(`${name} 的 Argon 入口应保留原锚点、双日期及同语言检测链接`);
+}
 const authenticity = await read('model-authenticity-verification.md');
 for (const filename of ['README.md', 'sonnet-5-guide.md', 'tools-integration-guide.md']) {
   const content = await read(filename);

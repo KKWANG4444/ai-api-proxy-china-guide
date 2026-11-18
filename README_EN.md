@@ -55,9 +55,9 @@ The HK public catalog lists `claude-fable-5-2` with Anthropic and OpenAI endpoin
 
 ## Gemini 4 Argon API update (2026-10-15)
 
-The HK public catalog checked on 2026-11-19 lists `gemini-4-argon` with `gemini` and `openai` endpoint types. For OpenAI-compatible clients, use `https://www.aifast.hk/v1`. Listing does not establish access for your key, measured uptime, or tested streaming or tool support.
+First published 2026-10-15. Catalog last checked 2026-11-19: the HK public directory lists `gemini-4-argon` with `gemini` and `openai` endpoint types. For OpenAI-compatible clients, use `https://www.aifast.hk/v1`. Listing does not establish access for your key, measured uptime, or tested streaming or tool support.
 
-[Integration guide and context limits](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [Current catalog](https://www.aifast.hk/api/pricing) · [Check your endpoint](https://docs.aifast.hk/model-check/)
+[Integration guide and context limits](https://github.com/KKWANG4444/ai-api-proxy-china-guide/blob/main/gemini-4-argon-guide.md) · [Current catalog](https://www.aifast.hk/api/pricing) · [Check your endpoint](https://docs.aifast.hk/en/model-check/)
 
 ## Start from the problem you need to solve
 
