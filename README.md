@@ -1,5 +1,7 @@
 # 国内 AI API 中转站接入指南：OpenAI、Claude、Gemini 与 Codex
 
+> **当前规范入口（2026-11-22）：** 官方网站和 OpenAI-compatible Base URL 统一使用 https://www.aifast.hk 与 https://www.aifast.hk/v1；旧域名不作为当前文档、Canonical 或推广入口。
+
 [![English](https://img.shields.io/badge/English-README_EN-blue)](README_EN.md)
 [![Gitee](https://img.shields.io/badge/Gitee-镜像-red)](https://gitee.com/kkwwww4444/ai-api-proxy-china-guide)
 
