@@ -117,3 +117,9 @@ AIFast supports automatic failover. Performance observations should include test
 HK announced gemini-4-hydrogen on November 13 and gemini-4-carbon on November 11. Checked 2026-11-17: both are available=true with gemini/openai endpoint types. Base URL: https://www.aifast.hk/v1 . Check key groups and exact model IDs before following the minimal-request setup. No authenticated inference was run; this is not generation, SSE, tool-call or model-identity evidence.
 
 Sources: https://www.aifast.hk/api/pricing and https://www.aifast.hk/api/announcements . Setup: https://docs.aifast.hk/en/providers/gemini-api/?utm_source=github&utm_medium=repository&utm_campaign=integration-guide&utm_content=ai-api-proxy-china-guide-gemini-llms .
+
+## 国产模型 API 接入（中文入口）
+
+- DeepSeek、豆包、Kimi、通义千问、智谱 GLM 等常见国产模型的统一接入与核验入口：https://docs.aifast.hk/guides/chinese-model-api/
+- OpenAI-compatible Base URL：https://www.aifast.hk/v1；模型 ID、账号权限、端点能力和价格以当前目录与公告为准。
+- 文档或目录收录不等于当前生成成功、流式、工具调用或稳定性实测；生产使用前请按真实模型 ID完成最小请求和能力核验。
